@@ -575,6 +575,5 @@ namespace PURCHASE.MAINCODE.Modun4
         private System.Windows.Forms.RadioButton rbWS_NO_Tab2;
         private System.Windows.Forms.RadioButton rbWS_DATE_Tab2;
         private System.Windows.Forms.RadioButton rbC_NO_Tab2;
-        private FastReport.Report report1;
     }
 }

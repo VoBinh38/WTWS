@@ -1,6 +1,4 @@
 ﻿using CrystalDecisions.CrystalReports.Engine;
-using FastReport;
-using FastReport.Data;
 using PURCHASE.DataCenter;
 using PURCHASE.MAINCODE.Modun4.Report;
 using PURCHASE.MAINCODE.Modun4.Search;

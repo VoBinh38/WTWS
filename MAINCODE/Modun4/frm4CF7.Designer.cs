@@ -159,7 +159,6 @@ namespace PURCHASE.MAINCODE.Modun4
             this.f4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnClose = new System.Windows.Forms.Button();
             this.btxemtruoc = new System.Windows.Forms.Button();
-            this.report1 = new FastReport.Report();
             this.dataSetModun41 = new PURCHASE.DataReport.DataSetModun4();
             this.tabControl1.SuspendLayout();
             this.tabPagePurchaseOrder.SuspendLayout();
@@ -185,7 +184,6 @@ namespace PURCHASE.MAINCODE.Modun4
             this.panel7.SuspendLayout();
             this.gbSortBy_5.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.report1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetModun41)).BeginInit();
             this.SuspendLayout();
             // 
@@ -1623,13 +1621,6 @@ namespace PURCHASE.MAINCODE.Modun4
             this.btxemtruoc.UseVisualStyleBackColor = true;
             this.btxemtruoc.Click += new System.EventHandler(this.btxemtruoc_Click);
             // 
-            // report1
-            // 
-            this.report1.NeedRefresh = false;
-            this.report1.ReportResourceString = resources.GetString("report1.ReportResourceString");
-            this.report1.Tag = null;
-            this.report1.RegisterData(this.dataSetModun41, "dataSetModun41");
-            // 
             // dataSetModun41
             // 
             this.dataSetModun41.DataSetName = "DataSetModun4";
@@ -1690,7 +1681,6 @@ namespace PURCHASE.MAINCODE.Modun4
             this.gbSortBy_5.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.report1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetModun41)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1828,7 +1818,6 @@ namespace PURCHASE.MAINCODE.Modun4
         private System.Windows.Forms.TextBox txtC_NO_Tab7;
         private System.Windows.Forms.Label lbC_NO1_Tab7;
         private System.Windows.Forms.Label lbC_NO_Tab7;
-        private FastReport.Report report1;
         private DataReport.DataSetModun4 dataSetModun41;
     }
 }

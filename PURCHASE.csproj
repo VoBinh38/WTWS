@@ -64,11 +64,6 @@
     <Reference Include="DocumentFormat.OpenXml, Version=2.16.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
       <HintPath>packages\DocumentFormat.OpenXml.2.16.0\lib\net40\DocumentFormat.OpenXml.dll</HintPath>
     </Reference>
-    <Reference Include="FastReport, Version=2022.2.17.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c" />
-    <Reference Include="FastReport.Bars, Version=2022.2.17.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c" />
-    <Reference Include="FastReport.Compat, Version=2022.2.0.0, Culture=neutral, PublicKeyToken=406e1f4c3c8ef97e" />
-    <Reference Include="FastReport.DataVisualization, Version=2022.2.0.0, Culture=neutral, PublicKeyToken=406e1f4c3c8ef97e" />
-    <Reference Include="FastReport.Editor, Version=2022.2.17.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c" />
     <Reference Include="LibraryCalender, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\WSEXEP\WTERP\LibraryCalender.dll</HintPath>
