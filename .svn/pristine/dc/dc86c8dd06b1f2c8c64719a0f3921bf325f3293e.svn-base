@@ -1,0 +1,171 @@
+﻿using PURCHASE.MAINCODE.Modun4.Search;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Net;
+using System.Net.Sockets;
+using System.Text;
+using System.Windows.Forms;
+
+namespace PURCHASE
+{
+    public partial class Form4C : Form
+    {
+        DataProvider conn = new DataProvider();
+        DataTable dt = new DataTable();
+        BindingSource bindingSource = new BindingSource();
+        public Form4C()
+        {
+            this.ShowInTaskbar = false;
+            InitializeComponent();
+        }
+
+        private void Form4C_Load(object sender, EventArgs e)
+        {
+            conn.CheckLoad(menuStrip1);
+            loadinfo();
+            Loaddata();
+            LoadTextBox();
+
+            btok.Hide();
+            btdong.Hide();
+            bt.Text = "NÚT DUYỆT";
+
+            f10ToolStripMenuItem.Checked = false;
+            f2ToolStripMenuItem.Checked = false;
+            f3ToolStripMenuItem.Checked = false;
+            f4ToolStripMenuItem.Checked = false;
+            f5ToolStripMenuItem.Checked = false;
+            f6DuyệtToolStripMenuItem.Checked = false;
+            f7ToolStripMenuItem.Checked = false;
+            f10ToolStripMenuItem.Checked = false;
+            f12ToolStripMenuItem.Checked = false;
+
+            btdau.Enabled = false;
+            bttruoc.Enabled = false;
+            btsau.Enabled = false;
+            btketthuc.Enabled = false;
+            conn.DGV(DGV1);
+        }
+
+        private void LoadTextBox()
+        {
+            
+        }
+
+        public void Loaddata()
+        {
+            string sql = "select top 20 * FROM COMHC1 ORDER BY WS_DATE DESC,WS_NO DESC";
+            dt = conn.readdata(sql);
+            bindingSource.DataSource = dt;
+        }
+        public void LoadDataGridView()
+        {
+            string sql = "SELECT * FROM COMBC1 JOIN SHOUSE ON SHOUSE.SH_NO = COMBC1.SH_NO WS_NO=N'" + txtWS_NO.Text+"'";
+            DGV1.DataSource = conn.readdata(sql);
+        }
+        void loadinfo()
+        {
+            lbUserName.Text = conn.getUser(frmLogin.ID_USER);
+            lbNamePC.Text = System.Environment.MachineName;
+
+
+            IPAddress[] localIP = Dns.GetHostAddresses(Dns.GetHostName());
+            foreach (IPAddress address in localIP)
+            {
+                if (address.AddressFamily == AddressFamily.InterNetwork)
+                    lbIP.Text = address.ToString();
+            }
+        }
+
+        private void f5ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form4CF5 frm = new Form4CF5();
+            frm.ShowDialog();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            btnTimeNow.Text = CN.getTimeNow();
+            btndateNow.Text = CN.getDateNow();
+        }
+
+        private void f2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            f2ToolStripMenuItem.Checked = true;
+            DateTime d1 = DateTime.Now;
+            txtWS_DATE.Text = d1.ToString("yyyy/MM/dd");
+            txtM_KIND.Text = "1";
+            txtWS_NO.Text = "";
+            txtC_NO.Text = "";
+            txtC_NAME.Text = "";
+            tb6.Text = "";
+            txtCAL_YM.Text = "";
+            cbM_TRAN.Text = "";
+            txtM_TRAN_R.Text = "3.16";
+            txtMEMO1.Text = "";
+
+            bt.Text = "SỬA";
+            btok.Show();
+            btdong.Show();
+
+            f1ToolStripMenuItem.Enabled = false;
+            f2ToolStripMenuItem.Enabled = false;
+            f3ToolStripMenuItem.Enabled = false;
+            f4ToolStripMenuItem.Enabled = false;
+            f5ToolStripMenuItem.Enabled = false;
+            f6DuyệtToolStripMenuItem.Enabled = false;
+            f7ToolStripMenuItem.Enabled = false;
+            f10ToolStripMenuItem.Enabled = true;
+            f12ToolStripMenuItem.Enabled = false;
+
+            btdau.Enabled = false;
+            bttruoc.Enabled = false;
+            btsau.Enabled = false;
+            btketthuc.Enabled = false;
+        }
+
+        private void f12ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            this.Close();
+        }
+
+        private void btdong_Click(object sender, EventArgs e)
+        {
+            Loaddata();
+            f10ToolStripMenuItem.Enabled = false;
+            f2ToolStripMenuItem.Enabled = true;
+            f3ToolStripMenuItem.Enabled = true;
+            f4ToolStripMenuItem.Enabled = true;
+            f5ToolStripMenuItem.Enabled = true;
+            f6DuyệtToolStripMenuItem.Enabled = false;
+            f7ToolStripMenuItem.Enabled = true;
+            f10ToolStripMenuItem.Enabled = false;
+            f12ToolStripMenuItem.Enabled = true;
+
+            btok.Hide();
+            btdong.Hide();
+            bt.Text = "NÚT DUYỆT";
+
+            f10ToolStripMenuItem.Checked = false;
+            f2ToolStripMenuItem.Checked = false;
+            f3ToolStripMenuItem.Checked = false;
+            f4ToolStripMenuItem.Checked = false;
+            f5ToolStripMenuItem.Checked = false;
+            f6DuyệtToolStripMenuItem.Checked = false;
+            f7ToolStripMenuItem.Checked = false;
+            f10ToolStripMenuItem.Checked = false;
+            f12ToolStripMenuItem.Checked = false;
+
+            btdau.Enabled = false;
+            bttruoc.Enabled = false;
+            btsau.Enabled = false;
+            btketthuc.Enabled = false;
+            conn.DGV(DGV1);
+        }
+    }
+}

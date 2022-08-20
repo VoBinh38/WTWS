@@ -1,0 +1,97 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Net;
+using System.Net.Sockets;
+using System.Text;
+using System.Windows.Forms;
+using LibraryCalender;
+using PURCHASE.MAINCODE;
+
+namespace PURCHASE
+{
+    public partial class Form4D : Form
+    {
+        DataProvider con = new DataProvider();
+        public Form4D()
+        {
+            this.ShowInTaskbar = false;
+            InitializeComponent();
+        }
+
+        private void f12ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Form4D_Load(object sender, EventArgs e)
+        {
+            loadinfo();
+            Loaddata();
+
+            btok.Hide();
+            btdong.Hide();
+            bt.Text = "NÚT DUYỆT";
+
+            f12ToolStripMenuItem.Checked = false;
+            f2ToolStripMenuItem.Checked = false;
+            f3ToolStripMenuItem.Checked = false;
+            f4ToolStripMenuItem.Checked = false;
+            f5ToolStripMenuItem.Checked = false;
+            f6DuyệtToolStripMenuItem.Checked = false;
+            f7ToolStripMenuItem.Checked = false;
+            f12ToolStripMenuItem.Checked = false;
+            f12ToolStripMenuItem.Checked = false;
+
+            btdau.Enabled = false;
+            bttruoc.Enabled = false;
+            btsau.Enabled = false;
+            btketthuc.Enabled = false;
+            con.DGV(DGV1);
+        }
+        public void Loaddata()
+        {
+            tb2.Text = "";
+            tb3.Text = "";
+            tb4.Text = "";
+            tb5.Text = "";
+            tb6.Text = "";
+            tb7.Text = "";
+            tb8.Text = "";
+            tb9.Text = "";
+            tb9.Text = "";
+            tb10.Text = "";
+            cb11.Text = "";
+            tb12.Text = "";
+            tb13.Text = "";
+            tb14.Text = "";
+            tb15.Text = "";
+        }
+        void loadinfo()
+        {
+            lbUserName.Text = con.getUser(frmLogin.ID_USER);
+            lbNamePC.Text = System.Environment.MachineName;
+
+            IPAddress[] localIP = Dns.GetHostAddresses(Dns.GetHostName());
+            foreach (IPAddress address in localIP)
+            {
+                if (address.AddressFamily == AddressFamily.InterNetwork)
+                    lbIP.Text = address.ToString();
+            }
+        }
+
+        private void f5ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Form4DF5 frm = new Form4DF5();
+            //frm.ShowDialog();
+        }
+
+        private void f2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+}

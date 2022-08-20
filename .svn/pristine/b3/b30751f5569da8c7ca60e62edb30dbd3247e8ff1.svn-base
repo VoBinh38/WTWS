@@ -1,0 +1,415 @@
+﻿
+namespace PURCHASE.MAINCODE.Search
+{
+    partial class SearchPROD1C
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchPROD1C));
+            this.dataPROD1C = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.P_NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.P_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.P_NAME1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.P_NAME3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PRICE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QTYSTORE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.C_NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BUNIT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CUNIT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TRANS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.K_NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnok = new System.Windows.Forms.Button();
+            this.txtP_NAME3 = new System.Windows.Forms.TextBox();
+            this.txtP_NAME = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtP_NAME1 = new System.Windows.Forms.TextBox();
+            this.txtP_NO = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbC_NO = new System.Windows.Forms.Label();
+            this.txtC_NO = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataPROD1C)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dataPROD1C
+            // 
+            this.dataPROD1C.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dataPROD1C.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataPROD1C.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.P_NO,
+            this.P_NAME,
+            this.P_NAME1,
+            this.P_NAME3,
+            this.PRICE,
+            this.QTYSTORE,
+            this.C_NO,
+            this.BUNIT,
+            this.CUNIT,
+            this.TRANS,
+            this.K_NO});
+            this.dataPROD1C.Location = new System.Drawing.Point(13, 124);
+            this.dataPROD1C.Margin = new System.Windows.Forms.Padding(4);
+            this.dataPROD1C.Name = "dataPROD1C";
+            this.dataPROD1C.RowHeadersWidth = 51;
+            this.dataPROD1C.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataPROD1C.Size = new System.Drawing.Size(1350, 591);
+            this.dataPROD1C.TabIndex = 23;
+            this.dataPROD1C.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataPROD1C_CellMouseDoubleClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Chọn";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
+            // 
+            // P_NO
+            // 
+            this.P_NO.DataPropertyName = "P_NO";
+            this.P_NO.FillWeight = 150F;
+            this.P_NO.HeaderText = "Tên Sản Phẩm";
+            this.P_NO.MinimumWidth = 6;
+            this.P_NO.Name = "P_NO";
+            this.P_NO.Width = 150;
+            // 
+            // P_NAME
+            // 
+            this.P_NAME.DataPropertyName = "P_NAME";
+            this.P_NAME.FillWeight = 250F;
+            this.P_NAME.HeaderText = "Tên Trung Quốc";
+            this.P_NAME.MinimumWidth = 6;
+            this.P_NAME.Name = "P_NAME";
+            this.P_NAME.Width = 250;
+            // 
+            // P_NAME1
+            // 
+            this.P_NAME1.DataPropertyName = "P_NAME1";
+            this.P_NAME1.FillWeight = 250F;
+            this.P_NAME1.HeaderText = "Tên Tiếng Anh";
+            this.P_NAME1.MinimumWidth = 6;
+            this.P_NAME1.Name = "P_NAME1";
+            this.P_NAME1.Width = 250;
+            // 
+            // P_NAME3
+            // 
+            this.P_NAME3.DataPropertyName = "P_NAME3";
+            this.P_NAME3.FillWeight = 150F;
+            this.P_NAME3.HeaderText = "Đặc Điểm Kỹ Thuật";
+            this.P_NAME3.MinimumWidth = 6;
+            this.P_NAME3.Name = "P_NAME3";
+            this.P_NAME3.Width = 150;
+            // 
+            // PRICE
+            // 
+            this.PRICE.DataPropertyName = "PRICE";
+            this.PRICE.HeaderText = "Đơn giá";
+            this.PRICE.MinimumWidth = 6;
+            this.PRICE.Name = "PRICE";
+            this.PRICE.Width = 125;
+            // 
+            // QTYSTORE
+            // 
+            this.QTYSTORE.DataPropertyName = "QTYSTORE";
+            this.QTYSTORE.HeaderText = "QTYSTORE";
+            this.QTYSTORE.MinimumWidth = 6;
+            this.QTYSTORE.Name = "QTYSTORE";
+            this.QTYSTORE.Width = 125;
+            // 
+            // C_NO
+            // 
+            this.C_NO.DataPropertyName = "C_NO";
+            this.C_NO.HeaderText = "C_NO";
+            this.C_NO.MinimumWidth = 6;
+            this.C_NO.Name = "C_NO";
+            this.C_NO.Visible = false;
+            this.C_NO.Width = 125;
+            // 
+            // BUNIT
+            // 
+            this.BUNIT.DataPropertyName = "BUNIT";
+            this.BUNIT.HeaderText = "BUNIT";
+            this.BUNIT.MinimumWidth = 6;
+            this.BUNIT.Name = "BUNIT";
+            this.BUNIT.Visible = false;
+            this.BUNIT.Width = 125;
+            // 
+            // CUNIT
+            // 
+            this.CUNIT.DataPropertyName = "CUNIT";
+            this.CUNIT.HeaderText = "CUNIT";
+            this.CUNIT.MinimumWidth = 6;
+            this.CUNIT.Name = "CUNIT";
+            this.CUNIT.Visible = false;
+            this.CUNIT.Width = 125;
+            // 
+            // TRANS
+            // 
+            this.TRANS.DataPropertyName = "TRANS";
+            this.TRANS.HeaderText = "TRANS";
+            this.TRANS.MinimumWidth = 6;
+            this.TRANS.Name = "TRANS";
+            this.TRANS.Visible = false;
+            this.TRANS.Width = 125;
+            // 
+            // K_NO
+            // 
+            this.K_NO.DataPropertyName = "K_NO";
+            this.K_NO.HeaderText = "K_NO";
+            this.K_NO.MinimumWidth = 6;
+            this.K_NO.Name = "K_NO";
+            this.K_NO.Visible = false;
+            this.K_NO.Width = 125;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
+            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSearch.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnSearch.Location = new System.Drawing.Point(1210, 15);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnSearch.Size = new System.Drawing.Size(153, 39);
+            this.btnSearch.TabIndex = 22;
+            this.btnSearch.Text = "TÌM KIẾM";
+            this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btSearch_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClose.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnClose.Location = new System.Drawing.Point(1066, 62);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnClose.Size = new System.Drawing.Size(136, 39);
+            this.btnClose.TabIndex = 21;
+            this.btnClose.Text = "ĐÓNG";
+            this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnok
+            // 
+            this.btnok.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnok.Image = ((System.Drawing.Image)(resources.GetObject("btnok.Image")));
+            this.btnok.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnok.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnok.Location = new System.Drawing.Point(1066, 15);
+            this.btnok.Margin = new System.Windows.Forms.Padding(4);
+            this.btnok.Name = "btnok";
+            this.btnok.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnok.Size = new System.Drawing.Size(136, 39);
+            this.btnok.TabIndex = 20;
+            this.btnok.Text = "OK";
+            this.btnok.UseVisualStyleBackColor = true;
+            this.btnok.Click += new System.EventHandler(this.btok_Click);
+            // 
+            // txtP_NAME3
+            // 
+            this.txtP_NAME3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.txtP_NAME3.Location = new System.Drawing.Point(631, 58);
+            this.txtP_NAME3.Margin = new System.Windows.Forms.Padding(4);
+            this.txtP_NAME3.Name = "txtP_NAME3";
+            this.txtP_NAME3.Size = new System.Drawing.Size(187, 29);
+            this.txtP_NAME3.TabIndex = 19;
+            this.txtP_NAME3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtP_NAME3_KeyDown);
+            // 
+            // txtP_NAME
+            // 
+            this.txtP_NAME.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.txtP_NAME.Location = new System.Drawing.Point(631, 12);
+            this.txtP_NAME.Margin = new System.Windows.Forms.Padding(4);
+            this.txtP_NAME.Name = "txtP_NAME";
+            this.txtP_NAME.Size = new System.Drawing.Size(187, 29);
+            this.txtP_NAME.TabIndex = 18;
+            this.txtP_NAME.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtP_NAME_KeyDown);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label4.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label4.Location = new System.Drawing.Point(454, 60);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(143, 24);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Tên Tiếng Anh:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label3.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label3.Location = new System.Drawing.Point(433, 15);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(164, 24);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Đặc điểm kỹ thuật:";
+            // 
+            // txtP_NAME1
+            // 
+            this.txtP_NAME1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.txtP_NAME1.Location = new System.Drawing.Point(205, 61);
+            this.txtP_NAME1.Margin = new System.Windows.Forms.Padding(4);
+            this.txtP_NAME1.Name = "txtP_NAME1";
+            this.txtP_NAME1.Size = new System.Drawing.Size(200, 29);
+            this.txtP_NAME1.TabIndex = 15;
+            this.txtP_NAME1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtP_NAME1_KeyDown);
+            // 
+            // txtP_NO
+            // 
+            this.txtP_NO.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.txtP_NO.Location = new System.Drawing.Point(202, 15);
+            this.txtP_NO.Margin = new System.Windows.Forms.Padding(4);
+            this.txtP_NO.Name = "txtP_NO";
+            this.txtP_NO.Size = new System.Drawing.Size(204, 29);
+            this.txtP_NO.TabIndex = 14;
+            this.txtP_NO.TextChanged += new System.EventHandler(this.txtP_NO_TextChanged);
+            this.txtP_NO.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtP_NO_KeyDown);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label2.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label2.Location = new System.Drawing.Point(12, 63);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(157, 24);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Tên Trung Quốc:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label1.Location = new System.Drawing.Point(43, 20);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(126, 24);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Số sản phầm:";
+            // 
+            // lbC_NO
+            // 
+            this.lbC_NO.AutoSize = true;
+            this.lbC_NO.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.lbC_NO.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lbC_NO.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbC_NO.Location = new System.Drawing.Point(826, 18);
+            this.lbC_NO.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbC_NO.Name = "lbC_NO";
+            this.lbC_NO.Size = new System.Drawing.Size(154, 24);
+            this.lbC_NO.TabIndex = 24;
+            this.lbC_NO.Text = "Số nhà cung cấp";
+            // 
+            // txtC_NO
+            // 
+            this.txtC_NO.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.txtC_NO.Location = new System.Drawing.Point(830, 58);
+            this.txtC_NO.Margin = new System.Windows.Forms.Padding(4);
+            this.txtC_NO.Name = "txtC_NO";
+            this.txtC_NO.Size = new System.Drawing.Size(187, 29);
+            this.txtC_NO.TabIndex = 25;
+            // 
+            // SearchPROD1C
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1376, 728);
+            this.Controls.Add(this.txtC_NO);
+            this.Controls.Add(this.lbC_NO);
+            this.Controls.Add(this.dataPROD1C);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnok);
+            this.Controls.Add(this.txtP_NAME3);
+            this.Controls.Add(this.txtP_NAME);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtP_NAME1);
+            this.Controls.Add(this.txtP_NO);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "SearchPROD1C";
+            this.Text = "Tìm kiếm Sản Phẩm";
+            this.Load += new System.EventHandler(this.SearchPROD1C_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataPROD1C)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.DataGridView dataPROD1C;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnok;
+        private System.Windows.Forms.TextBox txtP_NAME3;
+        private System.Windows.Forms.TextBox txtP_NAME;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtP_NAME1;
+        private System.Windows.Forms.TextBox txtP_NO;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbC_NO;
+        private System.Windows.Forms.TextBox txtC_NO;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn P_NO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn P_NAME;
+        private System.Windows.Forms.DataGridViewTextBoxColumn P_NAME1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn P_NAME3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PRICE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn QTYSTORE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn C_NO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BUNIT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CUNIT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TRANS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn K_NO;
+    }
+}

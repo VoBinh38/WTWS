@@ -1,0 +1,1042 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="f1ToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAJISURBVFhH7VXbbtNAEPUL9IVLabzrqH2N2no3rQoFCfFFFf0WQCBu4k/gExACiZsoz/DUB1Ac
+        2wS1MnM2s5GJt3jXQYiHHGlkz+TMzIl3dzZa4r9FoUTVwV6Ptjd6XGIxOIr72pvR5nrMZbrDFmS3FTUB
+        VaHFp3wrXuefumEBAS/5ebSQCFuQ3VZY/re91VV6zkQUm70NpoTBFmS3FXX+nIjPnUTUC/rA8l2WK/GR
+        af6wyey2ot7QZUzzR+fEOSwFLAX8cwFZmgyLVN4tVfye8o9tHcQy1ddMa0eogEpH5+kOeEQ5p7Om86bF
+        CT0fVPvROU47GzaJ3T+iGgxWci1eTHPkhP79k3wYX/++c/kKLNe9G6WST+n3n+DkqXgOwZzuRoiAMpXP
+        DF+LLzT1rnK4gTyNrxHvK7iljh9z2A1fAePtZId4+OzleCh3OXwmxlrsEfcHlmOi1xSHm/AVQJz7hkub
+        jENOZIO+yJU8wLtXjiF4CMBFAx7WmUMUkwdoyK5pXmrx1vBSebtIk5t4L5V4x5QmfAUQJwOv0uICfNqM
+        h6Y4NUTjenM0hF9txRfhk41MEReY4CNgDJ4VkO0mEo0QQ+PfmtNv4FSDtUuIkS0uwLUEtBkTWoYPtgbe
+        bXOgGMpbiP+tJXBuKJx/2umvYHjnsMEsR8k7HGpiSgixeDJ/DOnI9fE12DUIPoZBRoMIDbhEA0GDKAQY
+        q65RjBE9HdN2FMsJOF6jOBTmMkrFQ3zaqRCHhVxGXWGuYy3u8SkoYeZqpk3aXPMo+gU6c3egAjSA1AAA
+        AABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="f1ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 28</value>
+  </data>
+  <data name="f1ToolStripMenuItem.Text" xml:space="preserve">
+    <value>F1. Test</value>
+  </data>
+  <data name="f2ToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAG+SURBVEhL3ZXLSgMxFIaD1xeY5Am6mWTpC7jzAoIgRUHfyEu9rBQFXYgi6gu48AEUqgtRRO1S
+        VOiiNjM7x/9Mz3Q67YxV6Sz0gwNz/uTknCSTRPxvgkJh2NdqwXPliaflI6zKRt/HvnbmqQ93/xkYoAir
+        wALPyNcwiZEltlPob9z25Bk1w2HdCUbFAALXwmAty3UjxwMh+ri5CbR+q+UEEl9zohJp3JwNOq+HAa5a
+        oWQsZxIWZORqoyBnkeV0PNeZ+1bHFKggxH5Y40yxlIQ2Cx0qmPJF1lSxJDvWyG12E1AM4suw+2BEDLIc
+        E1VfN2qMpQ6Q/JyM3Q6sKydpDFiRpRis4yEantM2NKJbAp7Fi6fVPksxaLhHkgN2U+mWgMA4R7BbdmMg
+        vrdvLq05kl5G5mtZI2vV2vcE1S9hrBq7MRDr7Qlwijetds5arMrW1BC3wd1DvkrQuyUy8o7dGIg5b3Le
+        v2lgxBAaHmjjqBKWE/iu2qJ9YTcBV5990AjrqulGBTlcFRFYv+UwSR6XHcFTja7rq55f1xEIih8celx6
+        9eC0Et6w+LtwWvesVjcY0Cejb/wxu0g6++sn848gxCe8mlG2sFPuYQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="f2ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 28</value>
+  </data>
+  <data name="f2ToolStripMenuItem.Text" xml:space="preserve">
+    <value>F2. Add</value>
+  </data>
+  <data name="f3ToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAIASURBVGhD7ZnJTsMwEED7DRD7Dzg46R+wSFwQywWByiYKR5Yvh2shS8tSZqoZFKK4JMF2TOUn
+        jVQ7YztPU0dOOwgEAoHVolBiI1PinJrOwbXxHqjZjWmyFmexeIb4TJV8pG5n4Jq4Nt4D3gt1t4MkniDm
+        FCjzQJetU5Lg9Z+mw3VFl5uTJfI0S8R7aaI5tvNYXlOKNXIlx3VrZ0N5QintwIEwyezHhJYrU1MJjFln
+        CcaljDUJxoWMRqJIVXREKWbQysTynlI640yCsSHjXIIxKYNfTRxbmcu+BGNCpncJ5i8yeglxSClu6SLj
+        nQSjl4nuKOUbbyWYJjLeSzAamY88Ebf/RoLJkuiy9rBX7YvFG8QZDfMTTWXKUaSxOKB0v8lUdFFTBQys
+        xIjS/Acfv3DD1T2BsdgzlOY3SyQ4/JfJk+hKs7Exqn1+bnZNJRYbG89P+Llyzb/KaCTy8tPJe5kmEoxW
+        RskbSumHNhJMrQzsq95kukgw3sjoJF4TsU8pv9K7jAkJBg+NMNa9jEkJZonMmFLMgu8WsIhRCcaZjE0J
+        xrqMCwnGmoxLCca4jOadwtwPykvAf6lgrepBc4Z/dVBKc3IldmDwS2kiq5WoUlOZCZzLtuhyO/JYbMME
+        KONUginJTKAam9TdjWIo91Ilj6npHJAYwXvOLjUDgUBgJRgMvgC+JbDak+Kd/QAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="f3ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 28</value>
+  </data>
+  <data name="f3ToolStripMenuItem.Text" xml:space="preserve">
+    <value>F3. Delete</value>
+  </data>
+  <data name="f4ToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="f4ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 28</value>
+  </data>
+  <data name="f4ToolStripMenuItem.Text" xml:space="preserve">
+    <value>F4. Edit</value>
+  </data>
+  <data name="f5ToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAFSSURBVEhL3ZTPSsNAEMZzFERE3NmKXnqQaja1j1B8BhHE96h6KVU8+TB6EX2JXgTfwpM1Mbu3
+        xpn4UZqWJUkxCP3BQPIxf3eSDdaTpNfSzqhba2jM9gEbu0iNksM9gttq2EhdcrKULfNYYkO6gHs9bETn
+        nGCaJwrpyYXUn5xs74jJs2goMrVdfYawasjoqaEvScDJhpCXsKG+QpHP+PhgF3I5aajv80DuEpIXF9GL
+        +KZG30Eqh4Pe0X0fkhfXVaeY4g1SOez8LUFZr7UJyUt2pLZQIIZUTuMFGj+i2ZINPUPy4gy9im+tJced
+        fcVTTH6L6AHkJfgzvRYf8ZUYyNUo/GiGHuW4snZ7Q2zhR+MCaoSweuCqyBfusUSSz94jukFodRYuO7mX
+        xAqXXZ4cVmsXVeHjepgvstIkZUjn80UamWR9ihR2ws+Q/xbpvJHu/5Eg+AGGVBPZ3gPtdQAAAABJRU5E
+        rkJggg==
+</value>
+  </data>
+  <data name="f5ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 28</value>
+  </data>
+  <data name="f5ToolStripMenuItem.Text" xml:space="preserve">
+    <value>F5. Search</value>
+  </data>
+  <data name="f6ToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAACCSURBVEhL3Y1BCoAwEAP3E37C/7/Nq15WKqFD2hUEO5BDyWQb63Ds2/kmeYbpjWaSZ5hhscrn
+        H9zvavJMQ4unXEmeaWiBogF3WqBowJ0WKBpwpwWKBtxpgaIBd1qgaMCdFigacKcFigbcaYGiAXdaoGgY
+        3q3zQTV5humNZpJnfk/EBWNpewCVDzIgAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="f7ToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAGjSURBVFhH7Va9SgNBGDxfwd0DRayyu5hWC0tbsRTsxEbwFWysRazsRPxpLASLqBAI6AOI4FOI
+        nWDl/YRg4nx3n1x+LnJ7uRwRMjCEbGbmG/bC7jkTjUDqOvg0IuscZw+YvdDVtdA1R/moa5TBcfYgsy/0
+        Jn+1BnmnBaYF/k8BT1ZWAlfthtLs/TIQpomA0+41G5KXMnrWMMOTapnHxoBoB+I22CmJ7UCobR6PrZL6
+        IUU0VvrS3PN4etamkSYqkF/ge++aafD48RdoCl3tOM5MKNVdsl5egW9PVuejOUJfJusl7gD4BtLN2PVH
+        L7dACqcFshe4ac2ptTwkb19WFzMW8Gf1McusQd60zJiWBXCxnOAs/8xC0kaeggusIrznshlG0kYeiwIX
+        6aKkQCiXjO+qrWHES+gGnXZRIOPvAuqcZSSsLGLxBe37tlO3PaEOSYNT7Grw94Twf/jCLESBDPJSxoDW
+        1c80k2XDgdDJeSNC6wO0f81C0pKn0AKhW1n3hdrPQtKSp9ACeVBIAWznIz7PcjH2jlLAXOOZ3o5CyuC4
+        SYTj/AAWXZEORGsVtQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="f7ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 28</value>
+  </data>
+  <data name="f7ToolStripMenuItem.Text" xml:space="preserve">
+    <value>F7. Print</value>
+  </data>
+  <data name="f8ToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAI3SURBVGhD7ZW9btRAFIXdgBAl2BsRhAgURLahykvyI0W8BOnSgXgdqgjR46VAmF3pIB3PnqPZ
+        newNLvxJX7Nzzr0z27haWFg4nPHi9OHQNx+Hrv42dM145/bN76FbfRovqnu4UhlDu7qUC+7atrm+1WM2
+        Q252hpKIhTHZd5vHTAYJEQtjZ2fpY3YGJSIWhtq57pqv49nZA0T2Qw1iESsmNy89/+fBj1FDWMSKyc1L
+        z9mDHqMGsIgVk5uXnqfu/RhVZhErJjcvPZe2qyvEPbJIIlZMbl56bvyDuEeUJiJWTG5eeu5E3KNKLGLF
+        5Oal507EParEIlZMbl567kTco0osYmGonUrEPao08dXjp4geneH1o2dypxAVjyqx6775/PO8PkX8aGz/
+        oM034ovaqUTNo0pzFNf1qNIcxXU9qjRHcV2PKs1RXNejSnMU1/Wo0hzFdT2qNEdxXY8qsdvvyPr85AXi
+        R+fXm5OX+3xPEPeo0sTN1xfRMNbtk+dyN4moR5VYxMJRu1nEPKrEIhaO2s0i5lElFrFw1G4WMY8qsYiF
+        o3aziHlUiUUsHLWbRcyjSixi4ajdLGIeVWIRC0ftZhHzqBKLWDhqN4uYR5VYxMJRu1nEPKrEIhaO2s0i
+        5lElFrFw1G4WMY8qsYiFo3aziHlUWP0WjdqpfrOosPotGrVT/WbZhL5zIRWxcNRu8gYxz9DX70VxXrbN
+        W1zXM/bV/aGrPwx980MO+Z9u79TX77Z3xHUXFhayVNVf0m11iRuwuGUAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="f8ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 28</value>
+  </data>
+  <data name="f8ToolStripMenuItem.Text" xml:space="preserve">
+    <value>F8. Save</value>
+  </data>
+  <data name="f10ToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAIWSURBVEhL3ZXLahRBGIVbY7wkuNGqikgWWQSGrhrc5AUCgrhRFBUTcB9CLirkLUSCIq51oejb
+        RFSUEAyIvoCmu2YSsHL+7jNTmUxPJu1OPyjoOue/FN1V1cn/TZiaOuutecBpklsdZHCaiBemp89wWo/c
+        qXkU+3mw4OEGxdzpH3mq71MaDrJHvFMvO8UwNmhVNdjoaGjyQnJpDQbBz4sEp/PMqgUknaDV10C8LDWL
+        0Dxz1mlVk6fmNot431SzlLvQ6zbo4O3EVegt8TKnblLuJbjkNAK+l0F6iXIP4sngtAfoK/S3w0wySjki
+        O6IISPUHVDhJuQcWqGwAccRb/bGsoeYoR2C8F1PeKaU+jmog4Bsslw3MW0oRmN/EbDVUg1Ifwxq03QXL
+        mC1KEdk1YobJyXOU+hjWIMxcHmNMRikCcUfMcGVinFJtQkOdZ4NflCIQN8VsNy+mlGrz215yRQOnv1KK
+        QHzH7quUaoPr5XFZw7yhFJGtJaa36pNsOcrHJswmp5D/hYu8RznCg7ZVBKT6IeVjg1Wvsfhm5UETcAZu
+        MWi31TTXKA9lx+nryNnD+IOr4gblarCSp2UT05Yr46jXJR5iV2VBZY56QmswTHpWJsg3wfFP1SM5RPID
+        klHsFnzQzJrPnThskvVa3w4Jd5G43S0waMgN4MwdptVDfoeyu/CqXnO1cu97ec5S/Ur+ZH/9y/xHSJJ9
+        nbxSIVdaCCYAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="f10ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 28</value>
+  </data>
+  <data name="f10ToolStripMenuItem.Text" xml:space="preserve">
+    <value>F10. Close</value>
+  </data>
+  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1415, 32</value>
+  </data>
+  <data name="bt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 48</value>
+  </data>
+  <data name="bt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>151, 44</value>
+  </data>
+  <data name="bt.Text" xml:space="preserve">
+    <value>Browsing Button</value>
+  </data>
+  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1398, 673</value>
+  </data>
+  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1390, 641</value>
+  </data>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>PAGE 1</value>
+  </data>
+  <data name="cb1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>878, 398</value>
+  </data>
+  <data name="label29.Location" type="System.Drawing.Point, System.Drawing">
+    <value>809, 441</value>
+  </data>
+  <data name="label29.Size" type="System.Drawing.Size, System.Drawing">
+    <value>370, 24</value>
+  </data>
+  <data name="label29.Text" xml:space="preserve">
+    <value>3. Contract, 4. Foundry, 5. Comprehensive)</value>
+  </data>
+  <data name="label28.Location" type="System.Drawing.Point, System.Drawing">
+    <value>965, 403</value>
+  </data>
+  <data name="label28.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 24</value>
+  </data>
+  <data name="label28.Text" xml:space="preserve">
+    <value>(1. Shopping, 2. DIY,</value>
+  </data>
+  <data name="label27.Size" type="System.Drawing.Size, System.Drawing">
+    <value>147, 24</value>
+  </data>
+  <data name="label27.Text" xml:space="preserve">
+    <value>Product volume:</value>
+  </data>
+  <data name="label26.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 24</value>
+  </data>
+  <data name="label26.Text" xml:space="preserve">
+    <value>Number of orders:</value>
+  </data>
+  <data name="label25.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 24</value>
+  </data>
+  <data name="label25.Text" xml:space="preserve">
+    <value>Buy in batches:</value>
+  </data>
+  <data name="label24.Location" type="System.Drawing.Point, System.Drawing">
+    <value>763, 401</value>
+  </data>
+  <data name="label24.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 24</value>
+  </data>
+  <data name="label24.Text" xml:space="preserve">
+    <value>How to get:</value>
+  </data>
+  <data name="label23.Location" type="System.Drawing.Point, System.Drawing">
+    <value>794, 356</value>
+  </data>
+  <data name="label23.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 24</value>
+  </data>
+  <data name="label23.Text" xml:space="preserve">
+    <value>Last shipping date:</value>
+  </data>
+  <data name="label22.Location" type="System.Drawing.Point, System.Drawing">
+    <value>784, 322</value>
+  </data>
+  <data name="label22.Size" type="System.Drawing.Size, System.Drawing">
+    <value>173, 24</value>
+  </data>
+  <data name="label22.Text" xml:space="preserve">
+    <value>Last purchase date:</value>
+  </data>
+  <data name="label21.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 24</value>
+  </data>
+  <data name="label21.Text" xml:space="preserve">
+    <value>SF inventory:</value>
+  </data>
+  <data name="label20.Location" type="System.Drawing.Point, System.Drawing">
+    <value>799, 282</value>
+  </data>
+  <data name="label20.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 24</value>
+  </data>
+  <data name="label20.Text" xml:space="preserve">
+    <value>Effective quantity:</value>
+  </data>
+  <data name="label19.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 24</value>
+  </data>
+  <data name="label19.Text" xml:space="preserve">
+    <value>PCS inventory:</value>
+  </data>
+  <data name="label18.Location" type="System.Drawing.Point, System.Drawing">
+    <value>790, 234</value>
+  </data>
+  <data name="label18.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 24</value>
+  </data>
+  <data name="label18.Text" xml:space="preserve">
+    <value>Value:</value>
+  </data>
+  <data name="label17.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 24</value>
+  </data>
+  <data name="label17.Text" xml:space="preserve">
+    <value>Inventory base date:</value>
+  </data>
+  <data name="label16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>215, 24</value>
+  </data>
+  <data name="label16.Text" xml:space="preserve">
+    <value>Quantity of inventory KG:</value>
+  </data>
+  <data name="label15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>739, 203</value>
+  </data>
+  <data name="label15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 24</value>
+  </data>
+  <data name="label15.Text" xml:space="preserve">
+    <value>Raw weight:</value>
+  </data>
+  <data name="label14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 24</value>
+  </data>
+  <data name="label14.Text" xml:space="preserve">
+    <value>Price:</value>
+  </data>
+  <data name="label13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>893, 167</value>
+  </data>
+  <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 24</value>
+  </data>
+  <data name="label13.Text" xml:space="preserve">
+    <value>Sales unit:</value>
+  </data>
+  <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 24</value>
+  </data>
+  <data name="label12.Text" xml:space="preserve">
+    <value>Basic unit:</value>
+  </data>
+  <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>147, 24</value>
+  </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>Conversion rate:</value>
+  </data>
+  <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 24</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>Packing unit:</value>
+  </data>
+  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 24</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>Quality:</value>
+  </data>
+  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>866, 104</value>
+  </data>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 24</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>Specifications:</value>
+  </data>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 24</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>English product name:</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>567, 69</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 24</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Chinese name:</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 24</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Product code:</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>151, 24</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Product portfolio:</value>
+  </data>
+  <data name="tb25.Size" type="System.Drawing.Size, System.Drawing">
+    <value>454, 28</value>
+  </data>
+  <data name="tb24.Size" type="System.Drawing.Size, System.Drawing">
+    <value>454, 28</value>
+  </data>
+  <data name="tb22.Size" type="System.Drawing.Size, System.Drawing">
+    <value>452, 28</value>
+  </data>
+  <data name="tb16.Location" type="System.Drawing.Point, System.Drawing">
+    <value>891, 236</value>
+  </data>
+  <data name="tb10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 28</value>
+  </data>
+  <data name="tb7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>287, 133</value>
+  </data>
+  <data name="tb7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>564, 28</value>
+  </data>
+  <data name="tb5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>564, 28</value>
+  </data>
+  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1390, 641</value>
+  </data>
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>PAGE 2</value>
+  </data>
+  <data name="label30.Size" type="System.Drawing.Size, System.Drawing">
+    <value>179, 24</value>
+  </data>
+  <data name="label30.Text" xml:space="preserve">
+    <value>Product Description:</value>
+  </data>
+  <data name="data1C.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1273, 364</value>
+  </data>
+  <data name="SH_NO.HeaderText" xml:space="preserve">
+    <value>Storage</value>
+  </data>
+  <data name="SH_NAME1.HeaderText" xml:space="preserve">
+    <value>Warehouse</value>
+  </data>
+  <data name="C_NAME.HeaderText" xml:space="preserve">
+    <value>Customer ID</value>
+  </data>
+  <data name="P_NAME.HeaderText" xml:space="preserve">
+    <value>Product's name</value>
+  </data>
+  <data name="THICK.HeaderText" xml:space="preserve">
+    <value>Thickness</value>
+  </data>
+  <data name="QTYFT.HeaderText" xml:space="preserve">
+    <value>Number</value>
+  </data>
+  <data name="QTYPIC.HeaderText" xml:space="preserve">
+    <value>Number of Plates</value>
+  </data>
+  <data name="QTYKG.HeaderText" xml:space="preserve">
+    <value>Weight</value>
+  </data>
+  <data name="QTYPACK.HeaderText" xml:space="preserve">
+    <value>Number of Pieces</value>
+  </data>
+  <data name="IN_DATE.HeaderText" xml:space="preserve">
+    <value>Input day</value>
+  </data>
+  <data name="OR_NO.HeaderText" xml:space="preserve">
+    <value>Order Number</value>
+  </data>
+  <data name="OR_NR.HeaderText" xml:space="preserve">
+    <value>Numerical order</value>
+  </data>
+  <data name="K_NAME.HeaderText" xml:space="preserve">
+    <value>Skin</value>
+  </data>
+  <data name="MK_NO1.HeaderText" xml:space="preserve">
+    <value>Order SX</value>
+  </data>
+  <data name="tb29.Location" type="System.Drawing.Point, System.Drawing">
+    <value>195, 138</value>
+  </data>
+  <data name="tb28.Location" type="System.Drawing.Point, System.Drawing">
+    <value>196, 102</value>
+  </data>
+  <data name="tb27.Location" type="System.Drawing.Point, System.Drawing">
+    <value>198, 64</value>
+  </data>
+  <data name="tb26.Location" type="System.Drawing.Point, System.Drawing">
+    <value>199, 26</value>
+  </data>
+  <data name="tabPage4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1390, 641</value>
+  </data>
+  <data name="tabPage4.Text" xml:space="preserve">
+    <value>PAGE LOCK</value>
+  </data>
+  <data name="label51.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 24</value>
+  </data>
+  <data name="label51.Text" xml:space="preserve">
+    <value>Cost value:</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>591, 46</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 24</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Latest cost:</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>62, 121</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 24</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Average costs:</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 24</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Price:</value>
+  </data>
+  <data name="tabPage3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1390, 641</value>
+  </data>
+  <data name="tabPage3.Text" xml:space="preserve">
+    <value>DATE OF MANUFACTURE</value>
+  </data>
+  <data name="label50.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 24</value>
+  </data>
+  <data name="label50.Text" xml:space="preserve">
+    <value>SF/Day</value>
+  </data>
+  <data name="label49.Location" type="System.Drawing.Point, System.Drawing">
+    <value>509, 322</value>
+  </data>
+  <data name="label49.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 24</value>
+  </data>
+  <data name="label49.Text" xml:space="preserve">
+    <value>Day</value>
+  </data>
+  <data name="label48.Location" type="System.Drawing.Point, System.Drawing">
+    <value>509, 287</value>
+  </data>
+  <data name="label48.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 24</value>
+  </data>
+  <data name="label48.Text" xml:space="preserve">
+    <value>Day</value>
+  </data>
+  <data name="label47.Location" type="System.Drawing.Point, System.Drawing">
+    <value>507, 254</value>
+  </data>
+  <data name="label47.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 24</value>
+  </data>
+  <data name="label47.Text" xml:space="preserve">
+    <value>Day</value>
+  </data>
+  <data name="label46.Location" type="System.Drawing.Point, System.Drawing">
+    <value>507, 215</value>
+  </data>
+  <data name="label46.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 24</value>
+  </data>
+  <data name="label46.Text" xml:space="preserve">
+    <value>Day</value>
+  </data>
+  <data name="label45.Location" type="System.Drawing.Point, System.Drawing">
+    <value>507, 178</value>
+  </data>
+  <data name="label45.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 24</value>
+  </data>
+  <data name="label45.Text" xml:space="preserve">
+    <value>Day</value>
+  </data>
+  <data name="label44.Location" type="System.Drawing.Point, System.Drawing">
+    <value>507, 145</value>
+  </data>
+  <data name="label44.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 24</value>
+  </data>
+  <data name="label44.Text" xml:space="preserve">
+    <value>Day</value>
+  </data>
+  <data name="label43.Location" type="System.Drawing.Point, System.Drawing">
+    <value>507, 113</value>
+  </data>
+  <data name="label43.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 24</value>
+  </data>
+  <data name="label43.Text" xml:space="preserve">
+    <value>Day</value>
+  </data>
+  <data name="label42.Location" type="System.Drawing.Point, System.Drawing">
+    <value>507, 75</value>
+  </data>
+  <data name="label42.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 24</value>
+  </data>
+  <data name="label42.Text" xml:space="preserve">
+    <value>Day</value>
+  </data>
+  <data name="label41.Location" type="System.Drawing.Point, System.Drawing">
+    <value>505, 34</value>
+  </data>
+  <data name="label41.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 24</value>
+  </data>
+  <data name="label41.Text" xml:space="preserve">
+    <value>Day</value>
+  </data>
+  <data name="label40.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 24</value>
+  </data>
+  <data name="label40.Text" xml:space="preserve">
+    <value>Packing group:</value>
+  </data>
+  <data name="label39.Size" type="System.Drawing.Size, System.Drawing">
+    <value>147, 24</value>
+  </data>
+  <data name="label39.Text" xml:space="preserve">
+    <value>Finishing group:</value>
+  </data>
+  <data name="label38.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 24</value>
+  </data>
+  <data name="label38.Text" xml:space="preserve">
+    <value>Skin grinding group 2:</value>
+  </data>
+  <data name="label37.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 24</value>
+  </data>
+  <data name="label37.Text" xml:space="preserve">
+    <value>Drying group 2:</value>
+  </data>
+  <data name="label36.Size" type="System.Drawing.Size, System.Drawing">
+    <value>173, 24</value>
+  </data>
+  <data name="label36.Text" xml:space="preserve">
+    <value>Recording group 2:</value>
+  </data>
+  <data name="label35.Size" type="System.Drawing.Size, System.Drawing">
+    <value>222, 24</value>
+  </data>
+  <data name="label35.Text" xml:space="preserve">
+    <value>Leather grinding group 1:</value>
+  </data>
+  <data name="label33.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 24</value>
+  </data>
+  <data name="label33.Text" xml:space="preserve">
+    <value>Drying group 1:</value>
+  </data>
+  <data name="label32.Size" type="System.Drawing.Size, System.Drawing">
+    <value>173, 24</value>
+  </data>
+  <data name="label32.Text" xml:space="preserve">
+    <value>Recording group 1:</value>
+  </data>
+  <data name="label31.Size" type="System.Drawing.Size, System.Drawing">
+    <value>277, 24</value>
+  </data>
+  <data name="label31.Text" xml:space="preserve">
+    <value>Raw material preparation group:</value>
+  </data>
+  <data name="tb38.Location" type="System.Drawing.Point, System.Drawing">
+    <value>607, 282</value>
+  </data>
+  <data name="tb39.Location" type="System.Drawing.Point, System.Drawing">
+    <value>322, 316</value>
+  </data>
+  <data name="tb37.Location" type="System.Drawing.Point, System.Drawing">
+    <value>322, 279</value>
+  </data>
+  <data name="tb36.Location" type="System.Drawing.Point, System.Drawing">
+    <value>322, 246</value>
+  </data>
+  <data name="tb35.Location" type="System.Drawing.Point, System.Drawing">
+    <value>322, 210</value>
+  </data>
+  <data name="tb34.Location" type="System.Drawing.Point, System.Drawing">
+    <value>322, 174</value>
+  </data>
+  <data name="tb33.Location" type="System.Drawing.Point, System.Drawing">
+    <value>322, 139</value>
+  </data>
+  <data name="tb32.Location" type="System.Drawing.Point, System.Drawing">
+    <value>322, 103</value>
+  </data>
+  <data name="tb31.Location" type="System.Drawing.Point, System.Drawing">
+    <value>322, 69</value>
+  </data>
+  <data name="tb30.Location" type="System.Drawing.Point, System.Drawing">
+    <value>322, 31</value>
+  </data>
+  <data name="dataGridViewdulieusanpham.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 374</value>
+  </data>
+  <data name="btnTimeNow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>740, 50</value>
+  </data>
+  <data name="btnTimeNow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>410, 43</value>
+  </data>
+  <data name="btndateNow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>345, 50</value>
+  </data>
+  <data name="btndateNow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>391, 44</value>
+  </data>
+  <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 809</value>
+  </data>
+  <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1415, 26</value>
+  </data>
+  <data name="toolStripStatusLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 20</value>
+  </data>
+  <data name="toolStripStatusLabel1.Text" xml:space="preserve">
+    <value>User:</value>
+  </data>
+  <data name="toolStripStatusLabel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 20</value>
+  </data>
+  <data name="toolStripStatusLabel2.Text" xml:space="preserve">
+    <value>Computer Name:</value>
+  </data>
+  <data name="toolStripStatusLabel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 20</value>
+  </data>
+  <data name="toolStripStatusLabel3.Text" xml:space="preserve">
+    <value>IP Add:</value>
+  </data>
+  <data name="btdong.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAmVJREFUOE99
+        kt1PkmEYxt/zNvsQw48IAVELLUw0xGCC7yvMcqUkRQtJIvs4YBYtG7g+/gIP6h/opLM6abVmB22ttQ7K
+        reXWPCgKEcOP8fK8xOnVc7/OWonc271du+/rdz+fAoUs+cCC57De1A61UCHIw4JByKJvw7vuFvFrJonS
+        wwSUZBwrFYZQT5mOo/QggdJMAsQKa6IbxRt+sKiI4v0o2K0YsvtbtgxZNvOVp2+ieI97ohKUyRGsup0Q
+        0g1GrHl7oFwdBIuIUBJhyLErSOv/Dkmb2lBIXEcxeYF7+lXv6oAd6brGDc+32kbkxKNgFwdQCPVBmTqP
+        PN9JqtWKlPkQ5NuTKE6F1B6LSPjp7MRXreHfXS7wIcueLihhDwpBJ5TYKNjdONidONeBjdqYBxlHBxb2
+        6svf07xWj4yrA4WzLsj+HrAxCSwsce2AfMaFRYcVn2u2gTdjTqNDtu8I2OljkE/ZIZ+0c92LnGTDXI2u
+        MkzxgV9YblhCYagL+RPdaspcrwx78NFkqTzgnaEF2csRsEA//yhWMJ9NzTzpUQ+WJsbxtt5YfsgbQzOW
+        rl2CEvBCdvJnc1uR6baoSVp28k8UHMT3cAiv6/57gVe6JixOcNjvQ952AKz3MBYszZitrleTNNXytlYo
+        I16kxsOY5YwKv9hnxI9IBMpxEfl2buxsw5dmE57tqf2zCmmqUY88xSGvyhArvHc4UfLxD2RugmI5iHmD
+        AU92arack2rUIw95iSFWeF6vR85oRsHUgk8Nejyuqi5/STyoRx7yEkOs2nhapcHL3Vo82rFrW3gzyENe
+        YgRBEH4DWjGXiciZGLcAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btdong.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1280, 49</value>
+  </data>
+  <data name="btdong.Text" xml:space="preserve">
+    <value>CLOSE</value>
+  </data>
+  <data name="btketthuc.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAArpJREFUOE99
+        k2tIU2EYx/dBvxiRsyZOvKAUQhDmQa3o8kH2IZqlorKMlem6kWUDk7QvCpFmZUtTwULzVpaTvNt02TDS
+        mk4znTrzsqGO6drGjrs0Fft30ikcuvzgwHve/8PvvOd934exCUdqkjuHf4Wo1QVHt+mRIjPaU7oMCK/R
+        qpzRBhEdJoQ36vucr3/AKlCHVk1ZoQUwTT1HKmbnndEG6Z/N6Fx0wK9cq3BO0diVN0kUDJMoXFhFvm4F
+        ISUzc85ogwtSA/SU+eGoBf4l6mnn9BbuWePEo0ETihdXINKuIFg0QRdcpP5PYvuJ58ZViEZI7Hk8Q1vi
+        9ltfiTy5AQ/ml3FH7cDenFG6ILlBiw5KkDZuRbVhDRXTVgTmjqkDs0fZv3O31H4ip1ePbPUPZE7aEZQ1
+        RBckvp5FA7mGG0orUkdsKNI5UKSywOf2kMM3XeGy7XJPQHb3Am6q7LiutGF3uoIu4Fdr8IpavmCAhHDY
+        AkE/iQyq+MmMHYfuKzWufFlCpnQelyh54qAFAcJPdEFC+RTKFlfB6zFD0EciUU6CP2DBNdUyDuQOw5XX
+        WZXWPrfE67cgppeE/9VuuoBXqkLh/ApOyEzgfTDizIAN3Hcm+AjlYCfJuK6n2n2EzRpwPy6B02WGb7KU
+        LogrVOIutbuH278jSm5BRIsBbMF7eJ+THl8viBATVxrVOCo1I6zFCC++hC6IyR9Cxjc7wrpIhFbOUQUd
+        NjZfEuSMGYxjtcR58RT2NRkRJNbDM76RLoi+p4BQswbv/El4xraqvU63rR/fFgcriPiaCfi90INdqQMz
+        uo4u4Iq+gNekhQtHTL/jm4Q8JSLLxsB6poVH8SyYJ8V0AevsW7Dimv/ZTIz9paGx9TPYWWfGjhoDmDFv
+        6B/yiKr/bzu7cV4G+ye1wv2cxM5MlIAZWUe1M4PxCwYmpyXP42+rAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btketthuc.Location" type="System.Drawing.Point, System.Drawing">
+    <value>297, 49</value>
+  </data>
+  <data name="btsau.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAjBJREFUOE+d
+        kGtI01EYxv8J5tQUMipbQUT3EiPsYnjJKJA+FBjNIrooItaXIisD6UPQp0wKkyLoopiWZkFSSYTTipnO
+        WsmaXWQOZTpbOqfufv11RkkFYegDD5zDy+95z3OkybSipBvZvlf8uk5dSc1uttX0E66YZkjKcxvtQdh6
+        b4Dw7GmEyCuHaffBOz9k1AwQ8a86a6pH2NEwQnq9hbQHw6TWDpFW+53Nld9IuTtIgSFAlTlAgw0SKwaI
+        3P/675ADTWN4AaNwr3CPePIXsfFrANpckKfzkal2c1rnotQUZHG5kZhDqt8hyQ8t3LbDxcEg541BinsD
+        nNT7OPbZR67Wi0LjIkvtZJPSQbJynON6PwlXDURPhKyvMnN5FIr7AhSKYQjM0XpQvHWzu91FZquDVKWd
+        Dc9sLLxvZW3jOGc+OUi53kNMTitS4g0jF4bgRLeP/I8eDn7wsEftYmebk4wWBxsbbSQ8HmNJnZX4agtS
+        iYnVLU7ylRZm56uRVpUZKDKJrp1esjVudnW42K5yskVsXfdknGW1VuTio2NvDRN2xYR008q8c1ri8tp+
+        VlheqqdgEBRdkKkJkP7GT1KTm5VPHSyqtxFXYSH8mhmptJ+wOxZmFb5n/lGxeUJzCjqYeVhFhLDsSCuR
+        oleUcHSuOIuZVC7gS33E1o0SdaqT+D/h/yqrmRllJuY+GkVWpGPBlOCQRMDSF3ZkZ7uQTxkOaW8L0cU6
+        JMXLacAhhcBJYUn6Aa0XlfBBvzPUAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btsau.Location" type="System.Drawing.Point, System.Drawing">
+    <value>251, 48</value>
+  </data>
+  <data name="bttruoc.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAklJREFUOE+d
+        kVtIVFEUhqcLNU6iRVe7YPNgEEKUUSKRERSBgRjpg1SUlaRGOfriIImhVGYPYSaCVpOEBWYaWD4klRVd
+        yDDNSjPJHLVJmzNnbp6ZM5pfezAoCYzxh/2wYf3fWv9amqk0t1BmXoHE729gmp0lseG6jYiy6QAyJZJq
+        HJj6fay4GCjAYCOh1oHj5zilH1RmGYcDABhl9jc4GfCO89gyxql2L9tuOUejqxwijp3ICpmIEgl9kRV9
+        sZXQo71/wfMcpDWN8MMHd/pGMbSqGN54abSM8mjYx22zypUvXoq7FPLfK8Q/Uwg6/GkCMOOsC8OTEax+
+        s3mMvHaV3Lde0l55yHiukPLUzd4mF7vuOdlaZyeqWma1yU7QoW40IWVOzoliqwq1fWMUitz577xkt3g4
+        IsyJD93suO9iS72TqJt21phkVonLLCu3o03+iGZRuYvKHpU2eZyiTh+FHSo5Apguuu8TU+1pcrOz0UmM
+        WOz6agG4amPlZYnFJTJzEtsmIgQXOch6oWASE+SK7Cdee0gRGZOaFeIeKMQ2uNlY42LtDQfhFXaWXpIJ
+        vWBjZnzrnyXq8m0cFN3OdPlIfekh2W+ul9heM8ymaguR176jL7UQdn6ABQVmdHn9aHa3TD5xUI5EXJ1M
+        ZptKYrOH6PJe9MZOIgq+Em7sIUy8hdmfCT3ejS6tG21Cx2SAX9rMIWKqbBxo8bK5cogQQ8+/Rf/T3HQL
+        6yokYu/amX/SHDjAL92xbyw/PcgS4+D0AH5pUwcJzhiYAqDR/AK1MZyr0vIa2QAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="bttruoc.Location" type="System.Drawing.Point, System.Drawing">
+    <value>203, 48</value>
+  </data>
+  <data name="btdau.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAp9JREFUOE99
+        k2tIk2EYhj+hqCVldFZIscJDo6Zhulx5GprWRC1NIwWjMCUq80doEoQEaYL2w7VclpramrjU0JypM4em
+        pamklVsYta0d26Y5PEzb3WoL+Vh1wfPjvV+44H15buIPAfVay2mRYT69y2jZz9dM2OO/4smRBVLr1D32
+        o41TQj20AHoWgHCBRmmPHaBcl7iF8FVg8FUme2TjmECN+wYgS7oEWqVcYY9JUHLfUcNqZBidB0Jr5TJ7
+        bCOO9xXVVsFFiRl7OZ8dBJTLo/TQe5MY+A7kf1zE1psSuf3KBqtKBo4GODO2AOptKUmwIqM/OKZCime6
+        RWSNzCFxwATPgnGyIJo7iVKlBanDc/AunlgWJHclx3El6DEBJ/tncKTDiJS+GbjnjZAFkWVSFH5ZQsJL
+        E3bdGLO9L7Ix7WjZOITTQGz3FCJa9WB1GBArnoZbzmuygFnyHtekZkS9mIbH1ZEhIqw+PYM/iUr1EkKF
+        BjCe6sBs/YZw6zDbjdiW2UsWhBWOIueDGQfbpqz2V2+cwniivE4ljg+bsfuxBowmHehPtAgSaBDcosem
+        9E6ygFEwiHNv5+DfZIDrhT7J7zCoqpZ1dxyHxSb41qjg/0gFmnX8G/RYn9JGFtDz+5E6OAsfnhZbzoqW
+        P5FWzokpHUJ4lwnuXDl8KhTwrlNhXXwjWRBwRYyE3ll4VKqwIa2dvAd72Jn03G6EWJ+38Y4C27kKrGXx
+        yQK/bBGiOmewma2AS1KzwyIRXqUn9l0SgibQwYWtxMqIh2SBz3khglqMcL71CWviBY6CX+woCt6Z2gBa
+        sxFO4dXkVfbOfg4/8Q8QJWqsYjX8s0yEV5Gva1I9Vh/ikstEYT6wOCcK5olonoU4UP7fOhPU4kAikG2t
+        M0H8BM5qhx5sAUQNAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btdau.Location" type="System.Drawing.Point, System.Drawing">
+    <value>162, 48</value>
+  </data>
+  <data name="btok.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAc9JREFUOE9j
+        GIlgEvNChslcZVAeiaCdYULanZz/pses/jP0MMyEihIJOhjSg05H/a/53/hf9o7yf5H9Mv8ZpnBthsoC
+        wVSB5QyTuXdDeaigjSHI/ZDn/7r/zf+FLkn/V36g9V/iiPx/oFeWQRT0sG/IuW7wv+quF9BpHL0QQSjo
+        YnCw2+Xwv+lPK1izwh2N/5InFP8zTOLaC5ZnmsyzM+ua5v95P6X+z/il9z/zuut/hl6OqWDJLgZ59VVa
+        /7t+tvxXvqH2X+6O6n/Z82pAp3PfA8uDANMU3hmx58X+z/4p87/qhfj/2g9q/xMuO/8HOnu+6Dy5J1O+
+        tv/XuQ3UeEv5v/xl9f+MM3juAJ3OBtUOBT0c/UGnRP93flb4n/NU5n/2G/X/4Rfd/je/KPvv+cT4v9J1
+        +f+KN7T+s8zle8cwgVMRqgsN9HJN9Tgu9r/yvfL/6AdS/1NfGP8PfmL0X++m/H+de0DNC/j/M0zkMIaq
+        xgF6OPscjor/z3qt+t/nrvx/+zsK/80eaP7nXC78n6Gf0wuqigDo45hvcVjyf8RLjf9ujzX/C28U/c/Q
+        x54GlSUS9HFuMDom819xpwQoRkqhoiSCydy7GKZyE0iuDAwAtgbAghVfLswAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btok.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1153, 49</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1415, 835</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAIB8AAAAAAACECAAAFgAAACgAAAAgAAAAPgAAAAEACAAAAAAAXAQAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAMwAAAGYAAACZAAAAzAAAAP8AAAAAMwAAMzMAAGYzAACZMwAAzDMAAP8zAAAAZgAAM2YAAGZm
+        AACZZgAAzGYAAP9mAAAAmQAAM5kAAGaZAACZmQAAzJkAAP+ZAAAAzAAAM8wAAGbMAACZzAAAzMwAAP/M
+        AAAA/wAAM/8AAGb/AACZ/wAAzP8AAP//AAAAADMAMwAzAGYAMwCZADMAzAAzAP8AMwAAMzMAMzMzAGYz
+        MwCZMzMAzDMzAP8zMwAAZjMAM2YzAGZmMwCZZjMAzGYzAP9mMwAAmTMAM5kzAGaZMwCZmTMAzJkzAP+Z
+        MwAAzDMAM8wzAGbMMwCZzDMAzMwzAP/MMwAA/zMAM/8zAGb/MwCZ/zMAzP8zAP//MwAAAGYAMwBmAGYA
+        ZgCZAGYAzABmAP8AZgAAM2YAMzNmAGYzZgCZM2YAzDNmAP8zZgAAZmYAM2ZmAGZmZgCZZmYAzGZmAP9m
+        ZgAAmWYAM5lmAGaZZgCZmWYAzJlmAP+ZZgAAzGYAM8xmAGbMZgCZzGYAzMxmAP/MZgAA/2YAM/9mAGb/
+        ZgCZ/2YAzP9mAP//ZgAAAJkAMwCZAGYAmQCZAJkAzACZAP8AmQAAM5kAMzOZAGYzmQCZM5kAzDOZAP8z
+        mQAAZpkAM2aZAGZmmQCZZpkAzGaZAP9mmQAAmZkAM5mZAGaZmQCZmZkAzJmZAP+ZmQAAzJkAM8yZAGbM
+        mQCZzJkAzMyZAP/MmQAA/5kAM/+ZAGb/mQCZ/5kAzP+ZAP//mQAAAMwAMwDMAGYAzACZAMwAzADMAP8A
+        zAAAM8wAMzPMAGYzzACZM8wAzDPMAP8zzAAAZswAM2bMAGZmzACZZswAzGbMAP9mzAAAmcwAM5nMAGaZ
+        zACZmcwAzJnMAP+ZzAAAzMwAM8zMAGbMzACZzMwAzMzMAP/MzAAA/8wAM//MAGb/zACZ/8wAzP/MAP//
+        zAAAAP8AMwD/AGYA/wCZAP8AzAD/AP8A/wAAM/8AMzP/AGYz/wCZM/8AzDP/AP8z/wAAZv8AM2b/AGZm
+        /wCZZv8AzGb/AP9m/wAAmf8AM5n/AGaZ/wCZmf8AzJn/AP+Z/wAAzP8AM8z/AGbM/wCZzP8AzMz/AP/M
+        /wAA//8AM///AGb//wCZ//8AzP//AP///wAAAAAADQ0NABoaGgAoKCgANTU1AENDQwBQUFAAXV1dAGtr
+        awB4eHgAhoaGAJOTkwChoaEArq6uALu7uwDJyckA1tbWAOTk5ADx8fEA////AAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA19fXybvX19fX19fQu5eXl5eXl5fJ0NfX19fX0MLX19fX17vJwpe7wryXu5eXu9DX19e7l5eX
+        l7u8u5e7u8LX19eX19fQu5eXl5eXl5e70NfX17uXl5eXl5eXl7vXu7vXl9fX19fCl5eXl5eXl7vQ19fX
+        l5eXl5eXl5eX19fXwru70NfX19C7l5eXl5eXu9HX19eXl5eXl5eXl7vX19fQwteX19fX18mXl5eXl5e7
+        0dfX15eXl5eXl5eX19fX15fX18LC19fX18KXl5eXl7vX19fXl5eXl5eXl9DX19fJwtfX0LvJ19fX17uX
+        l5eXu9fX19eXl5eXl5fC19fX0LvX19fXu7vQ19fX17yXl5e719fX15eXl5eXydfX19C7w9fX19fQl5fX
+        19fX0JeXl7vX19fXl5eXl8LX19fXl5fQ19fX19eXl5fQ19fX18K7l9fX19eXl5fQ19fX15eXl9fX19fX
+        17uXl7vQ19fX19C719fX15fC19fX19e7l5fC19fX19fXwpeXl7vQ19fX19fX19fX19fX19fXl5eXl8PX
+        19fX19fJl5eXl5e819fX19fX19fX19fXyZeXl5eXydfX19fX18mXl5eXl5eX0NfX19fX19fQyZeXl5eX
+        l5fQ19fX19fX0JeXl5eXl5eXl9DQ0NDQ0MK7l5eXl5eXu9DX19fX19fQl5eXl5eXl8nX0JeXl5fQ18mX
+        l5eXl5eX0NfX19fX19CXl5eXl8LX19fXybuXydfX19eXu5eXl5fQ19fX19fXyZeXl5fJ19fX19fXl5fX
+        19fX19fJu5eXl8nX19fX19fCl5eXl9fX19fX19fCu9fX19fX19fCu5eXwtfX19fX17uXl7vX19fXwsLX
+        18nJ19fQydfX19fDl5e719fX19fXl5eX19fX18m7l9fX19fX0LuXwtfX19fCl5fX19fX19eXl8nX19fJ
+        l5e70NfX19fQu5eXydfX19eXu9DX19fXyZe719fXybuXl5fQ19fX19CXl5eXwtfX18mXydfX19e8u9DX
+        19C7l5eXl9DX19fX0JeXl5eX19fX17uX19fX17vC19fXwpeXl5eX0NfX19fQl5eXl5fC19fX0LvX19fJ
+        l9fX19C7l5eXl5fK19fX19CXl5eXl7vQ19fXycLX18m7wtfXwpeXl5eXl8nX19fX0JeXl5eXl8LX19C7
+        wtfX19fCl9CXl5eXl5eXydfX19fQl5eXl5eXu9DCu9DX19fX19fXwrvJ0NDJl5fJ19fX19CXl5fCycK7
+        l9DX19fX19fX19fX19fX19fXu5eXl5eXl5fD19fX19fX19fX19cAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>PRODUCT DATA MANAGEMENT (CUSTOMERS)</value>
+  </data>
+</root>

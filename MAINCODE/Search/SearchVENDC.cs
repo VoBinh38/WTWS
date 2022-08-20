@@ -1,0 +1,112 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+
+namespace PURCHASE.MAINCODE.Search
+{
+    public partial class SearchVENDC : Form
+    {
+        DataProvider con = new DataProvider();
+        DataTable dt;
+
+        public class Getitem
+        {
+            public string C_NO { get; set; } 
+            public string CAL_YM { get; set; }
+        }
+        public class SetItem
+        {
+            public static string CAL_YM;
+        }
+        public static List<Getitem> ListItem = new List<Getitem>();
+        public SearchVENDC()
+        {
+            InitializeComponent();
+        }
+
+        private void txtC_NO_TextChanged(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+        public void LoadData()
+        {
+            string sql = "Select C_NO,C_NAME,BOSS,SPEAK,ACCOUNT,NUMBER,TEL1 FROM VENDC where 1=1";
+            if(!string.IsNullOrEmpty(txtC_NO.Text))
+            {
+                sql = sql + " AND C_NO LIKE '"+ txtC_NO.Text +"%'";
+            }
+            if (!string.IsNullOrEmpty(txtC_NAME.Text))
+            {
+                sql = sql + " AND C_NAME LIKE '%" + txtC_NAME.Text + "%'";
+            }
+            dt = new DataTable();
+            dt = con.readdata(sql);
+            DGV1.DataSource = dt;
+        }
+
+        private void DGV1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int cur = DGV1.CurrentRow.Index;
+            if (Convert.ToBoolean(DGV1.Rows[cur].Cells[0].Value) == false)
+            {
+                DGV1.Rows[cur].SetValues(true);
+            }
+            else
+            {
+                DGV1.Rows[cur].SetValues(false);
+            }
+        }
+
+        private void btnSelectAll_Click(object sender, EventArgs e)
+        {
+            foreach(DataGridViewRow item in DGV1.Rows)
+            {
+                item.SetValues(true);
+            }
+        }
+
+        private void btnUnSelectAll_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow item in DGV1.Rows)
+            {
+                item.SetValues(false);
+            }
+        }
+
+        private void SearchVENDC_Load(object sender, EventArgs e)
+        {
+            ListItem.Clear();
+            LoadData();
+        }
+
+        private void txtC_NAME_TextChanged(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
+        private void btok_Click(object sender, EventArgs e)
+        {
+            var da = DGV1.Rows.Cast<DataGridViewRow>().Where(x => Convert.ToBoolean(x.Cells[0].Value) == true).ToList();
+
+            foreach (var item in da)
+            {
+                ListItem.Add(new Getitem
+                {
+                    C_NO = DGV1.Rows[item.Index].Cells["C_NO"].Value.ToString(),
+                    CAL_YM = SetItem.CAL_YM,
+                });
+            }
+            this.Close();
+        }
+
+        private void btdong_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+    }
+}

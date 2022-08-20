@@ -1,0 +1,93 @@
+﻿
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+
+namespace PURCHASE.MAINCODE.Modun4.Search
+{
+    public partial class frmSearchCOMHC : Form
+    {
+        DataProvider conn = new DataProvider();
+        DataTable dt;
+        public frmSearchCOMHC()
+        {
+            InitializeComponent();
+        }
+
+        private void frmSearchCOMHC_Load(object sender, EventArgs e)
+        {
+            txtWS_DATE.Text = Form4B.PassDataSearch.WS_DATE;
+            txtC_NO.Text = Form4B.PassDataSearch.C_NO;
+            txtWS_NO.Text = Form4B.PassDataSearch.WS_NO;
+            LoadData();
+        }
+
+        public class GetDataLoad
+        {
+            public static DataTable GetData;
+            public static int index;
+        }
+        public void LoadData()
+        {
+            string sql = "SELECT * FROM COMHC where 1 = 1";
+            if (!string.IsNullOrEmpty(txtWS_NO.Text))
+            {
+                sql = sql + " AND WS_NO = '" + txtWS_NO.Text + "'";
+            }
+            if (!string.IsNullOrEmpty(txtC_NO.Text))
+            {
+                sql = sql + " AND C_NO Like '%" + txtC_NO.Text + "'%";
+            }
+            if (!string.IsNullOrEmpty(txtWS_DATE.Text))
+            {
+                sql = sql + " AND WS_DATE = '" + txtWS_DATE.Text + "'";
+            }
+            sql = sql + " ORDER BY WS_DATE DESC,WS_NO DESC";
+            dt = conn.readdata(sql);
+            foreach (DataRow item in dt.Rows)
+            {
+                item["WS_DATE"] = conn.formatstr2(item["WS_DATE"].ToString()); 
+            }
+                DGV1.DataSource = dt;
+        }
+        private void txtWS_NO_TextChanged(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
+        private void txtWS_DATE_TextChanged(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
+        private void txtC_NO_TextChanged(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
+        private void btnok_Click(object sender, EventArgs e)
+        {
+            GetDataLoad.GetData = dt;
+            GetDataLoad.index = DGV1.CurrentRow.Index;
+            Form4B.PassDataSearch.WS_DATE = txtWS_DATE.Text;
+            Form4B.PassDataSearch.WS_NO = txtWS_NO.Text;
+            Form4B.PassDataSearch.C_NO = txtC_NO.Text;
+            this.Close();
+        }
+
+        private void DGV1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            GetDataLoad.GetData = dt;
+            GetDataLoad.index = DGV1.CurrentRow.Index;
+            Form4B.PassDataSearch.WS_DATE = txtWS_DATE.Text;
+            Form4B.PassDataSearch.WS_NO = txtWS_NO.Text;
+            Form4B.PassDataSearch.C_NO = txtC_NO.Text;
+            this.Close();
+        }
+    }
+}

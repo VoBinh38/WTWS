@@ -1,0 +1,351 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+
+using LibraryCalender;
+using PURCHASE.MAINCODE.Search;
+
+namespace PURCHASE.MAINCODE.Modun4
+{
+    public partial class Form4B : Form
+    {
+        DataProvider conn = new DataProvider();
+        DataTable dt = new DataTable();
+        BindingSource bindingSource;
+        public Form4B()
+        {
+            InitializeComponent();
+        }
+        private void ShowTextBox()
+        {
+            this.txtWS_DATE.Text = currentRow["WS_DATE"].ToString();
+            this.txtM_KIND.Text = currentRow["M_KIND"].ToString();
+            this.txtWS_NO.Text = currentRow["WS_NO"].ToString();
+            this.txtC_NO.Text = currentRow["C_NO"].ToString();
+            this.txtC_NAME.Text = currentRow["C_NAME"].ToString();
+            this.txtINV_NO.Text = currentRow["INV_NO"].ToString();
+            this.txtFOB_DATE.Text = currentRow["FOB_DATE"].ToString();
+
+            this.txtCAL_YM.Text = currentRow["CAL_YM"].ToString();
+            this.txtTOTAL.Text = currentRow["TOTAL"].ToString();
+            this.txtM_TRAN_R.Text = currentRow["M_TRAN_R"].ToString();
+
+        }
+
+        private void LoadData()
+        {
+            string sql = "SELECT top 50 * FROM COMHC ORDER BY WS_DATE DESC,WS_NO DESC";
+            dt = conn.readdata(sql);
+            bindingSource = new BindingSource();
+            bindingSource.DataSource = dt;
+        }
+
+        private void txtWS_NO_TextChanged(object sender, EventArgs e)
+        {
+            string sql = "SELECT NR,COMBC.C_NO,P_NO,P_NAME,P_NAME1,P_NAME3,BQTY,BUNIT,PRICE,AMOUNT,DEPT_NAME,MEMO1,OUTBQTY,COMHC.OVER0" +
+                " FROM COMBC JOIN COMHC ON COMBC.WS_NO = COMHC.WS_NO WHERE COMBC.WS_NO = '" + txtWS_NO.Text + "'";
+            DataTable data = conn.readdata(sql);
+            DGV1.DataSource = data;
+            Loadcb(currentRow["M_TRAN"].ToString());
+        }
+
+        public DataRow currentRow
+        {
+            get
+            {
+                int position = this.BindingContext[bindingSource].Position;
+                if (position > -1)
+                {
+                    return ((DataRowView)bindingSource.Current).Row;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+        }
+        private void Form4B_Load(object sender, EventArgs e)
+        {
+            LoadData();
+            ShowTextBox();
+        }
+        public void Loadcb(string M_NO)
+        {
+            string wheres = "";
+            if (f2ToolStripMenuItem.Checked == false)
+            {
+                wheres = " AND M_NO = '" + M_NO + "'";
+            }
+            string sql = "SELECT DISTINCT M_NO,M_NAME FROM MONEYT where 1=1 " + wheres + "";
+            DataTable data = conn.readdata(sql);
+            cbM_TRAN.DataSource = data;
+            cbM_TRAN.DisplayMember = "M_NAME";
+            cbM_TRAN.ValueMember = "M_NO";
+        }
+
+        private void btsau_Click(object sender, EventArgs e)
+        {
+            bindingSource.MoveNext();
+            ShowTextBox();
+            btdau.Enabled = true;
+            bttruoc.Enabled = true;
+            btsau.Enabled = true;
+            btketthuc.Enabled = true;
+        }
+
+        private void btketthuc_Click(object sender, EventArgs e)
+        {
+            bindingSource.MoveLast();
+            ShowTextBox();
+            btdau.Enabled = true;
+            bttruoc.Enabled = true;
+            btsau.Enabled = false;
+            btketthuc.Enabled = false;
+        }
+
+        private void bttruoc_Click(object sender, EventArgs e)
+        {
+            bindingSource.MovePrevious();
+            ShowTextBox();
+
+            btdau.Enabled = true;
+            bttruoc.Enabled = true;
+            btsau.Enabled = true;
+            btketthuc.Enabled = true;
+        }
+
+        private void btdau_Click(object sender, EventArgs e)
+        {
+            bindingSource.MoveFirst();
+            ShowTextBox();
+
+            btdau.Enabled = false;
+            bttruoc.Enabled = false;
+            btsau.Enabled = true;
+            btketthuc.Enabled = true;
+        }
+
+        private void txtM_KIND_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (f2ToolStripMenuItem.Checked == true)
+            {
+                if (txtM_KIND.Text == "8")
+                {
+                    txtM_KIND.Text = "1";
+                }
+                else
+                {
+                    txtM_KIND.Text = (int.Parse(txtM_KIND.Text) + 1).ToString();
+                }
+            }
+        }
+
+        private void f2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btnok.Visible = true;
+            btnClose.Visible = true;
+
+            f2ToolStripMenuItem.Checked = true;
+            txtWS_DATE.Text = DateTime.Now.ToString("yyyy/MM/dd");
+            txtM_KIND.Text = "1";
+            txtINV_NO.Text = "N";
+            txtC_NO.Text = "";
+            txtC_NAME.Text = "";
+            txtWS_NO.Text = "";
+
+            DGV1.Refresh();
+            cbM_TRAN.Enabled = true;
+        }
+
+        private void txtM_KIND_TextChanged(object sender, EventArgs e)
+        {
+            if (f2ToolStripMenuItem.Checked == true)
+            {
+                switch (txtM_KIND.Text)
+                {
+                    case "1":
+                        label3.Text = "化 料 - 台 灣";
+                        break;
+                    case "2":
+                        label3.Text = "化料-大陸";
+                        break;
+                    case "3":
+                        label3.Text = "開狀櫃化料-台灣";
+                        break;
+                    case "4":
+                        label3.Text = "總料-台灣";
+                        break;
+                    case "5":
+                        label3.Text = "總料-大陸";
+                        break;
+                    case "6":
+                        label3.Text = "化料-越南";
+                        break;
+                    case "7":
+                        label3.Text = "總料-越南";
+                        break;
+                    case "8":
+                        label3.Text = "化料-越南轉廠";
+                        break;
+                }
+            }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            LoadData();
+            ShowTextBox();
+            btnok.Visible = false;
+            btnClose.Visible = false;
+            cbM_TRAN.Enabled = false;
+        }
+
+        private void txtFOB_DATE_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (f2ToolStripMenuItem.Checked == true)
+            {
+                LibraryCalender.FromCalender from = new LibraryCalender.FromCalender();
+                from.ShowDialog();
+                txtFOB_DATE.Text = FromCalender.getDate.ToString("yyyy/MM/dd");
+            }
+        }
+
+        private void txtWS_DATE_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (f2ToolStripMenuItem.Checked == true)
+            {
+                LibraryCalender.FromCalender from = new LibraryCalender.FromCalender();
+                from.ShowDialog();
+                txtWS_DATE.Text = FromCalender.getDate.ToString("yyyy/MM/dd");
+            }
+        }
+
+        private void txtCAL_YM_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (f2ToolStripMenuItem.Checked == true)
+            {
+                LibraryCalender.FromCalender from = new LibraryCalender.FromCalender();
+                from.ShowDialog();
+                txtWS_DATE.Text = FromCalender.getDate.ToString("yyyy/MM");
+            }
+        }
+
+        private void cbM_TRAN_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            txtM_TRAN_R.Text = "";
+        }
+
+        private void txtC_NO_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            SearchVENDC1B frm = new SearchVENDC1B();
+            frm.ShowDialog();
+
+            txtC_NO.Text = SearchVENDC1B.getDataTable.C_NO;
+            txtC_NAME.Text = SearchVENDC1B.getDataTable.C_NAME;
+        }
+        string STT = "";
+        private void DGV1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int Cur = int.Parse(DGV1.CurrentCell.ColumnIndex.ToString());
+            if (Cur == 1)
+            {
+                SearchVENDC1B frm = new SearchVENDC1B();
+                frm.ShowDialog();
+                this.DGV1[1, DGV1.CurrentRow.Index].Value = SearchVENDC1B.getDataTable.C_NO;
+            }
+            else if (Cur == 2)
+            {
+                DataGridViewRow dr = new DataGridViewRow();
+                int NR1 = 1;
+                if (DGV1.RowCount > 0)
+                {
+                    NR1 = DGV1.RowCount + 1;
+                }
+
+                SearchPROD1C frm = new SearchPROD1C();
+                SearchPROD1C.SetC_NO.C_NO = txtC_NO.Text;
+                frm.ShowDialog();
+                DataTable dataTable = (DataTable)DGV1.DataSource;
+                foreach (var item in SearchPROD1C.GetListData.lisdata)
+                {
+                    STT = NR1.ToString("D" + 3);
+                    DataRow drToAdd = dataTable.NewRow();
+                    drToAdd["NR"] = STT;
+                    drToAdd["C_NO"] = item.C_NO;
+                    drToAdd["P_NO"] = item.P_NO;
+                    drToAdd["P_NAME"] = item.P_NAME;
+                    drToAdd["P_NAME1"] = item.P_NAME1;
+                    drToAdd["P_NAME3"] = item.P_NAME3;
+                    drToAdd["BQTY"] = 0;
+                    drToAdd["BUNIT"] = item.BUNIT;
+                    drToAdd["PRICE"] = item.PRICE;
+                    drToAdd["AMOUNT"] = 0;
+                    drToAdd["MEMO1"] = "";
+                    drToAdd["OUTBQTY"] = 0;
+                    drToAdd["OVER0"] = "N";
+                    dataTable.Rows.Add(drToAdd);
+                    NR1++;
+                }
+            }
+        }
+
+        private void DGV1_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (f4ToolStripMenuItem.Checked == true || f2ToolStripMenuItem.Checked == true)
+            {
+                if (e.Button == MouseButtons.Right)
+                {
+                    conn.CreateMenuStrip(e, DGV1, Mouse_Click);
+                }
+            }
+        }
+
+        private void Mouse_Click(object sender, ToolStripItemClickedEventArgs e)
+        {
+            switch (e.ClickedItem.Name.ToString())
+            {
+                case "Insert":
+                    DataGridViewRow dr = new DataGridViewRow();
+                    int NR1 = 1;
+                    if (DGV1.RowCount > 0)
+                    {
+                        NR1 = DGV1.RowCount + 1;
+                    }
+
+                    SearchPROD1C frm = new SearchPROD1C();
+                    SearchPROD1C.SetC_NO.C_NO = txtC_NO.Text;
+                    frm.ShowDialog();
+                    DataTable dataTable = (DataTable)DGV1.DataSource;
+                    foreach (var item in SearchPROD1C.GetListData.lisdata)
+                    {
+                        STT = NR1.ToString("D" + 3);
+                        DataRow drToAdd = dataTable.NewRow();
+                        drToAdd["NR"] = STT;
+                        drToAdd["C_NO"] = item.C_NO;
+                        drToAdd["P_NO"] = item.P_NO;
+                        drToAdd["P_NAME"] = item.P_NAME;
+                        drToAdd["P_NAME1"] = item.P_NAME1;
+                        drToAdd["P_NAME3"] = item.P_NAME3;
+                        drToAdd["BQTY"] = 0;
+                        drToAdd["BUNIT"] = item.BUNIT;
+                        drToAdd["PRICE"] = item.PRICE;
+                        drToAdd["AMOUNT"] = 0;
+                        drToAdd["MEMO1"] = "";
+                        drToAdd["OUTBQTY"] = 0;
+                        drToAdd["OVER0"] = "N";
+                        dataTable.Rows.Add(drToAdd);
+                        NR1++;
+                    }
+                    break;
+                case "Delele":
+                    break;
+            }
+        }
+    }
+}

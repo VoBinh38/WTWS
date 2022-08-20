@@ -1,0 +1,95 @@
+﻿using System;
+using System.Data;
+using System.Windows.Forms;
+
+
+namespace PURCHASE.MAINCODE.Modun1
+{
+    public partial class frmSearchMemo : Form
+    {
+        DataProvider con = new DataProvider();
+        public frmSearchMemo()
+        {
+            this.ShowInTaskbar = false;
+            con.choose_languege();
+            InitializeComponent();
+        }
+
+        private void frmSearchMemo_Load(object sender, EventArgs e)
+        {
+            loadDGV();
+        }
+        private void loadDGV()
+        {
+            string str1 = "SELECT M_NO, M_NAME FROM MEMO WHERE 1=1";
+            if(!string.IsNullOrEmpty(getMeMo.M_NO))
+            {
+                str1 = str1 + " AND M_NO ='" + getMeMo.M_NO + "'";
+            }
+            str1 = str1 + " ORDER BY m_NO";
+            DataTable dt = con.readdata(str1);
+            if (dt != null)
+            {
+                con.FormatDGV(DGV2, dt);
+            }
+        }
+        private void Searching()
+        {
+            try
+            {
+                string str2 = "SELECT M_NO, M_NAME FROM MEMO WHERE 1=1";
+                string Ma = txtMaCumTu.Text;
+                string ND = txtNoiDung.Text;
+                if (Ma == "" && ND == "")
+                    str2 = str2 + "";
+                if (Ma != "")
+                    str2 = str2 + " AND M_NO LIKE '" + Ma + "%' ";
+                if (ND != "")
+                    str2 = str2 + " AND M_NAME LIKE '" + ND + "%' ";
+                DataTable dt = con.readdata(str2);
+                if (dt != null)
+                {
+                    con.FormatDGV(DGV2, dt);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+        public class getMeMo
+        {
+            public static string M_NO;
+            public static string M_NAME;
+        }
+        private void txtMaCumTu_TextChanged(object sender, EventArgs e)
+        {
+            Searching();
+        }
+
+        private void txtNoiDung_TextChanged(object sender, EventArgs e)
+        {
+            Searching();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            getMeMo.M_NO = DGV2.CurrentRow.Cells[0].Value.ToString();
+            getMeMo.M_NAME = DGV2.CurrentRow.Cells[1].Value.ToString();
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void DGV2_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            getMeMo.M_NO = DGV2.CurrentRow.Cells[0].Value.ToString();
+            getMeMo.M_NAME = DGV2.CurrentRow.Cells[1].Value.ToString();
+            this.Close();
+        }
+    }
+}

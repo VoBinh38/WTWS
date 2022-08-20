@@ -1,0 +1,821 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="f1ToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAkhJREFUWEft
+        Vdtu00AQ9Qv0hUtpvOuofY3aejetCgUJ8UUV/RZAIG7iT+ATEAKJmyjP8NQHUBzbBLUyczazkYm3eNdB
+        iIccaWTP5MzMiXd3Nlriv0WhRNXBXo+2N3pcYjE4ivvam9HmesxlusMWZLcVNQFVocWnfCte55+6YQEB
+        L/l5tJAIW5DdVlj+t73VVXrORBSbvQ2mhMEWZLcVdf6ciM+dRNQL+sDyXZYr8ZFp/rDJ7Lai3tBlTPNH
+        58Q5LAUsBfxzAVmaDItU3i1V/J7yj20dxDLV10xrR6iASkfn6Q54RDmns6bzpsUJPR9U+9E5TjsbNond
+        P6IaDFZyLV5Mc+SE/v2TfBhf/75z+Qos170bpZJP6fef4OSpeA7BnO5GiIAylc8MX4svNPWucriBPI2v
+        Ee8ruKWOH3PYDV8B4+1kh3j47OV4KHc5fCbGWuwR9weWY6LXFIeb8BVAnPuGS5uMQ05kg77IlTzAu1eO
+        IXgIwEUDHtaZQxSTB2jIrmleavHW8FJ5u0iTm3gvlXjHlCZ8BRAnA6/S4gJ82oyHpjg1RON6czSEX23F
+        F+GTjUwRF5jgI2AMnhWQ7SYSjRBD49+a02/gVIO1S4iRLS7AtQS0GRNahg+2Bt5tc6AYyluI/60lcG4o
+        nH/a6a9geOewwSxHyTscamJKCLF4Mn8M6cj18TXYNQg+hkFGgwgNuEQDQYMoBBirrlGMET0d03YUywk4
+        XqM4FOYySsVDfNqpEIeFXEZdYa5jLe7xKShh5mqmTdpc8yj6BTpzd6ACNIDUAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="f1ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 28</value>
+  </data>
+  <data name="f1ToolStripMenuItem.Text" xml:space="preserve">
+    <value>F1. Query</value>
+  </data>
+  <data name="f2ToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAqlJREFUWEft
+        ls1r1EAYxuMn4kFkM9nVgti6M9lqEUE9CHoQPOhFjx6KqPhxElHBj5MIBelBUMS/QBDx4yB68AMUEUGw
+        B8WDitVTT+LHoW43ybbS+LzZZ3VLtUmmVSr0B8Nmn5n3mXcmkzdxZvgviB1nVk1V1odKnwmVfz30zLNQ
+        mSehpy9Hrn8oXNyxnEOnnkjp7ZjsNVo8UQuUuV13/U6GTZ64rW0hjK+2TFLHDtzFRCdw3R26/h789kTK
+        vGgZMyw7Qgt7OPlzmo5gkgtDxY4Su8dRU3otbs09jo8x/hy77MBKr9FsMCrqrZQnRM5J44xwNzyzl135
+        CDy9kyYj2OYtlDMTen4v44dqauVSytnAKmYj8K0YBK65SDkXsbN5LuLfWHkEBb1BAtHCaqlcpJybll38
+        jEXNoZxO6OqzSebK3KFkRdzevgA+1SQJz99EOZ1I+TeSBFx9ipI18HncSEDvp5QOAp4mQa6/m5I18LmS
+        eClzmlI6GPywEeQfpGRN5Jqb4oWDeJJSOghoZt1DyRp49CVert5FKZ1A6WNMoI+SFdUl2oPHd/GqF/Qq
+        yumg6pWZwOhw0V9DOTd8X4hPP6XsyAsnCfbMAymvlDPD1X8Vj8gzRyhnp17qXI3gZPuktlPOROx0zcfq
+        XzZizXv5z658tJwFKSS9UqLZ9UcGF3UVWl7No3hD7mCXHShK55tJYFWvpLxKhWP3T6Rky6OGcZ+ak/N3
+        ICr5KzjMDlSxfTD6RkNpuNaPpGLiS+kWP814u6Tpd5FX3obrD9Q+5noKfkeyQk9fwmRffk00rvXjwB2O
+        nXXzJCYolJdBm7okBHmrBcXKRvkUwy05jnNyFObdkapUOGQMfyWJvEyLJFjcBpjE5A+mDWOScM19yv+W
+        RhLy5ewfoDTDdMBxfgARt6SHqltyzAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="f2ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 28</value>
+  </data>
+  <data name="f2ToolStripMenuItem.Text" xml:space="preserve">
+    <value>F2. Preview</value>
+  </data>
+  <data name="f9ToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAgBJREFUaEPt
+        mclOwzAQQPsNEPsPODjpH7BIXBDLBYHKJgpHli+HayFLy1JmqhkUorgkwXZM5SeNVDtjO09TR047CAQC
+        gdWiUGIjU+Kcms7BtfEeqNmNabIWZ7F4hvhMlXykbmfgmrg23gPeC3W3gySeIOYUKPNAl61TkuD1n6bD
+        dUWXm5Ml8jRLxHtpojm281heU4o1ciXHdWtnQ3lCKe3AgTDJ7MeElitTUwmMWWcJxqWMNQnGhYxGokhV
+        dEQpZtDKxPKeUjrjTIKxIeNcgjEpg19NHFuZy74EY0KmdwnmLzJ6CXFIKW7pIuOdBKOXie4o5RtvJZgm
+        Mt5LMBqZjzwRt/9GgsmS6LL2sFfti8UbxBkN8xNNZcpRpLE4oHS/yVR0UVMFDKzEiNL8Bx+/cMPVPYGx
+        2DOU5jdLJDj8l8mT6EqzsTGqfX5udk0lFhsbz0/4uXLNv8poJPLy08l7mSYSjFZGyRtK6Yc2EkytDOyr
+        3mS6SDDeyOgkXhOxTym/0ruMCQkGD40w1r2MSQlmicyYUsyC7xawiFEJxpmMTQnGuowLCcaajEsJxriM
+        5p3C3A/KS8B/qWCt6kFzhn91UEpzciV2YPBLaSKrlahSU5kJnMu26HI78lhswwQo41SCKclMoBqb1N2N
+        Yij3UiWPqekckBjBe84uNQOBQGAlGAy+AL4lsNqT4p39AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="f9ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 28</value>
+  </data>
+  <data name="f9ToolStripMenuItem.Text" xml:space="preserve">
+    <value>F9. Close</value>
+  </data>
+  <data name="textBox1.Text" xml:space="preserve">
+    <value>PRINT PRODUCT INFORMATION</value>
+  </data>
+  <data name="label17.Location" type="System.Drawing.Point, System.Drawing">
+    <value>250, 330</value>
+  </data>
+  <data name="label17.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 24</value>
+  </data>
+  <data name="label17.Text" xml:space="preserve">
+    <value>End stock number:</value>
+  </data>
+  <data name="label16.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 289</value>
+  </data>
+  <data name="label16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>334, 24</value>
+  </data>
+  <data name="label16.Text" xml:space="preserve">
+    <value>Please enter the starting stock number:</value>
+  </data>
+  <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>181, 244</value>
+  </data>
+  <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>237, 24</value>
+  </data>
+  <data name="label12.Text" xml:space="preserve">
+    <value>Termination product name:</value>
+  </data>
+  <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>112, 198</value>
+  </data>
+  <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>306, 24</value>
+  </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>Please enter product name starting:</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>169, 152</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>255, 24</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Termination product number:</value>
+  </data>
+  <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>69, 109</value>
+  </data>
+  <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>355, 24</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>Please enter the starting product number:</value>
+  </data>
+  <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>195, 64</value>
+  </data>
+  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 24</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>Termination item number:</value>
+  </data>
+  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>107, 18</value>
+  </data>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>326, 24</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>Please enter the starting item number:</value>
+  </data>
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>LIST ||</value>
+  </data>
+  <data name="label23.Location" type="System.Drawing.Point, System.Drawing">
+    <value>209, 176</value>
+  </data>
+  <data name="label23.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 24</value>
+  </data>
+  <data name="label23.Text" xml:space="preserve">
+    <value>End provider number:</value>
+  </data>
+  <data name="label22.Location" type="System.Drawing.Point, System.Drawing">
+    <value>38, 130</value>
+  </data>
+  <data name="label22.Size" type="System.Drawing.Size, System.Drawing">
+    <value>403, 24</value>
+  </data>
+  <data name="label22.Text" xml:space="preserve">
+    <value>Please enter the original manufacturer number:</value>
+  </data>
+  <data name="label18.Location" type="System.Drawing.Point, System.Drawing">
+    <value>184, 273</value>
+  </data>
+  <data name="label18.Size" type="System.Drawing.Size, System.Drawing">
+    <value>255, 24</value>
+  </data>
+  <data name="label18.Text" xml:space="preserve">
+    <value>Termination product number:</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>89, 226</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>355, 24</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Please enter the starting product number:</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>171, 79</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>266, 24</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Enter the starting item number:</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>276, 24</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Please enter a starting category:</value>
+  </data>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>PRODUCTS QUICK FIND TABLE ||</value>
+  </data>
+  <data name="label14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>273, 65</value>
+  </data>
+  <data name="label14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 24</value>
+  </data>
+  <data name="label14.Text" xml:space="preserve">
+    <value>Termination item number:</value>
+  </data>
+  <data name="label13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>177, 20</value>
+  </data>
+  <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>326, 24</value>
+  </data>
+  <data name="label13.Text" xml:space="preserve">
+    <value>Please enter the starting item number:</value>
+  </data>
+  <data name="tabPage3.Text" xml:space="preserve">
+    <value>QUICK LIST ||</value>
+  </data>
+  <data name="rd1t4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 28</value>
+  </data>
+  <data name="rd1t4.Text" xml:space="preserve">
+    <value>Not enough quantity &gt;0</value>
+  </data>
+  <data name="rd2t4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 28</value>
+  </data>
+  <data name="rd2t4.Text" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Status:</value>
+  </data>
+  <data name="label21.Location" type="System.Drawing.Point, System.Drawing">
+    <value>189, 188</value>
+  </data>
+  <data name="label21.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 24</value>
+  </data>
+  <data name="label21.Text" xml:space="preserve">
+    <value>Termination item number:</value>
+  </data>
+  <data name="label20.Location" type="System.Drawing.Point, System.Drawing">
+    <value>94, 134</value>
+  </data>
+  <data name="label20.Size" type="System.Drawing.Size, System.Drawing">
+    <value>326, 24</value>
+  </data>
+  <data name="label20.Text" xml:space="preserve">
+    <value>Please enter the starting item number:</value>
+  </data>
+  <data name="label19.Location" type="System.Drawing.Point, System.Drawing">
+    <value>171, 82</value>
+  </data>
+  <data name="label19.Size" type="System.Drawing.Size, System.Drawing">
+    <value>255, 24</value>
+  </data>
+  <data name="label19.Text" xml:space="preserve">
+    <value>Termination product number:</value>
+  </data>
+  <data name="label15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>65, 31</value>
+  </data>
+  <data name="label15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>355, 24</value>
+  </data>
+  <data name="label15.Text" xml:space="preserve">
+    <value>Please enter the starting product number:</value>
+  </data>
+  <data name="tabPage4.Text" xml:space="preserve">
+    <value>ADDITIONAL CONSULTATION FORM ||</value>
+  </data>
+  <data name="rd1t5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 28</value>
+  </data>
+  <data name="rd1t5.Text" xml:space="preserve">
+    <value>Material change table</value>
+  </data>
+  <data name="rd2t5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>322, 28</value>
+  </data>
+  <data name="rd2t5.Text" xml:space="preserve">
+    <value>Statistical table of material inventory</value>
+  </data>
+  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>374, 125</value>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>Status:</value>
+  </data>
+  <data name="label33.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 24</value>
+  </data>
+  <data name="label33.Text" xml:space="preserve">
+    <value>End provider number:</value>
+  </data>
+  <data name="label32.Size" type="System.Drawing.Size, System.Drawing">
+    <value>403, 24</value>
+  </data>
+  <data name="label32.Text" xml:space="preserve">
+    <value>Please enter the original manufacturer number:</value>
+  </data>
+  <data name="label31.Location" type="System.Drawing.Point, System.Drawing">
+    <value>448, 317</value>
+  </data>
+  <data name="label31.Size" type="System.Drawing.Size, System.Drawing">
+    <value>358, 24</value>
+  </data>
+  <data name="label31.Text" xml:space="preserve">
+    <value>List of valid inventory of auxiliary materials.</value>
+  </data>
+  <data name="tb7t5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>265, 317</value>
+  </data>
+  <data name="label30.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="label30.Text" xml:space="preserve">
+    <value>Please enter department:</value>
+  </data>
+  <data name="label29.Location" type="System.Drawing.Point, System.Drawing">
+    <value>156, 250</value>
+  </data>
+  <data name="label29.Size" type="System.Drawing.Size, System.Drawing">
+    <value>274, 24</value>
+  </data>
+  <data name="label29.Text" xml:space="preserve">
+    <value>Please enter an expiration date:</value>
+  </data>
+  <data name="label28.Size" type="System.Drawing.Size, System.Drawing">
+    <value>214, 24</value>
+  </data>
+  <data name="label28.Text" xml:space="preserve">
+    <value>Please enter a start date:</value>
+  </data>
+  <data name="label27.Location" type="System.Drawing.Point, System.Drawing">
+    <value>174, 156</value>
+  </data>
+  <data name="label27.Size" type="System.Drawing.Size, System.Drawing">
+    <value>255, 24</value>
+  </data>
+  <data name="label27.Text" xml:space="preserve">
+    <value>Termination product number:</value>
+  </data>
+  <data name="label26.Location" type="System.Drawing.Point, System.Drawing">
+    <value>72, 113</value>
+  </data>
+  <data name="label26.Size" type="System.Drawing.Size, System.Drawing">
+    <value>355, 24</value>
+  </data>
+  <data name="label26.Text" xml:space="preserve">
+    <value>Please enter the starting product number:</value>
+  </data>
+  <data name="label25.Location" type="System.Drawing.Point, System.Drawing">
+    <value>202, 66</value>
+  </data>
+  <data name="label25.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 24</value>
+  </data>
+  <data name="label25.Text" xml:space="preserve">
+    <value>Termination item number:</value>
+  </data>
+  <data name="label24.Location" type="System.Drawing.Point, System.Drawing">
+    <value>91, 23</value>
+  </data>
+  <data name="label24.Size" type="System.Drawing.Size, System.Drawing">
+    <value>326, 24</value>
+  </data>
+  <data name="label24.Text" xml:space="preserve">
+    <value>Please enter the starting item number:</value>
+  </data>
+  <data name="tabPage5.Text" xml:space="preserve">
+    <value>MATERIAL CHANGE TABLE ||</value>
+  </data>
+  <data name="l7t6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 22</value>
+  </data>
+  <data name="l7t6.Text" xml:space="preserve">
+    <value>Test day:</value>
+  </data>
+  <data name="l6t6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>51, 260</value>
+  </data>
+  <data name="l6t6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>371, 24</value>
+  </data>
+  <data name="l6t6.Text" xml:space="preserve">
+    <value>Enter the termination provider number:</value>
+  </data>
+  <data name="l5t6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 212</value>
+  </data>
+  <data name="l5t6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>402, 24</value>
+  </data>
+  <data name="l5t6.Text" xml:space="preserve">
+    <value>Please enter the original supplier number:</value>
+  </data>
+  <data name="l4t6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>252, 24</value>
+  </data>
+  <data name="l4t6.Text" xml:space="preserve">
+    <value>Finished product number:</value>
+  </data>
+  <data name="l3t6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 114</value>
+  </data>
+  <data name="l3t6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>396, 24</value>
+  </data>
+  <data name="l3t6.Text" xml:space="preserve">
+    <value>Please enter the starting product number:</value>
+  </data>
+  <data name="l2t6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 24</value>
+  </data>
+  <data name="l2t6.Text" xml:space="preserve">
+    <value>Termination item number:</value>
+  </data>
+  <data name="l1t6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 19</value>
+  </data>
+  <data name="l1t6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>405, 24</value>
+  </data>
+  <data name="l1t6.Text" xml:space="preserve">
+    <value>Please enter the starting category number:</value>
+  </data>
+  <data name="rd3t6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>211, 28</value>
+  </data>
+  <data name="rd3t6.Text" xml:space="preserve">
+    <value>VS changes checklist</value>
+  </data>
+  <data name="rd1t6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>217, 28</value>
+  </data>
+  <data name="rd1t6.Text" xml:space="preserve">
+    <value>Refrigeration Checklist</value>
+  </data>
+  <data name="rd2t6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>208, 28</value>
+  </data>
+  <data name="rd2t6.Text" xml:space="preserve">
+    <value>VS Change Checklist</value>
+  </data>
+  <data name="groupBox3.Text" xml:space="preserve">
+    <value>Status:</value>
+  </data>
+  <data name="tabPage6.Text" xml:space="preserve">
+    <value>CATALOG ||</value>
+  </data>
+  <data name="rd5t7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>301, 28</value>
+  </data>
+  <data name="rd5t7.Text" xml:space="preserve">
+    <value>List of foreign chemical materials</value>
+  </data>
+  <data name="rd4t7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>319, 28</value>
+  </data>
+  <data name="rd4t7.Text" xml:space="preserve">
+    <value>List of domestic chemical materials</value>
+  </data>
+  <data name="rd3t7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>310, 28</value>
+  </data>
+  <data name="rd3t7.Text" xml:space="preserve">
+    <value>List of goods at home and abroad</value>
+  </data>
+  <data name="rd1t7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 28</value>
+  </data>
+  <data name="rd1t7.Text" xml:space="preserve">
+    <value>Inventory calendar</value>
+  </data>
+  <data name="rd2t7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 28</value>
+  </data>
+  <data name="rd2t7.Text" xml:space="preserve">
+    <value>Safety Check Schedule</value>
+  </data>
+  <data name="groupBox4.Text" xml:space="preserve">
+    <value>Status:</value>
+  </data>
+  <data name="tb5t7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>425, 195</value>
+  </data>
+  <data name="tb5t7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>482, 28</value>
+  </data>
+  <data name="label38.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="label38.Text" xml:space="preserve">
+    <value>Please enter department:</value>
+  </data>
+  <data name="tb4t7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>425, 148</value>
+  </data>
+  <data name="tb4t7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>481, 28</value>
+  </data>
+  <data name="label37.Location" type="System.Drawing.Point, System.Drawing">
+    <value>155, 153</value>
+  </data>
+  <data name="label37.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 24</value>
+  </data>
+  <data name="label37.Text" xml:space="preserve">
+    <value>End provider number:</value>
+  </data>
+  <data name="tb3t7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>425, 101</value>
+  </data>
+  <data name="tb3t7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>482, 28</value>
+  </data>
+  <data name="label36.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 105</value>
+  </data>
+  <data name="label36.Size" type="System.Drawing.Size, System.Drawing">
+    <value>403, 24</value>
+  </data>
+  <data name="label36.Text" xml:space="preserve">
+    <value>Please enter the original manufacturer number:</value>
+  </data>
+  <data name="tb2t7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>425, 59</value>
+  </data>
+  <data name="tb2t7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>481, 28</value>
+  </data>
+  <data name="label35.Location" type="System.Drawing.Point, System.Drawing">
+    <value>176, 63</value>
+  </data>
+  <data name="label35.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 24</value>
+  </data>
+  <data name="label35.Text" xml:space="preserve">
+    <value>Termination item number:</value>
+  </data>
+  <data name="tb1t7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>425, 17</value>
+  </data>
+  <data name="tb1t7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>481, 28</value>
+  </data>
+  <data name="label34.Size" type="System.Drawing.Size, System.Drawing">
+    <value>326, 24</value>
+  </data>
+  <data name="label34.Text" xml:space="preserve">
+    <value>Please enter the starting item number:</value>
+  </data>
+  <data name="tabPage7.Text" xml:space="preserve">
+    <value>SUMMARY TABLE OF CHEMICALS ||</value>
+  </data>
+  <data name="rd4t8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>223, 28</value>
+  </data>
+  <data name="rd4t8.Text" xml:space="preserve">
+    <value>Foreign goods in stock</value>
+  </data>
+  <data name="rd3t8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>235, 28</value>
+  </data>
+  <data name="rd3t8.Text" xml:space="preserve">
+    <value>Domestic goods in stock</value>
+  </data>
+  <data name="rd1t8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 28</value>
+  </data>
+  <data name="rd1t8.Text" xml:space="preserve">
+    <value>Daily inventory</value>
+  </data>
+  <data name="rd2t8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 28</value>
+  </data>
+  <data name="rd2t8.Text" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="groupBox5.Text" xml:space="preserve">
+    <value>Status:</value>
+  </data>
+  <data name="label43.Location" type="System.Drawing.Point, System.Drawing">
+    <value>158, 280</value>
+  </data>
+  <data name="label43.Size" type="System.Drawing.Size, System.Drawing">
+    <value>274, 24</value>
+  </data>
+  <data name="label43.Text" xml:space="preserve">
+    <value>Please enter an expiration date:</value>
+  </data>
+  <data name="label42.Size" type="System.Drawing.Size, System.Drawing">
+    <value>214, 24</value>
+  </data>
+  <data name="label42.Text" xml:space="preserve">
+    <value>Please enter a start date:</value>
+  </data>
+  <data name="label41.Size" type="System.Drawing.Size, System.Drawing">
+    <value>235, 24</value>
+  </data>
+  <data name="label41.Text" xml:space="preserve">
+    <value>Please enter a department:</value>
+  </data>
+  <data name="label40.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 24</value>
+  </data>
+  <data name="label40.Text" xml:space="preserve">
+    <value>Termination item number:</value>
+  </data>
+  <data name="label39.Size" type="System.Drawing.Size, System.Drawing">
+    <value>326, 24</value>
+  </data>
+  <data name="label39.Text" xml:space="preserve">
+    <value>Please enter the starting item number:</value>
+  </data>
+  <data name="tabPage8.Text" xml:space="preserve">
+    <value>US PRODUCTS STATISTICS</value>
+  </data>
+  <data name="button4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAmVJREFUOE99
+        kt1PkmEYxt/zNvsQw48IAVELLUw0xGCC7yvMcqUkRQtJIvs4YBYtG7g+/gIP6h/opLM6abVmB22ttQ7K
+        reXWPCgKEcOP8fK8xOnVc7/OWonc271du+/rdz+fAoUs+cCC57De1A61UCHIw4JByKJvw7vuFvFrJonS
+        wwSUZBwrFYZQT5mOo/QggdJMAsQKa6IbxRt+sKiI4v0o2K0YsvtbtgxZNvOVp2+ieI97ohKUyRGsup0Q
+        0g1GrHl7oFwdBIuIUBJhyLErSOv/Dkmb2lBIXEcxeYF7+lXv6oAd6brGDc+32kbkxKNgFwdQCPVBmTqP
+        PN9JqtWKlPkQ5NuTKE6F1B6LSPjp7MRXreHfXS7wIcueLihhDwpBJ5TYKNjdONidONeBjdqYBxlHBxb2
+        6svf07xWj4yrA4WzLsj+HrAxCSwsce2AfMaFRYcVn2u2gTdjTqNDtu8I2OljkE/ZIZ+0c92LnGTDXI2u
+        MkzxgV9YblhCYagL+RPdaspcrwx78NFkqTzgnaEF2csRsEA//yhWMJ9NzTzpUQ+WJsbxtt5YfsgbQzOW
+        rl2CEvBCdvJnc1uR6baoSVp28k8UHMT3cAiv6/57gVe6JixOcNjvQ952AKz3MBYszZitrleTNNXytlYo
+        I16kxsOY5YwKv9hnxI9IBMpxEfl2buxsw5dmE57tqf2zCmmqUY88xSGvyhArvHc4UfLxD2RugmI5iHmD
+        AU92arack2rUIw95iSFWeF6vR85oRsHUgk8Nejyuqi5/STyoRx7yEkOs2nhapcHL3Vo82rFrW3gzyENe
+        YgRBEH4DWjGXiciZGLcAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="button4.Text" xml:space="preserve">
+    <value>Close [C]</value>
+  </data>
+  <data name="button3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAkBJREFUOE+N
+        kl1oUmEYx73trovuuwm6aK27QbDqol10sWa5nEOLEVKEBdIaptN9VgY1aG5EjlRcLt1qjkJ3jtpcbrgo
+        5weuNlqggz5so0mQByV059+r5+xCpW0/eHhvzvM7/+d9XsE2j90LG/a3sZzNH2XMnhAzQr1nBqaCTK8j
+        wMiHJtnj7U8W6lVP9/OfV+MIRJl8YQssy+L3nyy+fE8juJyEM7iCuxMBiPQ2NPbZ5urVpn18Szk2f4Qp
+        EAHYAjK5PH78ymBlLYXgp68w0hE8mJzFxFwcDV3Wd0RSnWTUFy4J6i6P44zShdNKJ05cHcdJ+QscEQ7C
+        6o+hiNkbKSWpURgO8q0cFt8il+A/WN5Esby2jtmlBNpNFI4qhsN8K4eR+lASXNC4IVbTkHbSEHfRaNZQ
+        OK92o0HhwGGhEdf0LvTa/ERg+Mi3cgxOze+YgIPFt/QmvNFV1F4fKhfo7R4uQacHIq0bUq0XMh1JoiOn
+        lsZZ1WucujKGO6Z5zISTRDBcLtBYqD0kALL5v0im0jhWKbhlobkEagotJEULmV2iKd6FD5J+P9r6ZyBS
+        +fDQHkN4NYVaRcUI24LdKD60xM80aioFHRbuDppvu8kmaEjIForVSuZvJadU60NTxzQML+NY/JwiW6gQ
+        KEfce0qwxSeoEsgfOUsCscYFWfc0LvXQpZJ1U2QTLlwkJbz5CgPPQogn1qsF0vvPGf4nu7KZyaLuRsVD
+        OtSm3xDfG8s19Y0yO5Wwx8o0as04cE4XEggEgn9hgnImefVyAgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="button3.Text" xml:space="preserve">
+    <value>Preview[V]</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAIB8AAAAAAACECAAAFgAAACgAAAAgAAAAPgAAAAEACAAAAAAAXAQAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAMwAAAGYAAACZAAAAzAAAAP8AAAAAMwAAMzMAAGYzAACZMwAAzDMAAP8zAAAAZgAAM2YAAGZm
+        AACZZgAAzGYAAP9mAAAAmQAAM5kAAGaZAACZmQAAzJkAAP+ZAAAAzAAAM8wAAGbMAACZzAAAzMwAAP/M
+        AAAA/wAAM/8AAGb/AACZ/wAAzP8AAP//AAAAADMAMwAzAGYAMwCZADMAzAAzAP8AMwAAMzMAMzMzAGYz
+        MwCZMzMAzDMzAP8zMwAAZjMAM2YzAGZmMwCZZjMAzGYzAP9mMwAAmTMAM5kzAGaZMwCZmTMAzJkzAP+Z
+        MwAAzDMAM8wzAGbMMwCZzDMAzMwzAP/MMwAA/zMAM/8zAGb/MwCZ/zMAzP8zAP//MwAAAGYAMwBmAGYA
+        ZgCZAGYAzABmAP8AZgAAM2YAMzNmAGYzZgCZM2YAzDNmAP8zZgAAZmYAM2ZmAGZmZgCZZmYAzGZmAP9m
+        ZgAAmWYAM5lmAGaZZgCZmWYAzJlmAP+ZZgAAzGYAM8xmAGbMZgCZzGYAzMxmAP/MZgAA/2YAM/9mAGb/
+        ZgCZ/2YAzP9mAP//ZgAAAJkAMwCZAGYAmQCZAJkAzACZAP8AmQAAM5kAMzOZAGYzmQCZM5kAzDOZAP8z
+        mQAAZpkAM2aZAGZmmQCZZpkAzGaZAP9mmQAAmZkAM5mZAGaZmQCZmZkAzJmZAP+ZmQAAzJkAM8yZAGbM
+        mQCZzJkAzMyZAP/MmQAA/5kAM/+ZAGb/mQCZ/5kAzP+ZAP//mQAAAMwAMwDMAGYAzACZAMwAzADMAP8A
+        zAAAM8wAMzPMAGYzzACZM8wAzDPMAP8zzAAAZswAM2bMAGZmzACZZswAzGbMAP9mzAAAmcwAM5nMAGaZ
+        zACZmcwAzJnMAP+ZzAAAzMwAM8zMAGbMzACZzMwAzMzMAP/MzAAA/8wAM//MAGb/zACZ/8wAzP/MAP//
+        zAAAAP8AMwD/AGYA/wCZAP8AzAD/AP8A/wAAM/8AMzP/AGYz/wCZM/8AzDP/AP8z/wAAZv8AM2b/AGZm
+        /wCZZv8AzGb/AP9m/wAAmf8AM5n/AGaZ/wCZmf8AzJn/AP+Z/wAAzP8AM8z/AGbM/wCZzP8AzMz/AP/M
+        /wAA//8AM///AGb//wCZ//8AzP//AP///wAAAAAADQ0NABoaGgAoKCgANTU1AENDQwBQUFAAXV1dAGtr
+        awB4eHgAhoaGAJOTkwChoaEArq6uALu7uwDJyckA1tbWAOTk5ADx8fEA////AAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA19fXybvX19fX19fQu5eXl5eXl5fJ0NfX19fX0MLX19fX17vJwpe7wryXu5eXu9DX19e7l5eX
+        l7u8u5e7u8LX19eX19fQu5eXl5eXl5e70NfX17uXl5eXl5eXl7vXu7vXl9fX19fCl5eXl5eXl7vQ19fX
+        l5eXl5eXl5eX19fXwru70NfX19C7l5eXl5eXu9HX19eXl5eXl5eXl7vX19fQwteX19fX18mXl5eXl5e7
+        0dfX15eXl5eXl5eX19fX15fX18LC19fX18KXl5eXl7vX19fXl5eXl5eXl9DX19fJwtfX0LvJ19fX17uX
+        l5eXu9fX19eXl5eXl5fC19fX0LvX19fXu7vQ19fX17yXl5e719fX15eXl5eXydfX19C7w9fX19fQl5fX
+        19fX0JeXl7vX19fXl5eXl8LX19fXl5fQ19fX19eXl5fQ19fX18K7l9fX19eXl5fQ19fX15eXl9fX19fX
+        17uXl7vQ19fX19C719fX15fC19fX19e7l5fC19fX19fXwpeXl7vQ19fX19fX19fX19fX19fXl5eXl8PX
+        19fX19fJl5eXl5e819fX19fX19fX19fXyZeXl5eXydfX19fX18mXl5eXl5eX0NfX19fX19fQyZeXl5eX
+        l5fQ19fX19fX0JeXl5eXl5eXl9DQ0NDQ0MK7l5eXl5eXu9DX19fX19fQl5eXl5eXl8nX0JeXl5fQ18mX
+        l5eXl5eX0NfX19fX19CXl5eXl8LX19fXybuXydfX19eXu5eXl5fQ19fX19fXyZeXl5fJ19fX19fXl5fX
+        19fX19fJu5eXl8nX19fX19fCl5eXl9fX19fX19fCu9fX19fX19fCu5eXwtfX19fX17uXl7vX19fXwsLX
+        18nJ19fQydfX19fDl5e719fX19fXl5eX19fX18m7l9fX19fX0LuXwtfX19fCl5fX19fX19eXl8nX19fJ
+        l5e70NfX19fQu5eXydfX19eXu9DX19fXyZe719fXybuXl5fQ19fX19CXl5eXwtfX18mXydfX19e8u9DX
+        19C7l5eXl9DX19fX0JeXl5eX19fX17uX19fX17vC19fXwpeXl5eX0NfX19fQl5eXl5fC19fX0LvX19fJ
+        l9fX19C7l5eXl5fK19fX19CXl5eXl7vQ19fXycLX18m7wtfXwpeXl5eXl8nX19fX0JeXl5eXl8LX19C7
+        wtfX19fCl9CXl5eXl5eXydfX19fQl5eXl5eXu9DCu9DX19fX19fXwrvJ0NDJl5fJ19fX19CXl5fCycK7
+        l9DX19fX19fX19fX19fX19fXu5eXl5eXl5fD19fX19fX19fX19cAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>PRINT PRODUCT INFORMATION</value>
+  </data>
+</root>

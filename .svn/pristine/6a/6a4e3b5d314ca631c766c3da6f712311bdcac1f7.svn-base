@@ -1,0 +1,566 @@
+﻿
+namespace PURCHASE.MAINCODE.Modun4
+{
+    partial class frm4DF7
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm4DF7));
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.f1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.f2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.f4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtWS_NO1 = new System.Windows.Forms.TextBox();
+            this.txtWS_NO = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lbWS_NO1 = new System.Windows.Forms.Label();
+            this.lbWS_NO = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.radioButton5 = new System.Windows.Forms.RadioButton();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btxemtruoc = new System.Windows.Forms.Button();
+            this.menuStrip1.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.Color.LightBlue;
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.f1ToolStripMenuItem,
+            this.f2ToolStripMenuItem,
+            this.f4ToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1428, 38);
+            this.menuStrip1.TabIndex = 9;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // f1ToolStripMenuItem
+            // 
+            this.f1ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("f1ToolStripMenuItem.Image")));
+            this.f1ToolStripMenuItem.Name = "f1ToolStripMenuItem";
+            this.f1ToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
+            this.f1ToolStripMenuItem.Size = new System.Drawing.Size(128, 34);
+            this.f1ToolStripMenuItem.Text = "F1. Truy vấn";
+            // 
+            // f2ToolStripMenuItem
+            // 
+            this.f2ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("f2ToolStripMenuItem.Image")));
+            this.f2ToolStripMenuItem.Name = "f2ToolStripMenuItem";
+            this.f2ToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F2;
+            this.f2ToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
+            this.f2ToolStripMenuItem.Text = "F2. Xem trước";
+            // 
+            // f4ToolStripMenuItem
+            // 
+            this.f4ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("f4ToolStripMenuItem.Image")));
+            this.f4ToolStripMenuItem.Name = "f4ToolStripMenuItem";
+            this.f4ToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F4;
+            this.f4ToolStripMenuItem.Size = new System.Drawing.Size(108, 24);
+            this.f4ToolStripMenuItem.Text = "F.4 Thoát";
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Brown;
+            this.label1.Location = new System.Drawing.Point(12, 52);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(1118, 80);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Thông tin trả hàng";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.Location = new System.Drawing.Point(12, 135);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1118, 458);
+            this.tabControl1.TabIndex = 11;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.panel1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 34);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1110, 420);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Đơn hàng trả";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.txtWS_NO1);
+            this.panel1.Controls.Add(this.txtWS_NO);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.lbWS_NO1);
+            this.panel1.Controls.Add(this.lbWS_NO);
+            this.panel1.Location = new System.Drawing.Point(6, 6);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1098, 417);
+            this.panel1.TabIndex = 0;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.radioButton3);
+            this.groupBox1.Controls.Add(this.radioButton2);
+            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.ForeColor = System.Drawing.Color.Brown;
+            this.groupBox1.Location = new System.Drawing.Point(633, 146);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(363, 189);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Định dạng báo cáo";
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.ForeColor = System.Drawing.Color.Brown;
+            this.radioButton3.Location = new System.Drawing.Point(20, 134);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(166, 36);
+            this.radioButton3.TabIndex = 0;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "Bộ đồng hồ";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.ForeColor = System.Drawing.Color.Brown;
+            this.radioButton2.Location = new System.Drawing.Point(20, 87);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(337, 29);
+            this.radioButton2.TabIndex = 0;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Bảng không đặt - toàn bộ trang tính";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
+            this.radioButton1.ForeColor = System.Drawing.Color.Brown;
+            this.radioButton1.Location = new System.Drawing.Point(20, 41);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(272, 29);
+            this.radioButton1.TabIndex = 0;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Mẫu không theo bộ - nửa tờ";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(336, 150);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(57, 30);
+            this.textBox3.TabIndex = 1;
+            // 
+            // txtWS_NO1
+            // 
+            this.txtWS_NO1.Location = new System.Drawing.Point(336, 97);
+            this.txtWS_NO1.Name = "txtWS_NO1";
+            this.txtWS_NO1.Size = new System.Drawing.Size(226, 30);
+            this.txtWS_NO1.TabIndex = 1;
+            // 
+            // txtWS_NO
+            // 
+            this.txtWS_NO.Location = new System.Drawing.Point(336, 47);
+            this.txtWS_NO.Name = "txtWS_NO";
+            this.txtWS_NO.Size = new System.Drawing.Size(226, 30);
+            this.txtWS_NO.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label4.ForeColor = System.Drawing.Color.Brown;
+            this.label4.Location = new System.Drawing.Point(62, 146);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(268, 38);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "In đơn giá";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbWS_NO1
+            // 
+            this.lbWS_NO1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lbWS_NO1.ForeColor = System.Drawing.Color.Brown;
+            this.lbWS_NO1.Location = new System.Drawing.Point(62, 93);
+            this.lbWS_NO1.Name = "lbWS_NO1";
+            this.lbWS_NO1.Size = new System.Drawing.Size(268, 38);
+            this.lbWS_NO1.TabIndex = 0;
+            this.lbWS_NO1.Text = "Số kết thúc trả lại";
+            this.lbWS_NO1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbWS_NO
+            // 
+            this.lbWS_NO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lbWS_NO.ForeColor = System.Drawing.Color.Brown;
+            this.lbWS_NO.Location = new System.Drawing.Point(62, 43);
+            this.lbWS_NO.Name = "lbWS_NO";
+            this.lbWS_NO.Size = new System.Drawing.Size(268, 38);
+            this.lbWS_NO.TabIndex = 0;
+            this.lbWS_NO.Text = "Số bắt đầu trả lại";
+            this.lbWS_NO.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.panel2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 34);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1110, 420);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Lịch trình trả lại";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.groupBox2);
+            this.panel2.Controls.Add(this.maskedTextBox2);
+            this.panel2.Controls.Add(this.maskedTextBox1);
+            this.panel2.Controls.Add(this.textBox9);
+            this.panel2.Controls.Add(this.textBox4);
+            this.panel2.Controls.Add(this.textBox8);
+            this.panel2.Controls.Add(this.textBox5);
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Location = new System.Drawing.Point(6, 6);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1098, 417);
+            this.panel2.TabIndex = 1;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.radioButton6);
+            this.groupBox2.Controls.Add(this.radioButton5);
+            this.groupBox2.Controls.Add(this.radioButton4);
+            this.groupBox2.ForeColor = System.Drawing.Color.Brown;
+            this.groupBox2.Location = new System.Drawing.Point(676, 65);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(295, 216);
+            this.groupBox2.TabIndex = 7;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Sắp xếp theo";
+            // 
+            // radioButton6
+            // 
+            this.radioButton6.AutoSize = true;
+            this.radioButton6.ForeColor = System.Drawing.Color.Brown;
+            this.radioButton6.Location = new System.Drawing.Point(30, 157);
+            this.radioButton6.Name = "radioButton6";
+            this.radioButton6.Size = new System.Drawing.Size(221, 36);
+            this.radioButton6.TabIndex = 0;
+            this.radioButton6.TabStop = true;
+            this.radioButton6.Text = "Số đơn dặt hàng";
+            this.radioButton6.UseVisualStyleBackColor = true;
+            // 
+            // radioButton5
+            // 
+            this.radioButton5.AutoSize = true;
+            this.radioButton5.ForeColor = System.Drawing.Color.Brown;
+            this.radioButton5.Location = new System.Drawing.Point(30, 106);
+            this.radioButton5.Name = "radioButton5";
+            this.radioButton5.Size = new System.Drawing.Size(163, 36);
+            this.radioButton5.TabIndex = 0;
+            this.radioButton5.TabStop = true;
+            this.radioButton5.Text = "Ngày trả lại";
+            this.radioButton5.UseVisualStyleBackColor = true;
+            // 
+            // radioButton4
+            // 
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.ForeColor = System.Drawing.Color.Brown;
+            this.radioButton4.Location = new System.Drawing.Point(30, 56);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(185, 36);
+            this.radioButton4.TabIndex = 0;
+            this.radioButton4.TabStop = true;
+            this.radioButton4.Text = "Nhà sản xuất";
+            this.radioButton4.UseVisualStyleBackColor = true;
+            // 
+            // maskedTextBox2
+            // 
+            this.maskedTextBox2.Location = new System.Drawing.Point(374, 175);
+            this.maskedTextBox2.Mask = "0000/00/00";
+            this.maskedTextBox2.Name = "maskedTextBox2";
+            this.maskedTextBox2.Size = new System.Drawing.Size(184, 30);
+            this.maskedTextBox2.TabIndex = 6;
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(374, 125);
+            this.maskedTextBox1.Mask = "0000/00/00";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(184, 30);
+            this.maskedTextBox1.TabIndex = 6;
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(374, 276);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(226, 30);
+            this.textBox9.TabIndex = 4;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(374, 73);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(226, 30);
+            this.textBox4.TabIndex = 4;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(374, 226);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(226, 30);
+            this.textBox8.TabIndex = 5;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(374, 23);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(226, 30);
+            this.textBox5.TabIndex = 5;
+            // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label10.ForeColor = System.Drawing.Color.Brown;
+            this.label10.Location = new System.Drawing.Point(100, 272);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(268, 38);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "số nhà sản xuất kết thúc";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label9
+            // 
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label9.ForeColor = System.Drawing.Color.Brown;
+            this.label9.Location = new System.Drawing.Point(100, 222);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(268, 38);
+            this.label9.TabIndex = 3;
+            this.label9.Text = "Số nhà sản xuất ban đầu";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label8
+            // 
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label8.ForeColor = System.Drawing.Color.Brown;
+            this.label8.Location = new System.Drawing.Point(100, 171);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(268, 38);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "Ngày kết thúc trả lại";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label7.ForeColor = System.Drawing.Color.Brown;
+            this.label7.Location = new System.Drawing.Point(100, 121);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(268, 38);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "Ngày bắt đầu trở lại";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label5.ForeColor = System.Drawing.Color.Brown;
+            this.label5.Location = new System.Drawing.Point(100, 69);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(268, 38);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Số kết thúc trả lại";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label6.ForeColor = System.Drawing.Color.Brown;
+            this.label6.Location = new System.Drawing.Point(100, 19);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(268, 38);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Số bắt đầu trả lại";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button2.Location = new System.Drawing.Point(609, 600);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(257, 64);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "&Thoát";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // btxemtruoc
+            // 
+            this.btxemtruoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btxemtruoc.ForeColor = System.Drawing.Color.ForestGreen;
+            this.btxemtruoc.Image = ((System.Drawing.Image)(resources.GetObject("btxemtruoc.Image")));
+            this.btxemtruoc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btxemtruoc.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btxemtruoc.Location = new System.Drawing.Point(323, 600);
+            this.btxemtruoc.Margin = new System.Windows.Forms.Padding(4);
+            this.btxemtruoc.Name = "btxemtruoc";
+            this.btxemtruoc.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btxemtruoc.Size = new System.Drawing.Size(257, 64);
+            this.btxemtruoc.TabIndex = 14;
+            this.btxemtruoc.Text = "&Xem trước ";
+            this.btxemtruoc.UseVisualStyleBackColor = true;
+            this.btxemtruoc.Click += new System.EventHandler(this.btxemtruoc_Click);
+            // 
+            // frm4DF7
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1142, 686);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btxemtruoc);
+            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.menuStrip1);
+            this.Name = "frm4DF7";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "frm4DF7";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem f1ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem f2ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem f4ToolStripMenuItem;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btxemtruoc;
+        private System.Windows.Forms.Label lbWS_NO;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtWS_NO1;
+        private System.Windows.Forms.TextBox txtWS_NO;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbWS_NO1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.RadioButton radioButton6;
+        private System.Windows.Forms.RadioButton radioButton5;
+        private System.Windows.Forms.RadioButton radioButton4;
+    }
+}

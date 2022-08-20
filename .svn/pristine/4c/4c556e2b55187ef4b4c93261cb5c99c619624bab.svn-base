@@ -1,0 +1,140 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+
+namespace PURCHASE.MAINCODE.Search
+{
+    public partial class SearchPAYV : Form
+    {
+        DataProvider con = new DataProvider();
+        DataTable dt;
+        string wheres = "";
+        public SearchPAYV()
+        {
+            InitializeComponent();
+        }
+
+        private void SearchPAYV_Load(object sender, EventArgs e)
+        {
+            wheres = Form4E.Getitem.Wheres;
+            LoadData();
+        }
+
+        private void LoadData()
+        {
+            string sql = "SELECT TOP 500 CUTON,CUTOFF,C_ANAME,C_NO,CTOTAL,TAX,DISCOUNT,CASH,CURRMON FROM PAYV WHERE 2 > 1 ";
+            if (txtCUTON.MaskFull)
+            {
+                wheres = wheres + " AND CUTON LIKE '%" + txtCUTON.Text.Replace("/", "") + "%' ";
+            }
+
+            if (txtCUTOFF.MaskFull)
+            {
+                wheres = wheres + " AND CUTOFF LIKE '%" + txtCUTOFF.Text.Replace("/", "") + "%'";
+            }
+            if (!string.IsNullOrEmpty(txtC_NO.Text))
+            {
+                wheres = wheres + " AND C_NO LIKE '%" + txtC_NO.Text + "%'";
+            }
+            sql = sql + wheres + " ORDER BY CUTON DESC, C_NO";
+            dt = new DataTable();
+            dt = con.readdata(sql);
+
+            if(dt != null)
+            {
+                foreach (DataRow item in dt.Rows)
+                {
+                    item["CUTON"] = con.formatstr2(item["CUTON"].ToString());
+                    item["CUTOFF"] = con.formatstr2(item["CUTOFF"].ToString());
+                }
+            }
+            DGV1.DataSource = dt;
+            DGV1.CurrentCell = DGV1[2, GetItem.index];
+        }
+
+        private void DGV1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            GetItem.CUTON = DGV1.Rows[DGV1.CurrentRow.Index].Cells["CUTON"].Value.ToString();
+            GetItem.CUTOFF = DGV1.Rows[DGV1.CurrentRow.Index].Cells["CUTOFF"].Value.ToString();
+            GetItem.C_NO = DGV1.Rows[DGV1.CurrentRow.Index].Cells["C_NO"].Value.ToString();
+            GetItem.C_ANAME = DGV1.Rows[DGV1.CurrentRow.Index].Cells["C_ANAME"].Value.ToString();
+            GetItem.index = DGV1.CurrentRow.Index;
+            Form4E.Getitem.Wheres = wheres;
+            this.Close();
+        }
+
+        public class GetItem
+        {
+            public static string CUTON { get; set; }
+            public static string CUTOFF { get; set; }
+            public static string C_NO { get; set; }
+            public static string C_ANAME { get; set; }
+            public static int index { get; set; }
+        }
+
+        private void btnok_Click(object sender, EventArgs e)
+        {
+            GetItem.CUTON = DGV1.Rows[DGV1.CurrentRow.Index].Cells["CUTON"].Value.ToString();
+            GetItem.CUTOFF = DGV1.Rows[DGV1.CurrentRow.Index].Cells["CUTOFF"].Value.ToString();
+            GetItem.C_NO = DGV1.Rows[DGV1.CurrentRow.Index].Cells["C_NO"].Value.ToString();
+            GetItem.C_ANAME = DGV1.Rows[DGV1.CurrentRow.Index].Cells["C_ANAME"].Value.ToString();
+            GetItem.index = DGV1.CurrentRow.Index;
+            Form4E.Getitem.Wheres = wheres;
+            this.Close();
+        }
+        private void txtC_NO_TextChanged(object sender, EventArgs e)
+        {
+            wheres = "";
+            LoadData();
+        }
+
+        private void txtCUTON_TextChanged(object sender, EventArgs e)
+        {
+            wheres = "";
+            LoadData();
+        }
+
+        private void txtCUTOFF_TextChanged(object sender, EventArgs e)
+        {
+            wheres = "";
+            LoadData();
+        }
+
+        private void txtCUTON_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                wheres = "";
+                LoadData();
+            }
+        }
+
+        private void txtCUTOFF_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                wheres = "";
+                LoadData();
+            }
+        }
+
+        private void txtC_NO_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                wheres = "";
+                LoadData();
+            }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+    }
+}

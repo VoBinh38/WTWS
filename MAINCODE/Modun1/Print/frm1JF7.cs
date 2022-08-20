@@ -1,0 +1,135 @@
+﻿using CrystalDecisions.CrystalReports.Engine;
+using PURCHASE.DataCenter;
+using PURCHASE.MAINCODE.Modun1.CrytalReport;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using static PURCHASE.DataCenter.Report1;
+
+namespace PURCHASE.MAINCODE.Modun1.Print
+{
+    public partial class Form1JF7 : Form
+    {
+        DataProvider con = new DataProvider();
+        DataTable dt;
+        public Form1JF7()
+        {
+            this.ShowInTaskbar = false;
+            con.CheckLanguage(this);
+            InitializeComponent();
+        }
+
+        private void Form1JF7_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbxem_Click(object sender, EventArgs e)
+        {
+            string sql1 = "SELECT P_NAME, P_NAME1, P_NAME3, BUNIT, " +
+                " CASE WHEN QDATE <> '' THEN SUBSTRING(QDATE,3,2) +'/' + SUBSTRING(QDATE, 5, 2) + '/' + SUBSTRING(QDATE, 7, 2)ELSE '' END QDATE," +
+                " CASE WHEN QDATE1<> '' THEN SUBSTRING(QDATE1,3,2) +'/' + SUBSTRING(QDATE1, 5, 2) + '/' + SUBSTRING(QDATE1, 7, 2)ELSE '' END QDATE1," +
+                " CASE WHEN QDATE2<> '' THEN SUBSTRING(QDATE2,3,2) +'/' + SUBSTRING(QDATE2, 5, 2) + '/' + SUBSTRING(QDATE2, 7, 2)ELSE '' END QDATE2," +
+                " CASE WHEN QDATE3<> '' THEN SUBSTRING(QDATE3,3,2) +'/' + SUBSTRING(QDATE3, 5, 2) + '/' + SUBSTRING(QDATE3, 7, 2)ELSE '' END QDATE3," +
+                " CASE WHEN PRICE = 0 THEN '' ELSE CONVERT(VARCHAR(50),PRICE) END AS PRICE," +
+                " CASE WHEN PRICE1 = 0 THEN '' ELSE CONVERT(VARCHAR(50),PRICE1)END AS PRICE1," +
+                " CASE WHEN PRICE2 = 0 THEN '' ELSE CONVERT(VARCHAR(50),PRICE2)END AS PRICE2," +
+                " CASE WHEN PRICE3 = 0 THEN '' ELSE CONVERT(VARCHAR(50),PRICE3)END AS PRICE3," +
+                " VENDC.C_NAME,P_NO,PROD1C.C_NO,P_NO" +
+                " FROM PROD1C,VENDC" +
+                " WHERE VENDC.C_NO = PROD1C.C_NO";
+
+            string sql = "SELECT DISTINCT PROD1C.C_NO" +
+                        " FROM PROD1C, VENDC" +
+                        " WHERE VENDC.C_NO = PROD1C.C_NO ";
+
+            if(!string.IsNullOrEmpty(txtK_NO.Text))
+            {
+                sql = sql + " AND PROD1C.K_NO>='"+txtK_NO.Text+"'";
+                sql1 = sql1 + " AND PROD1C.K_NO>='"+txtK_NO.Text+"'";
+            }if(!string.IsNullOrEmpty(txtK_NO1.Text))
+            {
+                sql = sql + " AND PROD1C.K_NO<='"+txtK_NO1.Text+"'";
+                sql1 = sql1 + " AND PROD1C.K_NO<='"+txtK_NO1.Text+"'";
+            }if(!string.IsNullOrEmpty(txtP_NO.Text))
+            {
+                sql = sql + " AND PROD1C.P_NO>='" + txtP_NO.Text+"'";
+                sql1 = sql1 + " AND PROD1C.P_NO>='" + txtP_NO.Text+"'";
+            }if(!string.IsNullOrEmpty(txtP_NO1.Text))
+            {
+                sql = sql + " AND PROD1C.P_NO<='" + txtP_NO1.Text+"'";
+                sql1 = sql1 + " AND PROD1C.P_NO<='" + txtP_NO1.Text+"'";
+            }if(!string.IsNullOrEmpty(txtC_NO.Text))
+            {
+                sql = sql + " AND PROD1C.C_NO>='" + txtC_NO.Text+"'";
+                sql1 = sql1 + " AND PROD1C.C_NO>='" + txtC_NO.Text+"'";
+            }if(!string.IsNullOrEmpty(txtC_NO1.Text))
+            {
+                sql = sql + " AND PROD1C.C_NO<='" + txtC_NO1.Text+"'";
+                sql1 = sql1 + " AND PROD1C.C_NO<='" + txtC_NO1.Text+"'";
+            }
+            sql1 = sql1 + " ORDER BY PROD1C.C_NO,PROD1C.K_NO,PROD1C.P_NO";
+            dt = new DataTable();
+            dt = con.readdata(sql);
+
+            DataTable dt1 = new DataTable();
+            dt1 = con.readdata(sql1);
+
+            ReportDocument cryRpt = new ReportDocument();
+            if (radioButton1.Checked == true)
+            {
+                cryRpt = new cr_Form1JF7();
+            }else if (rbChemicals.Checked == true)
+            {
+                cryRpt = new cr_Form1JF7_1();
+            }else if (radioButton3.Checked == true)
+            {
+                cryRpt = new cr_Form1JF7_2();
+            }
+
+            cryRpt.SetDataSource(dt);
+            cryRpt.Subreports["Sub"].SetDataSource(dt1);
+            ShareReport.repo = cryRpt;
+            Report1 frm = new Report1();
+            frm.ShowDialog();
+        }
+
+        private void btdong_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void txtK_NO_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            FormSeachKIND1C frm = new FormSeachKIND1C();
+            frm.ShowDialog();
+            txtK_NO.Text = FormSeachKIND1C.Form1D_GUI.K1;
+        }
+
+        private void txtK_NO1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            FormSeachKIND1C frm = new FormSeachKIND1C();
+            frm.ShowDialog();
+            txtK_NO1.Text = FormSeachKIND1C.Form1D_GUI.K1;
+        }
+
+        private void txtC_NO_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            SearchVENDC1B frm = new SearchVENDC1B();
+            frm.ShowDialog();
+            txtC_NO.Text = SearchVENDC1B.getDataTable.C_NO;
+        }
+
+        private void txtC_NO1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            SearchVENDC1B frm = new SearchVENDC1B();
+            frm.ShowDialog();
+            txtC_NO1.Text = SearchVENDC1B.getDataTable.C_NO;
+        }
+    }
+}

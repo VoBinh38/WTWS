@@ -1,0 +1,67 @@
+﻿using CrystalDecisions.CrystalReports.Engine;
+using PURCHASE.DataCenter;
+using PURCHASE.MAINCODE.Modun4.Report;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using static PURCHASE.DataCenter.Report1;
+
+namespace PURCHASE.MAINCODE.Modun4
+{
+    public partial class frm4DF7 : Form
+    {
+        DataProvider con = new DataProvider();
+        DataTable dt;
+        public frm4DF7()
+        {
+            InitializeComponent();
+        }
+
+        private void btxemtruoc_Click(object sender, EventArgs e)
+        {
+            if(tabControl1.SelectedIndex ==0)
+            {
+                PrintTab1();
+            }
+            else
+            {
+                PrintTab2();
+            }
+        }
+
+        private void PrintTab2()
+        {
+        }
+
+        private void PrintTab1()
+        {
+            string sql = "SELECT CGBBC.WS_NO,CGBBC.C_NO,CGBHC.C_NAME,CGBHC.C_ANAME,CGBBC.WS_DATE,ADDR,CGBHC.OR_NO,CGBBC.C_OR_NO,NR," +
+                " P_NO,P_NAME,BQTY,BUNIT,PRICE,AMOUNT,MEMO,TAX,DISCOUNT,RCV_MON,TOT,TOTAL,NRCV_MON,M_TRAN,M_TRAN_R,TEL1,CGBHC.MEMO1,CAR_COMPANY" +
+                " FROM dbo.CGBHC,dbo.VENDC,dbo.CGBBC" +
+                " WHERE CGBHC.C_NO = VENDC.C_NO  AND CGBBC.WS_NO = CGBHC.WS_NO";
+            if(!string.IsNullOrEmpty(txtWS_NO.Text))
+            {
+                sql = sql + " AND CGBHC.WS_NO >= '"+txtWS_NO.Text+"'";
+            }
+            if (!string.IsNullOrEmpty(txtWS_NO1.Text))
+            {
+                sql = sql + " AND CGBHC.WS_NO <= '" + txtWS_NO.Text + "'";
+            }
+
+            dt = new DataTable();
+            dt = con.readdata(sql);
+
+            ReportDocument cryRpt = new ReportDocument();
+            cryRpt = new cr_Frm4DF7_Tab1();
+            cryRpt.SetDataSource(dt);
+            ShareReport.repo = cryRpt;
+            Report1 frm = new Report1();
+            frm.ShowDialog();
+        }
+    }
+}

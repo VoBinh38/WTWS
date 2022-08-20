@@ -1,0 +1,173 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+namespace PURCHASE.MAINCODE.Search
+{
+    public partial class SearchPROD1C : Form
+    {
+        BindingSource bindingsource;
+        DataTable dt = new DataTable();
+        DataProvider conn = new DataProvider();
+        public SearchPROD1C()
+        {
+            InitializeComponent();
+        }
+
+        public class SetC_NO
+        {
+            public static string C_NO;
+        }
+
+        public class GetData
+        {
+            public string C_NO { get; set; }
+            public string P_NO { get; set; }
+            public string P_NAME { get; set; }
+            public string P_NAME1 { get; set; }
+            public string P_NAME3 { get; set; }
+            public string PRICE { get; set; }
+            public string BUNIT { get; set; }
+            public string QTYSTORE { get; set; }
+            public string CUNIT { get; set; }
+            public string TRANS { get; set; }
+            public string K_NO { get; set; }
+            public string UNIT { get; set; }
+        }
+
+        public class GetListData
+        {
+            public static List<GetData> lisdata = new List<GetData>();
+        }
+
+        private void SearchPROD1C_Load(object sender, EventArgs e)
+        {
+            txtC_NO.Text = SetC_NO.C_NO;
+            Load_data();
+            conn.DGV(dataPROD1C);
+            GetListData.lisdata.Clear();
+        }
+        public void Load_data()
+        {
+            string sql = "SELECT P_NO,P_NAME,UNIT,BUNIT,CUNIT,PRICE,TRANS,P_WEG,P_NAME1,P_NAME3,K_NO,INDATE,QDATE,QDATE3,PRICE3,QDATE4,PRICE4,QDATE5,PRICE5,QDATE6,PRICE6,QDATE7,PRICE7,QDATE8,PRICE8,C_NO,W_CHECK,QTYSTORE,UNIT" +
+                " FROM PROD1C WHERE 2>1 AND C_NO LIKE N'" + txtC_NO.Text +"%' ORDER BY P_NO ,QDATE DESC";
+            dt = new DataTable();
+            dt = conn.readdata(sql);
+            bindingsource = new BindingSource();
+            bindingsource.DataSource = dt;
+            dataPROD1C.DataSource = bindingsource;
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            this.Close();
+        }
+
+        private void btSearch_Click(object sender, EventArgs e)
+        {
+            string sql;
+            sql = "select P_NO,P_NAME,UNIT,BUNIT,CUNIT,PRICE,TRANS,P_WEG,P_NAME1,P_NAME3,K_NO,INDATE,QDATE,QDATE3,PRICE3,QDATE4,PRICE4,QDATE5,PRICE5,QDATE6,PRICE6,QDATE7,PRICE7,QDATE8,PRICE8,C_NO,W_CHECK,QTYSTORE,UNIT" +
+                " from PROD1C WHERE 1=1";
+            if (txtP_NO.Text == "" && txtP_NAME1.Text == "" && txtP_NAME.Text == "" && txtP_NAME3.Text == "")
+                if (txtP_NO.Text != "")
+                    sql = sql + " AND P_NO LIKE N'%" + txtP_NO.Text + "%'";
+            if (txtP_NAME1.Text != "")
+                sql = sql + " AND P_NAME1 LIKE N'%" + txtP_NAME1.Text + "%'";
+            if (txtP_NAME.Text != "")
+                sql = sql + " AND P_NAME LIKE N'%" + txtP_NAME.Text + "%'";
+            if (txtP_NAME3.Text != "")
+                sql = sql + " AND P_NAME3 LIKE N'%" + txtP_NAME3.Text + "%'";
+            dt = new DataTable();
+            dt = conn.readdata(sql);
+            bindingsource = new BindingSource();
+            bindingsource.DataSource = dt;
+            dataPROD1C.DataSource = bindingsource;
+            conn.DGV(dataPROD1C);
+        }
+        public class SEND_FORM6G
+        {
+            public static string t1;
+        }
+        public class SEND_FORM6I
+        {
+            public static string t2;
+        }
+
+        private void dataPROD1C_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int cur = dataPROD1C.CurrentRow.Index;
+            dataPROD1C.Rows[cur].SetValues(true);
+        }
+
+        private void btok_Click(object sender, EventArgs e)
+        {
+            var da = dataPROD1C.Rows.Cast<DataGridViewRow>().Where(x => Convert.ToBoolean(x.Cells[0].Value) == true).ToList();
+
+            foreach (var item in da)
+            {
+                GetListData.lisdata.Add(new GetData
+                {
+                    C_NO = dataPROD1C.Rows[item.Index].Cells["C_NO"].Value.ToString(),
+                    P_NO = dataPROD1C.Rows[item.Index].Cells["P_NO"].Value.ToString(),
+                    P_NAME = dataPROD1C.Rows[item.Index].Cells["P_NAME"].Value.ToString(),
+                    P_NAME1 = dataPROD1C.Rows[item.Index].Cells["P_NAME1"].Value.ToString(),
+                    P_NAME3 = dataPROD1C.Rows[item.Index].Cells["P_NAME3"].Value.ToString(),
+                    PRICE = dataPROD1C.Rows[item.Index].Cells["PRICE"].Value.ToString(),
+                    BUNIT = dataPROD1C.Rows[item.Index].Cells["BUNIT"].Value.ToString(),
+                    QTYSTORE = dataPROD1C.Rows[item.Index].Cells["QTYSTORE"].Value.ToString(),
+                    CUNIT = dataPROD1C.Rows[item.Index].Cells["CUNIT"].Value.ToString(),
+                    TRANS = dataPROD1C.Rows[item.Index].Cells["TRANS"].Value.ToString(),
+                    K_NO = dataPROD1C.Rows[item.Index].Cells["K_NO"].Value.ToString(),
+                    UNIT = dataPROD1C.Rows[item.Index].Cells["UNIT"].Value.ToString()
+                });
+            }
+            this.Hide();
+            this.Close();
+        }
+
+        private void txtP_NO_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSearch.PerformClick();
+                txtP_NAME1.Focus();
+            }
+        }
+
+        private void txtP_NAME1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSearch.PerformClick();
+                txtP_NAME.Focus();
+            }
+        }
+
+        private void txtP_NAME_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSearch.PerformClick();
+                txtP_NAME3.Focus();
+            }
+        }
+
+        private void txtP_NAME3_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSearch.PerformClick();
+            }
+        }
+
+        private void txtP_NO_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
+}

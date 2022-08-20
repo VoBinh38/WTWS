@@ -1,0 +1,49 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using LibraryCalender;
+using PURCHASE.MAINCODE.Search;
+
+namespace PURCHASE.MAINCODE.Modun4
+{
+    public partial class frmSelectDateFrm4E : Form
+    {
+        public frmSelectDateFrm4E()
+        {
+            InitializeComponent();
+        }
+
+        private void btok_Click(object sender, EventArgs e)
+        {
+            if(txtCAL_YM.MaskFull)
+            {
+                SearchVENDC frm = new SearchVENDC();
+                SearchVENDC.SetItem.CAL_YM = txtCAL_YM.Text.Replace("/", "");
+                frm.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Bân chưa nhập tháng thanh toán");
+            }
+
+        }
+
+        private void btdong_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void txtCAL_YM_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            FromCalender frm = new FromCalender();
+            frm.ShowDialog();
+            txtCAL_YM.Text = FromCalender.getDate.ToString("yyyyMM");
+        }
+    }
+}

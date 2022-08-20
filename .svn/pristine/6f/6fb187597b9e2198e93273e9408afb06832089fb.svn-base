@@ -1,0 +1,796 @@
+﻿
+namespace PURCHASE.MAIN.Modun4.Search
+{
+    partial class SearchVENDC
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchVENDC));
+            this.dataGridViewdoanhnghiep2 = new System.Windows.Forms.DataGridView();
+            this.C_NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.C_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TEL1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FAX = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.C_ANAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.V_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.V_ANAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NUMBER = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BOSS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SPEAK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TEL2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ACT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EMAIL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.S_NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EMAIL1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ADR1ZIP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ADR1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ADR2ZIP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ADR2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ADR3ZIP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ADR3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ADR4ZIP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ADR4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MEMO1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MEMO2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MEMO3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ACCOUNT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PRE_RCV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EAR_MON = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TAX_KIND = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BA_NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BANK_AC_NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TAX_YN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CHK_AC_NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PAY_CON = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DEFA_MONEY = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnOK = new System.Windows.Forms.Button();
+            this.txtADR1 = new System.Windows.Forms.TextBox();
+            this.lbADR1 = new System.Windows.Forms.Label();
+            this.txtTEL1 = new System.Windows.Forms.TextBox();
+            this.lbTEL1 = new System.Windows.Forms.Label();
+            this.txtBOSS = new System.Windows.Forms.TextBox();
+            this.lbBOSS = new System.Windows.Forms.Label();
+            this.txtS_NO = new System.Windows.Forms.TextBox();
+            this.lbS_NO = new System.Windows.Forms.Label();
+            this.txtNUMBER = new System.Windows.Forms.TextBox();
+            this.lbNUMBER = new System.Windows.Forms.Label();
+            this.txtC_NAME = new System.Windows.Forms.TextBox();
+            this.lbC_NAME = new System.Windows.Forms.Label();
+            this.txtFAX = new System.Windows.Forms.TextBox();
+            this.lbFAX = new System.Windows.Forms.Label();
+            this.txtSPEAK = new System.Windows.Forms.TextBox();
+            this.lbSPEAK = new System.Windows.Forms.Label();
+            this.txtC_NO = new System.Windows.Forms.TextBox();
+            this.lbC_NO = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewdoanhnghiep2)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dataGridViewdoanhnghiep2
+            // 
+            this.dataGridViewdoanhnghiep2.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewdoanhnghiep2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewdoanhnghiep2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewdoanhnghiep2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.C_NO,
+            this.C_NAME,
+            this.TEL1,
+            this.FAX,
+            this.C_ANAME,
+            this.V_NAME,
+            this.V_ANAME,
+            this.NUMBER,
+            this.BOSS,
+            this.SPEAK,
+            this.TEL2,
+            this.ACT,
+            this.EMAIL,
+            this.S_NO,
+            this.EMAIL1,
+            this.ADR1ZIP,
+            this.ADR1,
+            this.ADR2ZIP,
+            this.ADR2,
+            this.ADR3ZIP,
+            this.ADR3,
+            this.ADR4ZIP,
+            this.ADR4,
+            this.MEMO1,
+            this.MEMO2,
+            this.MEMO3,
+            this.ACCOUNT,
+            this.PRE_RCV,
+            this.EAR_MON,
+            this.TAX_KIND,
+            this.BA_NO,
+            this.BANK_AC_NO,
+            this.TAX_YN,
+            this.CHK_AC_NO,
+            this.PAY_CON,
+            this.DEFA_MONEY});
+            this.dataGridViewdoanhnghiep2.Location = new System.Drawing.Point(26, 156);
+            this.dataGridViewdoanhnghiep2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridViewdoanhnghiep2.Name = "dataGridViewdoanhnghiep2";
+            this.dataGridViewdoanhnghiep2.RowHeadersWidth = 62;
+            this.dataGridViewdoanhnghiep2.RowTemplate.Height = 28;
+            this.dataGridViewdoanhnghiep2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewdoanhnghiep2.Size = new System.Drawing.Size(1356, 538);
+            this.dataGridViewdoanhnghiep2.TabIndex = 158;
+            this.dataGridViewdoanhnghiep2.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewdoanhnghiep2_CellMouseDoubleClick);
+            // 
+            // C_NO
+            // 
+            this.C_NO.DataPropertyName = "C_NO";
+            this.C_NO.HeaderText = "Mã Số Nhà Cung Cấp";
+            this.C_NO.MinimumWidth = 8;
+            this.C_NO.Name = "C_NO";
+            this.C_NO.Width = 200;
+            // 
+            // C_NAME
+            // 
+            this.C_NAME.DataPropertyName = "C_NAME";
+            this.C_NAME.HeaderText = "Tên Tiếng Trung";
+            this.C_NAME.MinimumWidth = 8;
+            this.C_NAME.Name = "C_NAME";
+            this.C_NAME.Width = 300;
+            // 
+            // TEL1
+            // 
+            this.TEL1.DataPropertyName = "TEL1";
+            this.TEL1.HeaderText = "Điện Thoại";
+            this.TEL1.MinimumWidth = 8;
+            this.TEL1.Name = "TEL1";
+            this.TEL1.Width = 150;
+            // 
+            // FAX
+            // 
+            this.FAX.DataPropertyName = "FAX";
+            this.FAX.HeaderText = "Fax";
+            this.FAX.MinimumWidth = 8;
+            this.FAX.Name = "FAX";
+            this.FAX.Width = 150;
+            // 
+            // C_ANAME
+            // 
+            this.C_ANAME.DataPropertyName = "C_ANAME";
+            this.C_ANAME.HeaderText = "Viết Tắt";
+            this.C_ANAME.MinimumWidth = 8;
+            this.C_ANAME.Name = "C_ANAME";
+            this.C_ANAME.Width = 150;
+            // 
+            // V_NAME
+            // 
+            this.V_NAME.DataPropertyName = "V_NAME";
+            this.V_NAME.HeaderText = "";
+            this.V_NAME.MinimumWidth = 8;
+            this.V_NAME.Name = "V_NAME";
+            this.V_NAME.Width = 150;
+            // 
+            // V_ANAME
+            // 
+            this.V_ANAME.DataPropertyName = "V_ANAME";
+            this.V_ANAME.HeaderText = "";
+            this.V_ANAME.MinimumWidth = 8;
+            this.V_ANAME.Name = "V_ANAME";
+            this.V_ANAME.Width = 150;
+            // 
+            // NUMBER
+            // 
+            this.NUMBER.DataPropertyName = "NUMBER";
+            this.NUMBER.HeaderText = "SỐ THỐNG NHẤT";
+            this.NUMBER.MinimumWidth = 8;
+            this.NUMBER.Name = "NUMBER";
+            this.NUMBER.Width = 200;
+            // 
+            // BOSS
+            // 
+            this.BOSS.DataPropertyName = "BOSS";
+            this.BOSS.HeaderText = "Người Phụ Trách";
+            this.BOSS.MinimumWidth = 8;
+            this.BOSS.Name = "BOSS";
+            this.BOSS.Width = 200;
+            // 
+            // SPEAK
+            // 
+            this.SPEAK.DataPropertyName = "SPEAK";
+            this.SPEAK.HeaderText = "Người Liên Hệ";
+            this.SPEAK.MinimumWidth = 8;
+            this.SPEAK.Name = "SPEAK";
+            this.SPEAK.Width = 200;
+            // 
+            // TEL2
+            // 
+            this.TEL2.DataPropertyName = "TEL2";
+            this.TEL2.HeaderText = "Điện Thoại";
+            this.TEL2.MinimumWidth = 8;
+            this.TEL2.Name = "TEL2";
+            this.TEL2.Width = 150;
+            // 
+            // ACT
+            // 
+            this.ACT.DataPropertyName = "ACT";
+            this.ACT.HeaderText = "Di Động";
+            this.ACT.MinimumWidth = 8;
+            this.ACT.Name = "ACT";
+            this.ACT.Width = 150;
+            // 
+            // EMAIL
+            // 
+            this.EMAIL.DataPropertyName = "EMAIL";
+            this.EMAIL.HeaderText = "EMAIL";
+            this.EMAIL.MinimumWidth = 8;
+            this.EMAIL.Name = "EMAIL";
+            this.EMAIL.Width = 150;
+            // 
+            // S_NO
+            // 
+            this.S_NO.DataPropertyName = "S_NO";
+            this.S_NO.HeaderText = "Người Bán";
+            this.S_NO.MinimumWidth = 8;
+            this.S_NO.Name = "S_NO";
+            this.S_NO.Width = 150;
+            // 
+            // EMAIL1
+            // 
+            this.EMAIL1.DataPropertyName = "EMAIL1";
+            this.EMAIL1.HeaderText = "";
+            this.EMAIL1.MinimumWidth = 8;
+            this.EMAIL1.Name = "EMAIL1";
+            this.EMAIL1.Width = 150;
+            // 
+            // ADR1ZIP
+            // 
+            this.ADR1ZIP.DataPropertyName = "ADR1ZIP";
+            this.ADR1ZIP.HeaderText = "";
+            this.ADR1ZIP.MinimumWidth = 8;
+            this.ADR1ZIP.Name = "ADR1ZIP";
+            this.ADR1ZIP.Width = 150;
+            // 
+            // ADR1
+            // 
+            this.ADR1.DataPropertyName = "ADR1";
+            this.ADR1.HeaderText = "Địa Chỉ Công Ty";
+            this.ADR1.MinimumWidth = 8;
+            this.ADR1.Name = "ADR1";
+            this.ADR1.Width = 250;
+            // 
+            // ADR2ZIP
+            // 
+            this.ADR2ZIP.DataPropertyName = "ADR2ZIP";
+            this.ADR2ZIP.HeaderText = "";
+            this.ADR2ZIP.MinimumWidth = 8;
+            this.ADR2ZIP.Name = "ADR2ZIP";
+            this.ADR2ZIP.Width = 150;
+            // 
+            // ADR2
+            // 
+            this.ADR2.DataPropertyName = "ADR2";
+            this.ADR2.HeaderText = "Địa Chỉ Thánh Toán";
+            this.ADR2.MinimumWidth = 8;
+            this.ADR2.Name = "ADR2";
+            this.ADR2.Width = 250;
+            // 
+            // ADR3ZIP
+            // 
+            this.ADR3ZIP.DataPropertyName = "ADR3ZIP";
+            this.ADR3ZIP.HeaderText = "";
+            this.ADR3ZIP.MinimumWidth = 8;
+            this.ADR3ZIP.Name = "ADR3ZIP";
+            this.ADR3ZIP.Width = 150;
+            // 
+            // ADR3
+            // 
+            this.ADR3.DataPropertyName = "ADR3";
+            this.ADR3.HeaderText = "Địa Chỉ Nhà Máy";
+            this.ADR3.MinimumWidth = 8;
+            this.ADR3.Name = "ADR3";
+            this.ADR3.Width = 250;
+            // 
+            // ADR4ZIP
+            // 
+            this.ADR4ZIP.DataPropertyName = "ADR4ZIP";
+            this.ADR4ZIP.HeaderText = "";
+            this.ADR4ZIP.MinimumWidth = 8;
+            this.ADR4ZIP.Name = "ADR4ZIP";
+            this.ADR4ZIP.Width = 150;
+            // 
+            // ADR4
+            // 
+            this.ADR4.DataPropertyName = "ADR4";
+            this.ADR4.HeaderText = "Địa Chỉ Giao Hàng";
+            this.ADR4.MinimumWidth = 8;
+            this.ADR4.Name = "ADR4";
+            this.ADR4.Width = 250;
+            // 
+            // MEMO1
+            // 
+            this.MEMO1.DataPropertyName = "MEMO1";
+            this.MEMO1.HeaderText = "Nhận Xét";
+            this.MEMO1.MinimumWidth = 8;
+            this.MEMO1.Name = "MEMO1";
+            this.MEMO1.Width = 150;
+            // 
+            // MEMO2
+            // 
+            this.MEMO2.DataPropertyName = "MEMO2";
+            this.MEMO2.HeaderText = "";
+            this.MEMO2.MinimumWidth = 8;
+            this.MEMO2.Name = "MEMO2";
+            this.MEMO2.Width = 150;
+            // 
+            // MEMO3
+            // 
+            this.MEMO3.DataPropertyName = "MEMO3";
+            this.MEMO3.HeaderText = "";
+            this.MEMO3.MinimumWidth = 8;
+            this.MEMO3.Name = "MEMO3";
+            this.MEMO3.Width = 150;
+            // 
+            // ACCOUNT
+            // 
+            this.ACCOUNT.DataPropertyName = "ACCOUNT";
+            this.ACCOUNT.HeaderText = "Kế Toán";
+            this.ACCOUNT.MinimumWidth = 8;
+            this.ACCOUNT.Name = "ACCOUNT";
+            this.ACCOUNT.Width = 150;
+            // 
+            // PRE_RCV
+            // 
+            this.PRE_RCV.DataPropertyName = "PRE_RCV";
+            this.PRE_RCV.HeaderText = "Thanh Toán Trước";
+            this.PRE_RCV.MinimumWidth = 8;
+            this.PRE_RCV.Name = "PRE_RCV";
+            this.PRE_RCV.Width = 250;
+            // 
+            // EAR_MON
+            // 
+            this.EAR_MON.DataPropertyName = "EAR_MON";
+            this.EAR_MON.HeaderText = "Mở Tài Khoản";
+            this.EAR_MON.MinimumWidth = 8;
+            this.EAR_MON.Name = "EAR_MON";
+            this.EAR_MON.Width = 200;
+            // 
+            // TAX_KIND
+            // 
+            this.TAX_KIND.DataPropertyName = "TAX_KIND";
+            this.TAX_KIND.HeaderText = "Thuế";
+            this.TAX_KIND.MinimumWidth = 8;
+            this.TAX_KIND.Name = "TAX_KIND";
+            this.TAX_KIND.Width = 150;
+            // 
+            // BA_NO
+            // 
+            this.BA_NO.DataPropertyName = "BA_NO";
+            this.BA_NO.HeaderText = "Ngân Hàng";
+            this.BA_NO.MinimumWidth = 8;
+            this.BA_NO.Name = "BA_NO";
+            this.BA_NO.Width = 150;
+            // 
+            // BANK_AC_NO
+            // 
+            this.BANK_AC_NO.DataPropertyName = "BANK_AC_NO";
+            this.BANK_AC_NO.HeaderText = "";
+            this.BANK_AC_NO.MinimumWidth = 8;
+            this.BANK_AC_NO.Name = "BANK_AC_NO";
+            this.BANK_AC_NO.Width = 150;
+            // 
+            // TAX_YN
+            // 
+            this.TAX_YN.DataPropertyName = "TAX_YN";
+            this.TAX_YN.HeaderText = "Có Tính Thuế";
+            this.TAX_YN.MinimumWidth = 8;
+            this.TAX_YN.Name = "TAX_YN";
+            this.TAX_YN.Width = 200;
+            // 
+            // CHK_AC_NO
+            // 
+            this.CHK_AC_NO.DataPropertyName = "CHK_AC_NO";
+            this.CHK_AC_NO.HeaderText = "Điều Khoản Thanh Toán";
+            this.CHK_AC_NO.MinimumWidth = 8;
+            this.CHK_AC_NO.Name = "CHK_AC_NO";
+            this.CHK_AC_NO.Width = 250;
+            // 
+            // PAY_CON
+            // 
+            this.PAY_CON.DataPropertyName = "PAY_CON";
+            this.PAY_CON.HeaderText = "Thanh Toán";
+            this.PAY_CON.MinimumWidth = 8;
+            this.PAY_CON.Name = "PAY_CON";
+            this.PAY_CON.Width = 150;
+            // 
+            // DEFA_MONEY
+            // 
+            this.DEFA_MONEY.DataPropertyName = "DEFA_MONEY";
+            this.DEFA_MONEY.HeaderText = "Tiền Tệ";
+            this.DEFA_MONEY.MinimumWidth = 8;
+            this.DEFA_MONEY.Name = "DEFA_MONEY";
+            this.DEFA_MONEY.Width = 150;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
+            this.btnSearch.ForeColor = System.Drawing.Color.Black;
+            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
+            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSearch.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnSearch.Location = new System.Drawing.Point(1243, 102);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(139, 39);
+            this.btnSearch.TabIndex = 157;
+            this.btnSearch.Text = "TÌM KIẾM";
+            this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
+            this.btnClose.ForeColor = System.Drawing.Color.Black;
+            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClose.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnClose.Location = new System.Drawing.Point(1243, 59);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(139, 37);
+            this.btnClose.TabIndex = 156;
+            this.btnClose.Text = "ĐÓNG";
+            this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClose.UseVisualStyleBackColor = true;
+            // 
+            // btnOK
+            // 
+            this.btnOK.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
+            this.btnOK.ForeColor = System.Drawing.Color.Black;
+            this.btnOK.Image = ((System.Drawing.Image)(resources.GetObject("btnOK.Image")));
+            this.btnOK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOK.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnOK.Location = new System.Drawing.Point(1243, 14);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(139, 36);
+            this.btnOK.TabIndex = 155;
+            this.btnOK.Text = "OK";
+            this.btnOK.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            // 
+            // txtADR1
+            // 
+            this.txtADR1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtADR1.Location = new System.Drawing.Point(1030, 95);
+            this.txtADR1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtADR1.Name = "txtADR1";
+            this.txtADR1.Size = new System.Drawing.Size(194, 30);
+            this.txtADR1.TabIndex = 154;
+            this.txtADR1.TextChanged += new System.EventHandler(this.txtADR1_TextChanged);
+            this.txtADR1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtADR1_KeyDown);
+            // 
+            // lbADR1
+            // 
+            this.lbADR1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.lbADR1.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lbADR1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbADR1.Location = new System.Drawing.Point(854, 103);
+            this.lbADR1.Name = "lbADR1";
+            this.lbADR1.Size = new System.Drawing.Size(149, 24);
+            this.lbADR1.TabIndex = 153;
+            this.lbADR1.Text = "Địa chỉ:";
+            this.lbADR1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtTEL1
+            // 
+            this.txtTEL1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtTEL1.Location = new System.Drawing.Point(630, 101);
+            this.txtTEL1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTEL1.Name = "txtTEL1";
+            this.txtTEL1.Size = new System.Drawing.Size(182, 30);
+            this.txtTEL1.TabIndex = 152;
+            this.txtTEL1.TextChanged += new System.EventHandler(this.txtTEL1_TextChanged);
+            this.txtTEL1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTEL1_KeyDown);
+            // 
+            // lbTEL1
+            // 
+            this.lbTEL1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.lbTEL1.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lbTEL1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbTEL1.Location = new System.Drawing.Point(466, 104);
+            this.lbTEL1.Name = "lbTEL1";
+            this.lbTEL1.Size = new System.Drawing.Size(156, 24);
+            this.lbTEL1.TabIndex = 151;
+            this.lbTEL1.Text = "Điện thoại:";
+            this.lbTEL1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtBOSS
+            // 
+            this.txtBOSS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtBOSS.Location = new System.Drawing.Point(214, 98);
+            this.txtBOSS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBOSS.Name = "txtBOSS";
+            this.txtBOSS.Size = new System.Drawing.Size(219, 30);
+            this.txtBOSS.TabIndex = 150;
+            this.txtBOSS.TextChanged += new System.EventHandler(this.txtBOSS_TextChanged);
+            this.txtBOSS.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBOSS_KeyDown);
+            // 
+            // lbBOSS
+            // 
+            this.lbBOSS.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.lbBOSS.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lbBOSS.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbBOSS.Location = new System.Drawing.Point(26, 100);
+            this.lbBOSS.Name = "lbBOSS";
+            this.lbBOSS.Size = new System.Drawing.Size(162, 24);
+            this.lbBOSS.TabIndex = 149;
+            this.lbBOSS.Text = "Người phụ trách:";
+            this.lbBOSS.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtS_NO
+            // 
+            this.txtS_NO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtS_NO.Location = new System.Drawing.Point(1030, 57);
+            this.txtS_NO.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtS_NO.Name = "txtS_NO";
+            this.txtS_NO.Size = new System.Drawing.Size(194, 30);
+            this.txtS_NO.TabIndex = 148;
+            this.txtS_NO.TextChanged += new System.EventHandler(this.txtS_NO_TextChanged);
+            this.txtS_NO.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtS_NO_KeyDown);
+            // 
+            // lbS_NO
+            // 
+            this.lbS_NO.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.lbS_NO.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lbS_NO.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbS_NO.Location = new System.Drawing.Point(852, 60);
+            this.lbS_NO.Name = "lbS_NO";
+            this.lbS_NO.Size = new System.Drawing.Size(151, 24);
+            this.lbS_NO.TabIndex = 147;
+            this.lbS_NO.Text = "Người bán hàng:";
+            this.lbS_NO.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtNUMBER
+            // 
+            this.txtNUMBER.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtNUMBER.Location = new System.Drawing.Point(630, 61);
+            this.txtNUMBER.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNUMBER.Name = "txtNUMBER";
+            this.txtNUMBER.Size = new System.Drawing.Size(182, 30);
+            this.txtNUMBER.TabIndex = 146;
+            this.txtNUMBER.TextChanged += new System.EventHandler(this.txtNUMBER_TextChanged);
+            this.txtNUMBER.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNUMBER_KeyDown);
+            // 
+            // lbNUMBER
+            // 
+            this.lbNUMBER.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.lbNUMBER.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lbNUMBER.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbNUMBER.Location = new System.Drawing.Point(461, 61);
+            this.lbNUMBER.Name = "lbNUMBER";
+            this.lbNUMBER.Size = new System.Drawing.Size(161, 24);
+            this.lbNUMBER.TabIndex = 145;
+            this.lbNUMBER.Text = "Số thống nhất:";
+            this.lbNUMBER.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtC_NAME
+            // 
+            this.txtC_NAME.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtC_NAME.Location = new System.Drawing.Point(214, 58);
+            this.txtC_NAME.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtC_NAME.Name = "txtC_NAME";
+            this.txtC_NAME.Size = new System.Drawing.Size(219, 30);
+            this.txtC_NAME.TabIndex = 144;
+            this.txtC_NAME.TextChanged += new System.EventHandler(this.txtC_NAME_TextChanged);
+            this.txtC_NAME.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtC_NAME_KeyDown);
+            // 
+            // lbC_NAME
+            // 
+            this.lbC_NAME.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.lbC_NAME.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lbC_NAME.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbC_NAME.Location = new System.Drawing.Point(25, 60);
+            this.lbC_NAME.Name = "lbC_NAME";
+            this.lbC_NAME.Size = new System.Drawing.Size(163, 24);
+            this.lbC_NAME.TabIndex = 143;
+            this.lbC_NAME.Text = "Tên Trung Quốc:";
+            this.lbC_NAME.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtFAX
+            // 
+            this.txtFAX.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtFAX.Location = new System.Drawing.Point(1030, 18);
+            this.txtFAX.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtFAX.Name = "txtFAX";
+            this.txtFAX.Size = new System.Drawing.Size(194, 30);
+            this.txtFAX.TabIndex = 142;
+            this.txtFAX.TextChanged += new System.EventHandler(this.txtFAX_TextChanged);
+            this.txtFAX.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtFAX_KeyDown);
+            // 
+            // lbFAX
+            // 
+            this.lbFAX.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.lbFAX.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lbFAX.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbFAX.Location = new System.Drawing.Point(852, 20);
+            this.lbFAX.Name = "lbFAX";
+            this.lbFAX.Size = new System.Drawing.Size(151, 24);
+            this.lbFAX.TabIndex = 141;
+            this.lbFAX.Text = "Số Fax:";
+            this.lbFAX.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtSPEAK
+            // 
+            this.txtSPEAK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtSPEAK.Location = new System.Drawing.Point(628, 21);
+            this.txtSPEAK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSPEAK.Name = "txtSPEAK";
+            this.txtSPEAK.Size = new System.Drawing.Size(185, 30);
+            this.txtSPEAK.TabIndex = 140;
+            this.txtSPEAK.TextChanged += new System.EventHandler(this.txtSPEAK_TextChanged);
+            this.txtSPEAK.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSPEAK_KeyDown);
+            // 
+            // lbSPEAK
+            // 
+            this.lbSPEAK.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.lbSPEAK.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lbSPEAK.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbSPEAK.Location = new System.Drawing.Point(461, 21);
+            this.lbSPEAK.Name = "lbSPEAK";
+            this.lbSPEAK.Size = new System.Drawing.Size(161, 24);
+            this.lbSPEAK.TabIndex = 139;
+            this.lbSPEAK.Text = "Người liên hệ:";
+            this.lbSPEAK.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtC_NO
+            // 
+            this.txtC_NO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtC_NO.Location = new System.Drawing.Point(214, 21);
+            this.txtC_NO.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtC_NO.Name = "txtC_NO";
+            this.txtC_NO.Size = new System.Drawing.Size(219, 30);
+            this.txtC_NO.TabIndex = 138;
+            this.txtC_NO.TextChanged += new System.EventHandler(this.txtC_NO_TextChanged);
+            this.txtC_NO.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtC_NO_KeyDown);
+            // 
+            // lbC_NO
+            // 
+            this.lbC_NO.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.lbC_NO.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lbC_NO.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbC_NO.Location = new System.Drawing.Point(26, 23);
+            this.lbC_NO.Name = "lbC_NO";
+            this.lbC_NO.Size = new System.Drawing.Size(162, 24);
+            this.lbC_NO.TabIndex = 137;
+            this.lbC_NO.Text = "Số Nhà cung cấp:";
+            this.lbC_NO.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // SearchVENDC
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1407, 719);
+            this.Controls.Add(this.dataGridViewdoanhnghiep2);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnOK);
+            this.Controls.Add(this.txtADR1);
+            this.Controls.Add(this.lbADR1);
+            this.Controls.Add(this.txtTEL1);
+            this.Controls.Add(this.lbTEL1);
+            this.Controls.Add(this.txtBOSS);
+            this.Controls.Add(this.lbBOSS);
+            this.Controls.Add(this.txtS_NO);
+            this.Controls.Add(this.lbS_NO);
+            this.Controls.Add(this.txtNUMBER);
+            this.Controls.Add(this.lbNUMBER);
+            this.Controls.Add(this.txtC_NAME);
+            this.Controls.Add(this.lbC_NAME);
+            this.Controls.Add(this.txtFAX);
+            this.Controls.Add(this.lbFAX);
+            this.Controls.Add(this.txtSPEAK);
+            this.Controls.Add(this.lbSPEAK);
+            this.Controls.Add(this.txtC_NO);
+            this.Controls.Add(this.lbC_NO);
+            this.Name = "SearchVENDC";
+            this.Text = "Tìm kiếm thông tin doanh nghiệp";
+            this.Load += new System.EventHandler(this.SearchVENDC_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewdoanhnghiep2)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        public System.Windows.Forms.DataGridView dataGridViewdoanhnghiep2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn C_NO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn C_NAME;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TEL1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FAX;
+        private System.Windows.Forms.DataGridViewTextBoxColumn C_ANAME;
+        private System.Windows.Forms.DataGridViewTextBoxColumn V_NAME;
+        private System.Windows.Forms.DataGridViewTextBoxColumn V_ANAME;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NUMBER;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BOSS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SPEAK;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TEL2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ACT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EMAIL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn S_NO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EMAIL1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ADR1ZIP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ADR1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ADR2ZIP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ADR2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ADR3ZIP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ADR3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ADR4ZIP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ADR4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MEMO1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MEMO2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MEMO3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ACCOUNT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PRE_RCV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EAR_MON;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TAX_KIND;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BA_NO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BANK_AC_NO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TAX_YN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CHK_AC_NO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PAY_CON;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DEFA_MONEY;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnOK;
+        private System.Windows.Forms.TextBox txtADR1;
+        private System.Windows.Forms.Label lbADR1;
+        private System.Windows.Forms.TextBox txtTEL1;
+        private System.Windows.Forms.Label lbTEL1;
+        private System.Windows.Forms.TextBox txtBOSS;
+        private System.Windows.Forms.Label lbBOSS;
+        private System.Windows.Forms.TextBox txtS_NO;
+        private System.Windows.Forms.Label lbS_NO;
+        private System.Windows.Forms.TextBox txtNUMBER;
+        private System.Windows.Forms.Label lbNUMBER;
+        private System.Windows.Forms.TextBox txtC_NAME;
+        private System.Windows.Forms.Label lbC_NAME;
+        private System.Windows.Forms.TextBox txtFAX;
+        private System.Windows.Forms.Label lbFAX;
+        private System.Windows.Forms.TextBox txtSPEAK;
+        private System.Windows.Forms.Label lbSPEAK;
+        private System.Windows.Forms.TextBox txtC_NO;
+        private System.Windows.Forms.Label lbC_NO;
+    }
+}

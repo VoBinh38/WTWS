@@ -1,0 +1,190 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+
+namespace PURCHASE.MAINCODE.Modun4.Search
+{
+    public partial class frmSearchCOMBC : Form
+    {
+        DataProvider con = new DataProvider();
+        DataTable dt = new DataTable();
+        public frmSearchCOMBC()
+        {
+            InitializeComponent();
+        }
+
+        private void frmSearchCOMBC_Load(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
+        public class Items
+        { 
+            public string WS_NO { get; set; }
+            public float NR { get; set; }
+            public string WS_DATE { get; set; }
+            public string C_NO { get; set; }
+            public string P_NO { get; set; }
+            public string P_NAME { get; set; }
+            public string P_NAME1 { get; set; }
+            public string P_NAME3 { get; set; }
+            public string UNIT { get; set; }
+            public float QTY { get; set; }
+            public string BUNIT { get; set; }
+            public string CUNIT { get; set; }
+            public string TRANS { get; set; }
+            public float PRICE { get; set; }
+            public int COST { get; set; }
+            public float AMOUNT { get; set; }
+            public string MEMO { get; set; }
+            public string SH_NO { get; set; }
+            public string DEPT_NO { get; set; }
+            public string DEPT_NAME { get; set; }
+            public string M_TRAN { get; set; }
+        }
+        public static List<Items> items = new List<Items>();
+
+        private void LoadData()
+        {
+            string sql = "SELECT B.WS_NO,B.NR,B.WS_DATE,B.C_NO,B.P_NO,B.P_NAME,B.P_NAME1,B.P_NAME3,B.UNIT,B.QTY,B.BQTY,B.BUNIT,B.CUNIT,B.TRANS,B.PRICE,B.COST,B.AMOUNT,B.MEMO,B.SH_NO,B.K_NO,B.DEPT_NO,B.DEPT_NAME,H.M_TRAN,B.OVER0" +
+                " FROM COMBC B,COMHC H" +
+                " WHERE B.WS_NO=H.WS_NO ";
+            if(rdb1.Checked == true)
+            {
+                sql = sql + " AND (B.OVER0='Y'OR B.HOVER='Y')";
+            }
+            else if(rdb2.Checked == true)
+            {
+                sql = sql + "";
+            }
+            else
+            {
+                sql = sql + " AND (B.OVER0<>'Y'AND B.HOVER<>'Y')";
+            }
+
+            if(!string.IsNullOrEmpty(txtWS_NO.Text))
+            {
+                sql = sql + " AND B.WS_NO LIKE '"+txtWS_NO.Text+"'";
+            }
+            if(txtWS_DATE.MaskFull)
+            {
+                sql = sql + " AND B.WS_DATE LIKE '"+ txtWS_DATE .Text.Replace("/","")+ "%'";
+            }
+            if (!string.IsNullOrEmpty(txtP_NAME1.Text))
+            {
+                sql = sql + " AND B.P_NAME1 LIKE '"+ txtP_NAME1.Text + "%'";
+            }
+            if (!string.IsNullOrEmpty(txtC_NO.Text))
+            {
+                sql = sql + " AND B.C_NO LIKE '" + txtC_NO.Text + "%'";
+            }
+            if (!string.IsNullOrEmpty(txtP_NO.Text))
+            {
+                sql = sql + " AND B.P_NO LIKE '" + txtP_NO.Text + "%'";
+            }
+            if (!string.IsNullOrEmpty(txtP_NAME3.Text))
+            {
+                sql = sql + " AND B.P_NAME3 LIKE '" + txtP_NAME3.Text + "%'";
+            }
+
+            sql = sql + " ORDER BY B.WS_DATE DESC,B.WS_NO DESC";
+            dt = con.readdata(sql);
+            DGV1.DataSource = dt;
+        }
+
+        private void txtWS_NO_TextChanged(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
+        private void txtWS_DATE_TextChanged(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
+        private void txtP_NAME1_TextChanged(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
+        private void txtC_NO_TextChanged(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
+        private void txtP_NO_TextChanged(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
+        private void txtP_NAME3_TextChanged(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
+        private void btnok_Click(object sender, EventArgs e)
+        {
+            var da = DGV1.Rows.Cast<DataGridViewRow>().Where(x => Convert.ToBoolean(x.Cells[0].Value) == true).ToList();
+
+            foreach (var item in da)
+            {
+                items.Add(new Items
+                {
+                    WS_NO = DGV1.Rows[item.Index].Cells["WS_NO"].Value.ToString(),
+                    NR = float.Parse(DGV1.Rows[item.Index].Cells["NR"].Value.ToString()),
+                    WS_DATE = DGV1.Rows[item.Index].Cells["WS_DATE"].Value.ToString(),
+                    C_NO = DGV1.Rows[item.Index].Cells["C_NO"].Value.ToString(),
+                    P_NO = DGV1.Rows[item.Index].Cells["P_NO"].Value.ToString(),
+                    P_NAME = DGV1.Rows[item.Index].Cells["P_NAME"].Value.ToString(),
+                    P_NAME1 = DGV1.Rows[item.Index].Cells["P_NAME1"].Value.ToString(),
+                    P_NAME3 = DGV1.Rows[item.Index].Cells["P_NAME3"].Value.ToString(),
+                    UNIT = DGV1.Rows[item.Index].Cells["UNIT"].Value.ToString(),
+                    QTY = float.Parse(DGV1.Rows[item.Index].Cells["QTY"].Value.ToString()),
+                    BUNIT = DGV1.Rows[item.Index].Cells["BUNIT"].Value.ToString(),
+                    CUNIT = DGV1.Rows[item.Index].Cells["CUNIT"].Value.ToString(),
+                    TRANS = DGV1.Rows[item.Index].Cells["TRANS"].Value.ToString(),
+                    PRICE = float.Parse(DGV1.Rows[item.Index].Cells["PRICE"].Value.ToString()),
+                    COST = int.Parse(DGV1.Rows[item.Index].Cells["COST"].Value.ToString()),
+                    AMOUNT = float.Parse(DGV1.Rows[item.Index].Cells["AMOUNT"].Value.ToString()),
+                    MEMO = DGV1.Rows[item.Index].Cells["MEMO"].Value.ToString(),
+                    SH_NO = DGV1.Rows[item.Index].Cells["SH_NO"].Value.ToString(),
+                    DEPT_NO = DGV1.Rows[item.Index].Cells["DEPT_NO"].Value.ToString(),
+                    DEPT_NAME = DGV1.Rows[item.Index].Cells["DEPT_NAME"].Value.ToString(),
+                    M_TRAN = DGV1.Rows[item.Index].Cells["M_TRAN"].Value.ToString()
+                });
+            }
+            this.Close();
+        }
+
+        private void DGV1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int cur = DGV1.CurrentRow.Index;
+            DGV1.Rows[cur].SetValues(true);
+        }
+
+        private void rdbAll_CheckedChanged(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
+        private void rdb2_CheckedChanged(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
+        private void rdb1_CheckedChanged(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+    }
+}

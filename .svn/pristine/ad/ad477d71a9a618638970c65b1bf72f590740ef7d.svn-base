@@ -1,0 +1,293 @@
+﻿
+namespace PURCHASE.MAINCODE.Search
+{
+    partial class SearchPAYV
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchPAYV));
+            this.lbCUTON = new System.Windows.Forms.Label();
+            this.txtCUTON = new System.Windows.Forms.MaskedTextBox();
+            this.lbCUTOFF = new System.Windows.Forms.Label();
+            this.txtCUTOFF = new System.Windows.Forms.MaskedTextBox();
+            this.lbC_NO = new System.Windows.Forms.Label();
+            this.txtC_NO = new System.Windows.Forms.TextBox();
+            this.DGV1 = new System.Windows.Forms.DataGridView();
+            this.btnok = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.CUTON = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CUTOFF = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.C_ANAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.C_NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CTOTAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TAX = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DISCOUNT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CASH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CURRMON = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // lbCUTON
+            // 
+            this.lbCUTON.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lbCUTON.ForeColor = System.Drawing.Color.Brown;
+            this.lbCUTON.Location = new System.Drawing.Point(12, 23);
+            this.lbCUTON.Name = "lbCUTON";
+            this.lbCUTON.Size = new System.Drawing.Size(256, 34);
+            this.lbCUTON.TabIndex = 0;
+            this.lbCUTON.Text = "Ngày bắt đầu thanh toán";
+            this.lbCUTON.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtCUTON
+            // 
+            this.txtCUTON.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtCUTON.Location = new System.Drawing.Point(285, 27);
+            this.txtCUTON.Mask = "0000/00/00";
+            this.txtCUTON.Name = "txtCUTON";
+            this.txtCUTON.Size = new System.Drawing.Size(277, 30);
+            this.txtCUTON.TabIndex = 0;
+            this.txtCUTON.TextChanged += new System.EventHandler(this.txtCUTON_TextChanged);
+            this.txtCUTON.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCUTON_KeyDown);
+            // 
+            // lbCUTOFF
+            // 
+            this.lbCUTOFF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lbCUTOFF.ForeColor = System.Drawing.Color.Brown;
+            this.lbCUTOFF.Location = new System.Drawing.Point(12, 72);
+            this.lbCUTOFF.Name = "lbCUTOFF";
+            this.lbCUTOFF.Size = new System.Drawing.Size(256, 34);
+            this.lbCUTOFF.TabIndex = 0;
+            this.lbCUTOFF.Text = "Ngày kết thúc thanh toán";
+            this.lbCUTOFF.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtCUTOFF
+            // 
+            this.txtCUTOFF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtCUTOFF.Location = new System.Drawing.Point(285, 74);
+            this.txtCUTOFF.Mask = "0000/00/00";
+            this.txtCUTOFF.Name = "txtCUTOFF";
+            this.txtCUTOFF.Size = new System.Drawing.Size(277, 30);
+            this.txtCUTOFF.TabIndex = 1;
+            this.txtCUTOFF.TextChanged += new System.EventHandler(this.txtCUTOFF_TextChanged);
+            this.txtCUTOFF.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCUTOFF_KeyDown);
+            // 
+            // lbC_NO
+            // 
+            this.lbC_NO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lbC_NO.ForeColor = System.Drawing.Color.Brown;
+            this.lbC_NO.Location = new System.Drawing.Point(577, 23);
+            this.lbC_NO.Name = "lbC_NO";
+            this.lbC_NO.Size = new System.Drawing.Size(256, 34);
+            this.lbC_NO.TabIndex = 0;
+            this.lbC_NO.Text = "Số nhà cung cấp";
+            this.lbC_NO.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtC_NO
+            // 
+            this.txtC_NO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtC_NO.Location = new System.Drawing.Point(839, 27);
+            this.txtC_NO.Name = "txtC_NO";
+            this.txtC_NO.Size = new System.Drawing.Size(288, 30);
+            this.txtC_NO.TabIndex = 2;
+            this.txtC_NO.TextChanged += new System.EventHandler(this.txtC_NO_TextChanged);
+            this.txtC_NO.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtC_NO_KeyDown);
+            // 
+            // DGV1
+            // 
+            this.DGV1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.DGV1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CUTON,
+            this.CUTOFF,
+            this.C_ANAME,
+            this.C_NO,
+            this.CTOTAL,
+            this.TAX,
+            this.DISCOUNT,
+            this.CASH,
+            this.CURRMON});
+            this.DGV1.Location = new System.Drawing.Point(12, 110);
+            this.DGV1.Name = "DGV1";
+            this.DGV1.RowHeadersWidth = 51;
+            this.DGV1.RowTemplate.Height = 24;
+            this.DGV1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGV1.Size = new System.Drawing.Size(1416, 684);
+            this.DGV1.TabIndex = 3;
+            this.DGV1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DGV1_CellMouseDoubleClick);
+            // 
+            // btnok
+            // 
+            this.btnok.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.btnok.Image = ((System.Drawing.Image)(resources.GetObject("btnok.Image")));
+            this.btnok.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnok.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnok.Location = new System.Drawing.Point(1177, 19);
+            this.btnok.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnok.Name = "btnok";
+            this.btnok.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnok.Size = new System.Drawing.Size(251, 41);
+            this.btnok.TabIndex = 3;
+            this.btnok.Text = "OK";
+            this.btnok.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnok.UseVisualStyleBackColor = true;
+            this.btnok.Click += new System.EventHandler(this.btnok_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClose.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnClose.Location = new System.Drawing.Point(1177, 64);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnClose.Size = new System.Drawing.Size(251, 41);
+            this.btnClose.TabIndex = 4;
+            this.btnClose.Text = "Đóng";
+            this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // CUTON
+            // 
+            this.CUTON.DataPropertyName = "CUTON";
+            this.CUTON.HeaderText = "Ngày bắt đầu thanh toán";
+            this.CUTON.MinimumWidth = 6;
+            this.CUTON.Name = "CUTON";
+            this.CUTON.Width = 125;
+            // 
+            // CUTOFF
+            // 
+            this.CUTOFF.DataPropertyName = "CUTOFF";
+            this.CUTOFF.HeaderText = "Ngày kết thúc thanh toán";
+            this.CUTOFF.MinimumWidth = 6;
+            this.CUTOFF.Name = "CUTOFF";
+            this.CUTOFF.Width = 125;
+            // 
+            // C_ANAME
+            // 
+            this.C_ANAME.DataPropertyName = "C_ANAME";
+            this.C_ANAME.HeaderText = "Tên";
+            this.C_ANAME.MinimumWidth = 6;
+            this.C_ANAME.Name = "C_ANAME";
+            this.C_ANAME.Width = 125;
+            // 
+            // C_NO
+            // 
+            this.C_NO.DataPropertyName = "C_NO";
+            this.C_NO.HeaderText = "Mã nhà cung cấp";
+            this.C_NO.MinimumWidth = 6;
+            this.C_NO.Name = "C_NO";
+            this.C_NO.Width = 125;
+            // 
+            // CTOTAL
+            // 
+            this.CTOTAL.DataPropertyName = "CTOTAL";
+            this.CTOTAL.HeaderText = "Tổng tiền mua";
+            this.CTOTAL.MinimumWidth = 6;
+            this.CTOTAL.Name = "CTOTAL";
+            this.CTOTAL.Width = 125;
+            // 
+            // TAX
+            // 
+            this.TAX.DataPropertyName = "TAX";
+            this.TAX.HeaderText = "Thuế đầu vào";
+            this.TAX.MinimumWidth = 6;
+            this.TAX.Name = "TAX";
+            this.TAX.Width = 125;
+            // 
+            // DISCOUNT
+            // 
+            this.DISCOUNT.DataPropertyName = "DISCOUNT";
+            this.DISCOUNT.HeaderText = "Giảm giá mua hàng";
+            this.DISCOUNT.MinimumWidth = 6;
+            this.DISCOUNT.Name = "DISCOUNT";
+            this.DISCOUNT.Width = 125;
+            // 
+            // CASH
+            // 
+            this.CASH.DataPropertyName = "CASH";
+            this.CASH.HeaderText = "Mua tiền mặt";
+            this.CASH.MinimumWidth = 6;
+            this.CASH.Name = "CASH";
+            this.CASH.Width = 125;
+            // 
+            // CURRMON
+            // 
+            this.CURRMON.DataPropertyName = "CURRMON";
+            this.CURRMON.HeaderText = "Các tài khoản ký hiện tại";
+            this.CURRMON.MinimumWidth = 6;
+            this.CURRMON.Name = "CURRMON";
+            this.CURRMON.Width = 125;
+            // 
+            // SearchPAYV
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1439, 806);
+            this.Controls.Add(this.btnok);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.txtC_NO);
+            this.Controls.Add(this.txtCUTOFF);
+            this.Controls.Add(this.lbCUTOFF);
+            this.Controls.Add(this.txtCUTON);
+            this.Controls.Add(this.lbC_NO);
+            this.Controls.Add(this.lbCUTON);
+            this.Controls.Add(this.DGV1);
+            this.Name = "SearchPAYV";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "SearchPAYV";
+            this.Load += new System.EventHandler(this.SearchPAYV_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DGV1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Label lbCUTON;
+        private System.Windows.Forms.MaskedTextBox txtCUTON;
+        private System.Windows.Forms.Label lbCUTOFF;
+        private System.Windows.Forms.MaskedTextBox txtCUTOFF;
+        private System.Windows.Forms.Label lbC_NO;
+        private System.Windows.Forms.TextBox txtC_NO;
+        private System.Windows.Forms.DataGridView DGV1;
+        private System.Windows.Forms.Button btnok;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CUTON;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CUTOFF;
+        private System.Windows.Forms.DataGridViewTextBoxColumn C_ANAME;
+        private System.Windows.Forms.DataGridViewTextBoxColumn C_NO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CTOTAL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TAX;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DISCOUNT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CASH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CURRMON;
+    }
+}

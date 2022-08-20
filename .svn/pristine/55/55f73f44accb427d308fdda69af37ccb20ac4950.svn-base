@@ -1,0 +1,402 @@
+﻿using PURCHASE.MAINCODE;
+using PURCHASE.MAINCODE.Modun4;
+using PURCHASE.MAINCODE.Modun4.Search;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Net;
+using System.Net.Sockets;
+using System.Text;
+using System.Windows.Forms;
+
+namespace PURCHASE
+{
+    public partial class Form4C : Form
+    {
+        DataProvider conn = new DataProvider();
+        DataTable dt = new DataTable();
+        BindingSource bindingSource = new BindingSource();
+        public Form4C()
+        {
+            this.ShowInTaskbar = false;
+            InitializeComponent();
+        }
+
+        private void Form4C_Load(object sender, EventArgs e)
+        {
+            conn.CheckLoad(menuStrip1);
+            loadinfo();
+            Loaddata();
+            LoadTextBox();
+
+            btok.Hide();
+            btdong.Hide();
+            bt.Text = "NÚT DUYỆT";
+
+            f10ToolStripMenuItem.Checked = false;
+            f2ToolStripMenuItem.Checked = false;
+            f3ToolStripMenuItem.Checked = false;
+            f4ToolStripMenuItem.Checked = false;
+            f5ToolStripMenuItem.Checked = false;
+            f6ToolStripMenuItem.Checked = false;
+            f7ToolStripMenuItem.Checked = false;
+            f10ToolStripMenuItem.Checked = false;
+            f12ToolStripMenuItem.Checked = false;
+
+            conn.DGV(DGV1);
+        }
+
+        private void LoadTextBox()
+        {
+            this.txtWS_DATE.Text = currentRow["WS_DATE"].ToString();
+            this.txtM_KIND.Text = currentRow["M_KIND"].ToString();
+            this.txtWS_NO.Text = currentRow["WS_NO"].ToString();
+            this.txtC_NO.Text = currentRow["C_NO"].ToString();
+            this.txtC_NAME.Text = currentRow["C_NAME"].ToString();
+
+            this.txtCAL_YM.Text = currentRow["CAL_YM"].ToString();
+            this.txtTOTAL.Text = int.Parse(currentRow["TOTAL"].ToString()).ToString("0.00");
+
+            this.txtM_TRAN_R.Text = currentRow["M_TRAN_R"].ToString();
+
+            this.txtMEMO1.Text = currentRow["MEMO1"].ToString();
+            this.txtTOT.Text = int.Parse(currentRow["TOT"].ToString()).ToString("0.00");
+            this.txtTAX.Text = currentRow["COSTTOT"].ToString();
+            this.txtDISCOUNT.Text = int.Parse(currentRow["DISCOUNT"].ToString()).ToString("0.00");
+            this.txtRCV_MON.Text = currentRow["RCV_MON"].ToString();
+            this.txtNRCV_MON.Text = int.Parse(currentRow["NRCV_MON"].ToString()).ToString("0.00");
+
+
+        }
+        public DataRow currentRow
+        {
+            get
+            {
+                int position = this.BindingContext[bindingSource].Position;
+                if (position > -1)
+                {
+                    return ((DataRowView)bindingSource.Current).Row;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+        }
+        public void Loaddata()
+        {
+            string sql = "select top 20 * FROM COMHC1 ORDER BY WS_DATE DESC,WS_NO DESC";
+            dt = conn.readdata(sql);
+            bindingSource.DataSource = dt;
+        }
+        void loadinfo()
+        {
+            lbUserName.Text = conn.getUser(frmLogin.ID_USER);
+            lbNamePC.Text = System.Environment.MachineName;
+
+
+            IPAddress[] localIP = Dns.GetHostAddresses(Dns.GetHostName());
+            foreach (IPAddress address in localIP)
+            {
+                if (address.AddressFamily == AddressFamily.InterNetwork)
+                    lbIP.Text = address.ToString();
+            }
+        }
+
+        private void f5ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form4CF5 frm = new Form4CF5();
+            frm.ShowDialog();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            btnTimeNow.Text = CN.getTimeNow();
+            btndateNow.Text = CN.getDateNow();
+        }
+
+        private void f2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            f2ToolStripMenuItem.Checked = true;
+            DateTime d1 = DateTime.Now;
+            txtWS_DATE.Text = d1.ToString("yyyy/MM/dd");
+            txtM_KIND.Text = "1";
+            txtWS_NO.Text = "";
+            txtC_NO.Text = "";
+            txtC_NAME.Text = "";
+            tb6.Text = "";
+            txtCAL_YM.Text = "";
+            txtMEMO1.Text = "";
+            txtTOT.Text = "0.00";
+            txtTOTAL.Text = "0.00";
+            txtNRCV_MON.Text = "0.00";
+            txtDISCOUNT.Text = "0.00";
+            txtRCV_MON.Text = "0";
+            txtTAX.Text = "0";
+
+            bt.Text = "Thêm";
+            btok.Show();
+            btdong.Show();
+
+            f1ToolStripMenuItem.Enabled = false;
+            f2ToolStripMenuItem.Enabled = false;
+            f3ToolStripMenuItem.Enabled = false;
+            f4ToolStripMenuItem.Enabled = false;
+            f5ToolStripMenuItem.Enabled = false;
+            f6ToolStripMenuItem.Enabled = false;
+            f7ToolStripMenuItem.Enabled = false;
+            f10ToolStripMenuItem.Enabled = true;
+            f12ToolStripMenuItem.Enabled = false;
+
+            btdau.Enabled = false;
+            bttruoc.Enabled = false;
+            btsau.Enabled = false;
+            btketthuc.Enabled = false;
+        }
+
+        private void f12ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            this.Close();
+        }
+
+        private void btdong_Click(object sender, EventArgs e)
+        {
+            Loaddata();
+            f10ToolStripMenuItem.Enabled = false;
+            f2ToolStripMenuItem.Enabled = true;
+            f3ToolStripMenuItem.Enabled = true;
+            f4ToolStripMenuItem.Enabled = true;
+            f5ToolStripMenuItem.Enabled = true;
+            f6ToolStripMenuItem.Enabled = false;
+            f7ToolStripMenuItem.Enabled = true;
+            f10ToolStripMenuItem.Enabled = false;
+            f12ToolStripMenuItem.Enabled = true;
+
+            btok.Hide();
+            btdong.Hide();
+            bt.Text = "NÚT DUYỆT";
+
+            f10ToolStripMenuItem.Checked = false;
+            f2ToolStripMenuItem.Checked = false;
+            f3ToolStripMenuItem.Checked = false;
+            f4ToolStripMenuItem.Checked = false;
+            f5ToolStripMenuItem.Checked = false;
+            f6ToolStripMenuItem.Checked = false;
+            f7ToolStripMenuItem.Checked = false;
+            f10ToolStripMenuItem.Checked = false;
+            f12ToolStripMenuItem.Checked = false;
+
+            btdau.Enabled = false;
+            bttruoc.Enabled = false;
+            btsau.Enabled = false;
+            btketthuc.Enabled = false;
+            conn.DGV(DGV1);
+        }
+
+        private void txtWS_NO_TextChanged(object sender, EventArgs e)
+        {
+            string sql = "SELECT NR,P_NO,P_NAME,P_NAME1,BUNIT,BQTY,PRICE,AMOUNT,OR_NO,SH_NAME,MEMO,OR_NR" +
+                        " FROM COMBC1 JOIN SHOUSE ON SHOUSE.SH_NO = COMBC1.SH_NO WHERE WS_NO = '" + txtWS_NO.Text + "'";
+            DataTable data = conn.readdata(sql);
+            DGV1.DataSource = data;
+            Loadcb(currentRow["M_TRAN"].ToString());
+        }
+        public void Loadcb(string M_NO)
+        {
+            string wheres = "";
+            if (f2ToolStripMenuItem.Checked == false)
+            {
+                wheres = " AND M_NO = '" + M_NO + "'";
+            }
+            string sql = "SELECT DISTINCT M_NO,M_NAME FROM MONEYT where 1=1 " + wheres + "";
+            DataTable data = conn.readdata(sql);
+            cbM_TRAN.DataSource = data;
+            cbM_TRAN.DisplayMember = "M_NAME";
+            cbM_TRAN.ValueMember = "M_NO";
+        }
+
+        private void btdau_Click(object sender, EventArgs e)
+        {
+            bindingSource.MoveFirst();
+            LoadTextBox();
+
+            btdau.Enabled = false;
+            bttruoc.Enabled = false;
+            btsau.Enabled = true;
+            btketthuc.Enabled = true;
+        }
+
+        private void bttruoc_Click(object sender, EventArgs e)
+        {
+            bindingSource.MovePrevious();
+            LoadTextBox();
+
+            btdau.Enabled = true;
+            bttruoc.Enabled = true;
+            btsau.Enabled = true;
+            btketthuc.Enabled = true;
+        }
+
+        private void btsau_Click(object sender, EventArgs e)
+        {
+            bindingSource.MoveNext();
+            LoadTextBox();
+            btdau.Enabled = true;
+            bttruoc.Enabled = true;
+            btsau.Enabled = true;
+            btketthuc.Enabled = true;
+        }
+
+        private void btketthuc_Click(object sender, EventArgs e)
+        {
+            bindingSource.MoveLast();
+            LoadTextBox();
+            btdau.Enabled = true;
+            bttruoc.Enabled = true;
+            btsau.Enabled = false;
+            btketthuc.Enabled = false;
+        }
+
+        private void txtM_KIND_TextChanged(object sender, EventArgs e)
+        {
+            switch (txtM_KIND.Text)
+            {
+                case "1":
+                    label1.Text = "化 料 - 台 灣";
+                    break;
+                case "2":
+                    label1.Text = "化料-大陸";
+                    break;
+                case "3":
+                    label1.Text = "開狀櫃化料-台灣";
+                    break;
+                case "4":
+                    label1.Text = "總料-台灣";
+                    break;
+                case "5":
+                    label1.Text = "總料-大陸";
+                    break;
+                case "6":
+                    label1.Text = "化料-越南";
+                    break;
+                case "7":
+                    label1.Text = "總料-越南";
+                    break;
+                case "8":
+                    label1.Text = "化料-越南轉廠";
+                    break;
+            }
+        }
+
+        private void DGV1_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (f4ToolStripMenuItem.Checked == true || f2ToolStripMenuItem.Checked == true || f6ToolStripMenuItem.Checked == true)
+            {
+                if (!string.IsNullOrEmpty(txtWS_NO.Text))
+                {
+                    if (e.Button == MouseButtons.Right)
+                    {
+                        conn.CreateMenuStrip(e, DGV1, Mouse_Click);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("採購單號不正確,請重新輸入!");
+                    txtM_KIND.Focus();
+                }
+            }
+        }
+        private void Mouse_Click(object sender, ToolStripItemClickedEventArgs e)
+        {
+            switch (e.ClickedItem.Name.ToString())
+            {
+                case "Insert":
+                    AddItemToDataDrid();
+                    break;
+                case "Delele":
+                    break;
+            }
+        }
+        string STT = "";
+        public void AddItemToDataDrid()
+        {
+            DataGridViewRow dr = new DataGridViewRow();
+            int NR1 = 1;
+            if (DGV1.RowCount > 0)
+            {
+                NR1 = DGV1.RowCount + 1;
+            }
+
+            frmSearchCOMBC frm = new frmSearchCOMBC();
+            frm.ShowDialog();
+            DataTable dataTable = (DataTable)DGV1.DataSource;
+            foreach (var item in frmSearchCOMBC.items)
+            {
+                STT = NR1.ToString("D" + 3);
+                DataRow drToAdd = dataTable.NewRow();
+                drToAdd["NR"] = STT;
+                drToAdd["P_NO"] = item.P_NO;
+                drToAdd["P_NAME"] = item.P_NAME;
+                drToAdd["P_NAME1"] = item.P_NAME1;
+                drToAdd["BUNIT"] = item.BUNIT;
+                drToAdd["BQTY"] = 0;
+                drToAdd["PRICE"] = item.PRICE;
+                drToAdd["AMOUNT"] = 0;
+                drToAdd["OR_NO"] = item.WS_NO;
+                drToAdd["MEMO"] = "";
+                drToAdd["OR_NR"] = item.NR;
+                dataTable.Rows.Add(drToAdd);
+                NR1++;
+            }
+        }
+
+        private void txtWS_NO_Click(object sender, EventArgs e)
+        {
+            string WS_NO = "";
+            string sql = "SELECT WS_NO FROM COMHC1 WHERE WS_NO LIKE '"+DateTime.Now.ToString("yyyymmdd")+"%' ORDER BY WS_NO desc";
+            DataTable table = conn.readdata(sql);
+            if(table.Rows.Count > 0)
+            {
+                foreach (DataRow item in table.Rows)
+                {
+                    WS_NO = DateTime.Now.ToString("yyyymmdd") + (int.Parse(item[0].ToString().Substring(9,3)) + 1);
+                }
+            }
+            else
+            {
+                WS_NO = DateTime.Now.ToString("yyyymmdd") + "001";
+            }
+            txtWS_NO.Text = WS_NO;
+        }
+
+        private void txtM_KIND_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (f2ToolStripMenuItem.Checked == true)
+            {
+                if (txtM_KIND.Text == "8")
+                {
+                    txtM_KIND.Text = "1";
+                }
+                else
+                {
+                    txtM_KIND.Text = (int.Parse(txtM_KIND.Text) + 1).ToString();
+                }
+            }
+        }
+
+        private void txtCAL_YM_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void f7ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form4CF7 frm = new Form4CF7();
+            frm.ShowDialog();
+        }
+    }
+}

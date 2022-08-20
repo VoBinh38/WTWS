@@ -1,0 +1,237 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+
+namespace PURCHASE.MAIN.Modun4.Search
+{
+    public partial class SearchVENDC : Form
+    {
+        BindingSource bindingsource;
+        DataTable datatable = new DataTable();
+        DataProvider conn = new DataProvider();
+        public SearchVENDC()
+        {
+            InitializeComponent();
+        }
+
+        private void SearchVENDC_Load(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+        public void LoadData()
+        {
+            string sql = "select C_NO, C_NAME, C_ANAME, V_NAME, V_ANAME, NUMBER, BOSS, SPEAK, TEL1, TEL2, FAX, ACT, EMAIL, S_NO,  ADR1ZIP, ADR1, ADR2ZIP, ADR2, ADR3ZIP, ADR3, ADR4ZIP, ADR4, MEMO1," +
+                " MEMO2, MEMO3, ACCOUNT, PRE_RCV, EAR_MON, TAX_KIND, BA_NO, TAX_YN, PAY_CON, RCV_DATE, DEFA_MONEY from VENDC";
+            datatable = new DataTable();
+            datatable = conn.readdata(sql);
+            bindingsource = new BindingSource();
+            bindingsource.DataSource = datatable;
+            dataGridViewdoanhnghiep2.DataSource = bindingsource;
+            dataGridViewdoanhnghiep2.MyDGV();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Search();
+        }
+        public void Search()
+        {
+            DataTable dt = new DataTable();
+
+            string sql;
+            sql = "SELECT C_NO, C_NAME, C_ANAME, V_NAME, V_ANAME, NUMBER, BOSS, SPEAK, TEL1, TEL2, FAX, ACT, EMAIL, S_NO,  ADR1ZIP, ADR1, ADR2ZIP, ADR2, ADR3ZIP, ADR3, ADR4ZIP, ADR4, MEMO1, MEMO2, MEMO3, ACCOUNT, PRE_RCV, EAR_MON, TAX_KIND, BA_NO, TAX_YN,  PAY_CON, RCV_DATE, DEFA_MONEY from dbo.VENDC WHERE 1=1";
+            if ((txtC_NO.Text == "") && (txtC_NAME.Text == "") && (txtBOSS.Text == "") && (txtSPEAK.Text == "") && (txtNUMBER.Text == "") && (txtTEL1.Text == "") && (txtFAX.Text == "") && (txtS_NO.Text == "") && (txtADR1.Text == ""))
+            {
+                sql = sql + "";
+            }
+            if (txtC_NO.Text != "")
+                sql = sql + " AND C_NO LIKE N'%" + txtC_NO.Text + "%'";
+            if (txtC_NAME.Text != "")
+                sql = sql + " AND C_NAME LIKE N'%" + txtC_NAME.Text + "%'";
+            if (txtBOSS.Text != "")
+                sql = sql + " AND BOSS LIKE N'%" + txtBOSS.Text + "%'";
+            if (txtSPEAK.Text != "")
+                sql = sql + " AND SPEAK LIKE N'%" + txtSPEAK.Text + "%'";
+            if (txtNUMBER.Text != "")
+                sql = sql + " AND NUMBER LIKE N'%" + txtNUMBER.Text + "%'";
+            if (txtTEL1.Text != "")
+                sql = sql + " AND TEL1 LIKE N'%" + txtTEL1.Text + "%'";
+            if (txtFAX.Text != "")
+                sql = sql + " AND FAX LIKE N'%" + txtFAX.Text + "%'";
+            if (txtS_NO.Text != "")
+                sql = sql + " AND S_NO LIKE N'%" + txtS_NO.Text + "%'";
+            if (txtADR1.Text != "")
+                sql = sql + " AND ADR1 LIKE N'%" + txtADR1.Text + "%'";
+
+            dt = conn.readdata(sql);
+            bindingsource = new BindingSource();
+            bindingsource.DataSource = dt;
+            dataGridViewdoanhnghiep2.DataSource = bindingsource;
+        }
+
+        private void dataGridViewdoanhnghiep2_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+        }
+        public class DL
+        {
+        }
+
+        private void txtC_NO_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSearch.PerformClick();
+                txtC_NAME.Focus();
+            }
+        }
+
+        private void txtC_NO_TextChanged(object sender, EventArgs e)
+        {
+            Search();
+        }
+
+        private void txtC_NAME_TextChanged(object sender, EventArgs e)
+        {
+            Search();
+        }
+
+        private void txtBOSS_TextChanged(object sender, EventArgs e)
+        {
+            Search();
+        }
+
+        private void txtSPEAK_TextChanged(object sender, EventArgs e)
+        {
+            Search();
+        }
+
+        private void txtNUMBER_TextChanged(object sender, EventArgs e)
+        {
+            Search();
+        }
+
+        private void txtTEL1_TextChanged(object sender, EventArgs e)
+        {
+            Search();
+        }
+
+        private void txtFAX_TextChanged(object sender, EventArgs e)
+        {
+            Search();
+        }
+
+        private void txtS_NO_TextChanged(object sender, EventArgs e)
+        {
+            Search();
+        }
+
+        private void txtADR1_TextChanged(object sender, EventArgs e)
+        {
+            Search();
+        }
+
+        private void txtC_NAME_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSearch.PerformClick();
+                txtBOSS.Focus();
+            }
+        }
+
+        private void txtBOSS_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSearch.PerformClick();
+                txtSPEAK.Focus();
+            }
+        }
+
+        private void txtSPEAK_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSearch.PerformClick();
+                txtNUMBER.Focus();
+            }
+        }
+
+        private void txtNUMBER_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSearch.PerformClick();
+                txtTEL1.Focus();
+            }
+        }
+
+        private void txtTEL1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSearch.PerformClick();
+                txtFAX.Focus();
+            }
+        }
+
+        private void txtFAX_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSearch.PerformClick();
+                txtS_NO.Focus();
+            }
+        }
+
+        private void txtS_NO_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSearch.PerformClick();
+                txtADR1.Focus();
+            }
+        }
+
+        private void txtADR1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSearch.PerformClick();
+            }
+        }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewdoanhnghiep2.Rows[dataGridViewdoanhnghiep2.CurrentRow.Index].Cells["C_NO"].Value.ToString() == "" || dataGridViewdoanhnghiep2.Rows[dataGridViewdoanhnghiep2.CurrentRow.Index].Cells["C_NO"].Value.ToString() == null)
+            {
+                if (DataProvider.LG.rdVietNam == false && DataProvider.LG.rdEnglish == false && DataProvider.LG.rdChina == false)
+                {
+                    MessageBox.Show("Vui lòng chọn một hàng để load dữ liệu");
+                }
+                if (DataProvider.LG.rdVietNam == true)
+                {
+                    MessageBox.Show("Vui lòng chọn một hàng để load dữ liệu");
+                }
+                if (DataProvider.LG.rdEnglish == true)
+                {
+                    MessageBox.Show("Please select a row to load data");
+                }
+                if (DataProvider.LG.rdChina == true)
+                {
+                    MessageBox.Show("請選擇一行加載數據");
+                }
+            }
+            else
+            {
+                this.Hide();
+                this.Close();
+            }
+        }
+    }
+}

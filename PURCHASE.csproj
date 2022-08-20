@@ -1,0 +1,1575 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AE600395-3B66-4369-94B2-706B81C4FBB1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PURCHASE</RootNamespace>
+    <AssemblyName>PURCHASE</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Design, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Data.AdoDotNetInterop, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DocumentFormat.OpenXml, Version=2.16.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>packages\DocumentFormat.OpenXml.2.16.0\lib\net40\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport, Version=2022.2.17.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c" />
+    <Reference Include="FastReport.Bars, Version=2022.2.17.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c" />
+    <Reference Include="FastReport.Compat, Version=2022.2.0.0, Culture=neutral, PublicKeyToken=406e1f4c3c8ef97e" />
+    <Reference Include="FastReport.DataVisualization, Version=2022.2.0.0, Culture=neutral, PublicKeyToken=406e1f4c3c8ef97e" />
+    <Reference Include="FastReport.Editor, Version=2022.2.17.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c" />
+    <Reference Include="LibraryCalender, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\WSEXEP\WTERP\LibraryCalender.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Common, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.Common.4.3.0\lib\net451\System.Data.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SqlClient, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SqlClient.4.8.3\lib\net451\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Config\ChooseLanguage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Config\cns.cs" />
+    <Compile Include="Config\DataProvider.cs" />
+    <Compile Include="Config\MenuStripEvent.cs" />
+    <Compile Include="Config\MyExtension.cs" />
+    <Compile Include="DataCenter\ImportKeyWork.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataCenter\ImportKeyWork.Designer.cs">
+      <DependentUpon>ImportKeyWork.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataCenter\Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataCenter\Report.designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataCenter\Report1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataCenter\Report1.Designer.cs">
+      <DependentUpon>Report1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataReport\DataSetDataTable.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetDataTable.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataReport\DataSetModun1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetModun1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataReport\DataSetModun4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetModun4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FormCenter\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCenter\frmLogin.designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCenter\Language.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCenter\Language.Designer.cs">
+      <DependentUpon>Language.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCenter\MAIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCenter\MAIN.designer.cs">
+      <DependentUpon>MAIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\CrytalReport\Cr_Form1BF7_Tab2_1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cr_Form1BF7_Tab2_1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\CrytalReport\cr_Form1DF7_Tab1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_Form1DF7_Tab1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\CrytalReport\cr_Form1DF7_Tab2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_Form1DF7_Tab2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\CrytalReport\cr_Form1DF7_Tab3.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_Form1DF7_Tab3.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\CrytalReport\cr_Form1DF7_Tab4.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_Form1DF7_Tab4.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\CrytalReport\cr_Form1DF7_Tab5.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_Form1DF7_Tab5.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\CrytalReport\cr_Form1DF7_Tab6.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_Form1DF7_Tab6.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\CrytalReport\cr_Form1DF7_Tab6_t1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_Form1DF7_Tab6_t1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\CrytalReport\cr_Form1DF7_Tab6_t23.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_Form1DF7_Tab6_t23.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\CrytalReport\cr_Form1EF7_Tab1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_Form1EF7_Tab1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\CrytalReport\cr_Form1EF7_Tab2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_Form1EF7_Tab2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\CrytalReport\cr_Form1JF7_2.cs">
+      <DependentUpon>cr_Form1JF7_2.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\CrytalReport\cr_Form1JF7_1.cs">
+      <DependentUpon>cr_Form1JF7_1.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\CrytalReport\cr_Form1JF7.cs">
+      <DependentUpon>cr_Form1JF7.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\CrytalReport\Cr_From1BF7_Tab1_11.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cr_From1BF7_Tab1_1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\CrytalReport\Cr_From1BF7_Tab1_21.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cr_From1BF7_Tab1_2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\CrytalReport\Cr_From1BF7_Tab2_2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cr_From1BF7_Tab2_2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\Form1J.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\Form1J.Designer.cs">
+      <DependentUpon>Form1J.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\frm1A.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\frm1A.designer.cs">
+      <DependentUpon>frm1A.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\frm1B.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\frm1B.designer.cs">
+      <DependentUpon>frm1B.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\frm1C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\frm1C.designer.cs">
+      <DependentUpon>frm1C.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\frm1D.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\frm1D.designer.cs">
+      <DependentUpon>frm1D.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\frm1E.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\frm1E.designer.cs">
+      <DependentUpon>frm1E.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\frm1F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\frm1F.designer.cs">
+      <DependentUpon>frm1F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\frm1G.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\frm1G.designer.cs">
+      <DependentUpon>frm1G.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\frm1H.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\frm1H.designer.cs">
+      <DependentUpon>frm1H.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\frm1L.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\frm1L.designer.cs">
+      <DependentUpon>frm1L.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\frm1Q.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\frm1Q.designer.cs">
+      <DependentUpon>frm1Q.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\frm1S.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\frm1S.designer.cs">
+      <DependentUpon>frm1S.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\Print\frm1BF7_tab1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\Print\frm1BF7_tab1.Designer.cs">
+      <DependentUpon>frm1BF7_tab1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\Print\frm1BF7_tab2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\Print\frm1BF7_tab2.Designer.cs">
+      <DependentUpon>frm1BF7_tab2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\Print\frm1JF7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\Print\frm1JF7.Designer.cs">
+      <DependentUpon>frm1JF7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\Print\frm1BF7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\Print\frm1BF7.designer.cs">
+      <DependentUpon>frm1BF7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\Print\frm1DF7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\Print\frm1DF7.designer.cs">
+      <DependentUpon>frm1DF7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\Print\frm1DF7_Tab1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\Print\frm1DF7_Tab1.designer.cs">
+      <DependentUpon>frm1DF7_Tab1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\Print\frm1DF7_Tab2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\Print\frm1DF7_Tab2.designer.cs">
+      <DependentUpon>frm1DF7_Tab2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\Print\frm1DF7_Tab3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\Print\frm1DF7_Tab3.designer.cs">
+      <DependentUpon>frm1DF7_Tab3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\Print\frm1DF7_Tab4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\Print\frm1DF7_Tab4.designer.cs">
+      <DependentUpon>frm1DF7_Tab4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\Print\frm1DF7_Tab5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\Print\frm1DF7_Tab5.designer.cs">
+      <DependentUpon>frm1DF7_Tab5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\Print\frm1DF7_Tab6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\Print\frm1DF7_Tab6.designer.cs">
+      <DependentUpon>frm1DF7_Tab6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\Print\frm1EF7_Tab1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\Print\frm1EF7_Tab1.designer.cs">
+      <DependentUpon>frm1EF7_Tab1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\Print\frm1EF7_Tab2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\Print\frm1EF7_Tab2.designer.cs">
+      <DependentUpon>frm1EF7_Tab2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\Print\frm1E_F7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\Print\frm1E_F7.designer.cs">
+      <DependentUpon>frm1E_F7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\Print\frm1FF7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\Print\frm1FF7.designer.cs">
+      <DependentUpon>frm1FF7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\Search\frm1CF5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\Search\frm1CF5.designer.cs">
+      <DependentUpon>frm1CF5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\Search\frm1DF5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\Search\frm1DF5.designer.cs">
+      <DependentUpon>frm1DF5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\Search\frm1SF5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\Search\frm1SF5.designer.cs">
+      <DependentUpon>frm1SF5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\Search\frmSeachKIND.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\Search\frmSeachKIND.designer.cs">
+      <DependentUpon>frmSeachKIND.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\Search\frmSeachKIND1C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\Search\frmSeachKIND1C.designer.cs">
+      <DependentUpon>frmSeachKIND1C.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\Search\frmSearchMeMo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\Search\frmSearchMeMo.designer.cs">
+      <DependentUpon>frmSearchMeMo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\Search\frmSearchSHOUSE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\Search\frmSearchSHOUSE.designer.cs">
+      <DependentUpon>frmSearchSHOUSE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\Search\SearchDept1A.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\Search\SearchDept1A.Designer.cs">
+      <DependentUpon>SearchDept1A.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\Search\SearchVENDC1B.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun1\Search\SearchVENDC1B.designer.cs">
+      <DependentUpon>SearchVENDC1B.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\frm4C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\frm4C.Designer.cs">
+      <DependentUpon>frm4C.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\frm4B.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\frm4B.Designer.cs">
+      <DependentUpon>frm4B.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\frm4CF7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\frm4CF7.Designer.cs">
+      <DependentUpon>frm4CF7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\frm4D.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\frm4D.Designer.cs">
+      <DependentUpon>frm4D.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\frm4DF7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\frm4DF7.Designer.cs">
+      <DependentUpon>frm4DF7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\frm4E.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\frm4E.Designer.cs">
+      <DependentUpon>frm4E.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\frm4EF7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\frm4EF7.Designer.cs">
+      <DependentUpon>frm4EF7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\frmSelectDateFrm4E.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\frmSelectDateFrm4E.Designer.cs">
+      <DependentUpon>frmSelectDateFrm4E.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\Report\cr_Frm4BF7_2.cs">
+      <DependentUpon>cr_Frm4BF7_2.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\Report\cr_Frm4BF7_4.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_Frm4BF7_4.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\Report\cr_Frm4BF7_5.cs">
+      <DependentUpon>cr_Frm4BF7_5.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\Report\cr_Frm4BF7_1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_Frm4BF7_1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\Report\cr_frm4BF7_7.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_frm4BF7_7.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\Report\cr_Frm4CF7_Tab1_1.cs">
+      <DependentUpon>cr_Frm4CF7_Tab1_1.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\Report\cr_Frm4CF7_Tab1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_Frm4CF7_Tab1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\Report\cr_Frm4CF7_Tab1_2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_Frm4CF7_Tab1_2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\Report\cr_Frm4CF7_Tab2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_Frm4CF7_Tab2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\Report\cr_Frm4CF7_Tab3.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_Frm4CF7_Tab3.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\Report\cr_Frm4CF7_Tab4.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_Frm4CF7_Tab4.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\Report\cr_Frm4CF7_Tab5.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_Frm4CF7_Tab5.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\Report\cr_Frm4CF7_Tab6.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_Frm4CF7_Tab6.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\Report\cr_Frm4CF7_Tab7.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_Frm4CF7_Tab7.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\Report\cr_Frm4CF7_Tab7_C_NO.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_Frm4CF7_Tab7_C_NO.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\Report\cr_Frm4CF7_Tab7_C_NO1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_Frm4CF7_Tab7_C_NO1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\Report\cr_Frm4DF7_Tab1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_Frm4DF7_Tab1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\Report\cr_Frm4DF7_Tab1_2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_Frm4DF7_Tab1_2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\Report\cr_Frm4DF7_Tab2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_Frm4DF7_Tab2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\Report\cr_Frm4EF7_Tab1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_Frm4EF7_Tab1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\Report\cr_Frm4EF7_Tab1_1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_Frm4EF7_Tab1_1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\Report\cr_Frm4EF7_Tab2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_Frm4EF7_Tab2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\Report\cr_Frm4EF7_Tab3.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_Frm4EF7_Tab3.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\Search\Form4CF5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\Search\Form4CF5.Designer.cs">
+      <DependentUpon>Form4CF5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\Search\frmSearchCOMBC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\Search\frmSearchCOMBC.Designer.cs">
+      <DependentUpon>frmSearchCOMBC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\Search\frmSearchCOMHC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\Search\frmSearchCOMHC.Designer.cs">
+      <DependentUpon>frmSearchCOMHC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\Search\frmSearchCOMHC1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\Search\frmSearchCOMHC1.Designer.cs">
+      <DependentUpon>frmSearchCOMHC1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\Search\frmSearchSH_NUM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\Search\frmSearchSH_NUM.Designer.cs">
+      <DependentUpon>frmSearchSH_NUM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\Search\SearchDEPT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\Search\SearchDEPT.Designer.cs">
+      <DependentUpon>SearchDEPT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\Search\SearchPROD1C_M4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun4\Search\SearchPROD1C_M4.Designer.cs">
+      <DependentUpon>SearchPROD1C_M4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun6\frm6A.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun6\frm6A.Designer.cs">
+      <DependentUpon>frm6A.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun6\frm6B.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun6\frm6B.Designer.cs">
+      <DependentUpon>frm6B.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun6\Search\Form6AF5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun6\Search\Form6AF5.Designer.cs">
+      <DependentUpon>Form6AF5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun8\Envent\frmCheckQtyShouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun8\Envent\frmCheckQtyShouse.Designer.cs">
+      <DependentUpon>frmCheckQtyShouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun8\frm8A.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun8\frm8A.designer.cs">
+      <DependentUpon>frm8A.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun8\frm8R.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun8\frm8R.Designer.cs">
+      <DependentUpon>frm8R.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun8\Search\frm8AF5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun8\Search\frm8AF5.designer.cs">
+      <DependentUpon>frm8AF5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun8\Search\frmSeachCOLB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun8\Search\frmSeachCOLB.designer.cs">
+      <DependentUpon>frmSeachCOLB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun8\Search\frmSearchMeMo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun8\Search\frmSearchMeMo.designer.cs">
+      <DependentUpon>frmSearchMeMo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun8\Search\frmSearchOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun8\Search\frmSearchOrder.designer.cs">
+      <DependentUpon>frmSearchOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Modun8\Search\frmSearchSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Modun8\Search\frmSearchSale.designer.cs">
+      <DependentUpon>frmSearchSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Search\SearchCGBHC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Search\SearchCGBHC.Designer.cs">
+      <DependentUpon>SearchCGBHC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Search\SearchPAYV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Search\SearchPAYV.Designer.cs">
+      <DependentUpon>SearchPAYV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Search\SearchPROD1C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Search\SearchPROD1C.Designer.cs">
+      <DependentUpon>SearchPROD1C.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Search\SearchPROD1C_Select_OneItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Search\SearchPROD1C_Select_OneItem.Designer.cs">
+      <DependentUpon>SearchPROD1C_Select_OneItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Search\SearchPSHQTY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Search\SearchPSHQTY.Designer.cs">
+      <DependentUpon>SearchPSHQTY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Search\SearchQUVHC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Search\SearchQUVHC.Designer.cs">
+      <DependentUpon>SearchQUVHC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINCODE\Search\SearchVENDC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINCODE\Search\SearchVENDC.Designer.cs">
+      <DependentUpon>SearchVENDC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="f1ToolStripMenuItem.Text\GeneralData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GeneralData.resx</DependentUpon>
+    </Compile>
+    <Compile Include="f1ToolStripMenuItem.Text\Language.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Language.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resource\GeneralData.Designer.cs" />
+    <EmbeddedResource Include="DataCenter\ImportKeyWork.resx">
+      <DependentUpon>ImportKeyWork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataCenter\Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataCenter\Report1.resx">
+      <DependentUpon>Report1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCenter\frmLogin.en.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCenter\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCenter\frmLogin.vi.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCenter\frmLogin.zh-TW.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCenter\Language.resx">
+      <DependentUpon>Language.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCenter\MAIN.resx">
+      <DependentUpon>MAIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\CrytalReport\Cr_Form1BF7_Tab2_1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Cr_Form1BF7_Tab2_1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\CrytalReport\cr_Form1DF7_Tab1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_Form1DF7_Tab1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\CrytalReport\cr_Form1DF7_Tab2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_Form1DF7_Tab2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\CrytalReport\cr_Form1DF7_Tab3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_Form1DF7_Tab3.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\CrytalReport\cr_Form1DF7_Tab4.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_Form1DF7_Tab4.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\CrytalReport\cr_Form1DF7_Tab5.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_Form1DF7_Tab5.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\CrytalReport\cr_Form1DF7_Tab6.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_Form1DF7_Tab6.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\CrytalReport\cr_Form1DF7_Tab6_t1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_Form1DF7_Tab6_t1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\CrytalReport\cr_Form1DF7_Tab6_t23.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_Form1DF7_Tab6_t23.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\CrytalReport\cr_Form1EF7_Tab1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_Form1EF7_Tab1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\CrytalReport\cr_Form1EF7_Tab2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_Form1EF7_Tab2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\CrytalReport\cr_Form1JF7_2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_Form1JF7_2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\CrytalReport\cr_Form1JF7_1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_Form1JF7_1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\CrytalReport\cr_Form1JF7.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_Form1JF7.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\CrytalReport\Cr_From1BF7_Tab1_1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Cr_From1BF7_Tab1_11.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\CrytalReport\Cr_From1BF7_Tab1_2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Cr_From1BF7_Tab1_21.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\CrytalReport\Cr_From1BF7_Tab2_2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Cr_From1BF7_Tab2_2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Form1J.resx">
+      <DependentUpon>Form1J.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\frm1A.en.resx">
+      <DependentUpon>frm1A.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\frm1A.resx">
+      <DependentUpon>frm1A.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\frm1A.vi.resx">
+      <DependentUpon>frm1A.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\frm1A.zh-TW.resx">
+      <DependentUpon>frm1A.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\frm1B.resx">
+      <DependentUpon>frm1B.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\frm1C.en.resx">
+      <DependentUpon>frm1C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\frm1C.resx">
+      <DependentUpon>frm1C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\frm1C.vi.resx">
+      <DependentUpon>frm1C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\frm1C.zh-TW.resx">
+      <DependentUpon>frm1C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\frm1D.en.resx">
+      <DependentUpon>frm1D.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\frm1D.resx">
+      <DependentUpon>frm1D.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\frm1D.vi.resx">
+      <DependentUpon>frm1D.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\frm1D.zh-TW.resx">
+      <DependentUpon>frm1D.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\frm1E.en.resx">
+      <DependentUpon>frm1E.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\frm1E.resx">
+      <DependentUpon>frm1E.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\frm1E.vi.resx">
+      <DependentUpon>frm1E.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\frm1E.zh-TW.resx">
+      <DependentUpon>frm1E.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\frm1F.en.resx">
+      <DependentUpon>frm1F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\frm1F.resx">
+      <DependentUpon>frm1F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\frm1F.vi.resx">
+      <DependentUpon>frm1F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\frm1F.zh-TW.resx">
+      <DependentUpon>frm1F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\frm1G.en.resx">
+      <DependentUpon>frm1G.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\frm1G.resx">
+      <DependentUpon>frm1G.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\frm1G.vi.resx">
+      <DependentUpon>frm1G.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\frm1G.zh-TW.resx">
+      <DependentUpon>frm1G.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\frm1H.en.resx">
+      <DependentUpon>frm1H.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\frm1H.resx">
+      <DependentUpon>frm1H.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\frm1H.vi.resx">
+      <DependentUpon>frm1H.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\frm1H.zh-TW.resx">
+      <DependentUpon>frm1H.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\frm1L.en.resx">
+      <DependentUpon>frm1L.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\frm1L.resx">
+      <DependentUpon>frm1L.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\frm1L.vi.resx">
+      <DependentUpon>frm1L.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\frm1L.zh-TW.resx">
+      <DependentUpon>frm1L.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\frm1Q.en.resx">
+      <DependentUpon>frm1Q.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\frm1Q.resx">
+      <DependentUpon>frm1Q.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\frm1Q.vi.resx">
+      <DependentUpon>frm1Q.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\frm1Q.zh-TW.resx">
+      <DependentUpon>frm1Q.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\frm1S.en.resx">
+      <DependentUpon>frm1S.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\frm1S.resx">
+      <DependentUpon>frm1S.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\frm1S.vi.resx">
+      <DependentUpon>frm1S.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\frm1S.zh-TW.resx">
+      <DependentUpon>frm1S.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Print\frm1BF7.resx">
+      <DependentUpon>frm1BF7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Print\frm1BF7_tab1.resx">
+      <DependentUpon>frm1BF7_tab1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Print\frm1BF7_tab2.resx">
+      <DependentUpon>frm1BF7_tab2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Print\frm1DF7.en.resx">
+      <DependentUpon>frm1DF7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Print\frm1DF7.resx">
+      <DependentUpon>frm1DF7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Print\frm1DF7.vi.resx">
+      <DependentUpon>frm1DF7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Print\frm1DF7.zh-TW.resx">
+      <DependentUpon>frm1DF7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Print\frm1DF7_Tab1.resx">
+      <DependentUpon>frm1DF7_Tab1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Print\frm1DF7_Tab2.resx">
+      <DependentUpon>frm1DF7_Tab2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Print\frm1DF7_Tab3.resx">
+      <DependentUpon>frm1DF7_Tab3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Print\frm1DF7_Tab4.resx">
+      <DependentUpon>frm1DF7_Tab4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Print\frm1DF7_Tab5.resx">
+      <DependentUpon>frm1DF7_Tab5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Print\frm1DF7_Tab6.resx">
+      <DependentUpon>frm1DF7_Tab6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Print\frm1EF7_Tab1.resx">
+      <DependentUpon>frm1EF7_Tab1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Print\frm1EF7_Tab2.resx">
+      <DependentUpon>frm1EF7_Tab2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Print\frm1E_F7.en.resx">
+      <DependentUpon>frm1E_F7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Print\frm1E_F7.resx">
+      <DependentUpon>frm1E_F7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Print\frm1E_F7.vi.resx">
+      <DependentUpon>frm1E_F7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Print\frm1E_F7.zh-TW.resx">
+      <DependentUpon>frm1E_F7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Print\frm1FF7.en.resx">
+      <DependentUpon>frm1FF7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Print\frm1FF7.resx">
+      <DependentUpon>frm1FF7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Print\frm1FF7.vi.resx">
+      <DependentUpon>frm1FF7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Print\frm1FF7.zh-TW.resx">
+      <DependentUpon>frm1FF7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Print\frm1JF7.resx">
+      <DependentUpon>frm1JF7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Search\frm1CF5.en.resx">
+      <DependentUpon>frm1CF5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Search\frm1CF5.resx">
+      <DependentUpon>frm1CF5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Search\frm1CF5.vi.resx">
+      <DependentUpon>frm1CF5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Search\frm1CF5.zh-TW.resx">
+      <DependentUpon>frm1CF5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Search\frm1DF5.en.resx">
+      <DependentUpon>frm1DF5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Search\frm1DF5.resx">
+      <DependentUpon>frm1DF5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Search\frm1DF5.vi.resx">
+      <DependentUpon>frm1DF5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Search\frm1DF5.zh-TW.resx">
+      <DependentUpon>frm1DF5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Search\frm1SF5.en.resx">
+      <DependentUpon>frm1SF5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Search\frm1SF5.resx">
+      <DependentUpon>frm1SF5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Search\frm1SF5.vi.resx">
+      <DependentUpon>frm1SF5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Search\frm1SF5.zh-TW.resx">
+      <DependentUpon>frm1SF5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Search\frmSeachKIND.en.resx">
+      <DependentUpon>frmSeachKIND.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Search\frmSeachKIND.resx">
+      <DependentUpon>frmSeachKIND.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Search\frmSeachKIND.vi.resx">
+      <DependentUpon>frmSeachKIND.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Search\frmSeachKIND.zh-TW.resx">
+      <DependentUpon>frmSeachKIND.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Search\frmSeachKIND1C.en.resx">
+      <DependentUpon>frmSeachKIND1C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Search\frmSeachKIND1C.resx">
+      <DependentUpon>frmSeachKIND1C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Search\frmSeachKIND1C.vi.resx">
+      <DependentUpon>frmSeachKIND1C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Search\frmSeachKIND1C.zh-TW.resx">
+      <DependentUpon>frmSeachKIND1C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Search\frmSearchMeMo.en.resx">
+      <DependentUpon>frmSearchMeMo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Search\frmSearchMeMo.resx">
+      <DependentUpon>frmSearchMeMo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Search\frmSearchMeMo.vi.resx">
+      <DependentUpon>frmSearchMeMo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Search\frmSearchMeMo.zh-TW.resx">
+      <DependentUpon>frmSearchMeMo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Search\frmSearchSHOUSE.en.resx">
+      <DependentUpon>frmSearchSHOUSE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Search\frmSearchSHOUSE.resx">
+      <DependentUpon>frmSearchSHOUSE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Search\frmSearchSHOUSE.vi.resx">
+      <DependentUpon>frmSearchSHOUSE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Search\frmSearchSHOUSE.zh-TW.resx">
+      <DependentUpon>frmSearchSHOUSE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Search\SearchDept1A.resx">
+      <DependentUpon>SearchDept1A.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun1\Search\SearchVENDC1B.resx">
+      <DependentUpon>SearchVENDC1B.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun4\frm4B.resx">
+      <DependentUpon>frm4B.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun4\frm4C.resx">
+      <DependentUpon>frm4C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun4\frm4CF7.resx">
+      <DependentUpon>frm4CF7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun4\frm4D.resx">
+      <DependentUpon>frm4D.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun4\frm4DF7.resx">
+      <DependentUpon>frm4DF7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun4\frm4E.resx">
+      <DependentUpon>frm4E.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun4\frm4EF7.resx">
+      <DependentUpon>frm4EF7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun4\frmSelectDateFrm4E.resx">
+      <DependentUpon>frmSelectDateFrm4E.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun4\Report\cr_Frm4BF7_2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_Frm4BF7_2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun4\Report\cr_Frm4BF7_4.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_Frm4BF7_4.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun4\Report\cr_Frm4BF7_5.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_Frm4BF7_5.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun4\Report\cr_Frm4BF7_1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_Frm4BF7_1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun4\Report\cr_frm4BF7_7.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_frm4BF7_7.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun4\Report\cr_Frm4CF7_Tab1_1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_Frm4CF7_Tab1_1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun4\Report\cr_Frm4CF7_Tab1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_Frm4CF7_Tab1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun4\Report\cr_Frm4CF7_Tab1_2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_Frm4CF7_Tab1_2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun4\Report\cr_Frm4CF7_Tab2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_Frm4CF7_Tab2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun4\Report\cr_Frm4CF7_Tab3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_Frm4CF7_Tab3.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun4\Report\cr_Frm4CF7_Tab4.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_Frm4CF7_Tab4.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun4\Report\cr_Frm4CF7_Tab5.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_Frm4CF7_Tab5.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun4\Report\cr_Frm4CF7_Tab6.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_Frm4CF7_Tab6.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun4\Report\cr_Frm4CF7_Tab7.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_Frm4CF7_Tab7.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun4\Report\cr_Frm4CF7_Tab7_C_NO.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_Frm4CF7_Tab7_C_NO.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun4\Report\cr_Frm4CF7_Tab7_C_NO1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_Frm4CF7_Tab7_C_NO1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun4\Report\cr_Frm4DF7_Tab1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_Frm4DF7_Tab1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun4\Report\cr_Frm4DF7_Tab1_2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_Frm4DF7_Tab1_2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun4\Report\cr_Frm4DF7_Tab2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_Frm4DF7_Tab2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun4\Report\cr_Frm4EF7_Tab1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_Frm4EF7_Tab1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun4\Report\cr_Frm4EF7_Tab1_1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_Frm4EF7_Tab1_1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun4\Report\cr_Frm4EF7_Tab2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_Frm4EF7_Tab2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun4\Report\cr_Frm4EF7_Tab3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_Frm4EF7_Tab3.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun4\Search\Form4CF5.resx">
+      <DependentUpon>Form4CF5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun4\Search\frmSearchCOMBC.resx">
+      <DependentUpon>frmSearchCOMBC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun4\Search\frmSearchCOMHC.resx">
+      <DependentUpon>frmSearchCOMHC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun4\Search\frmSearchCOMHC1.resx">
+      <DependentUpon>frmSearchCOMHC1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun4\Search\frmSearchSH_NUM.resx">
+      <DependentUpon>frmSearchSH_NUM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun4\Search\SearchDEPT.resx">
+      <DependentUpon>SearchDEPT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun4\Search\SearchPROD1C_M4.resx">
+      <DependentUpon>SearchPROD1C_M4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun6\frm6A.resx">
+      <DependentUpon>frm6A.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun6\frm6B.resx">
+      <DependentUpon>frm6B.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun6\Search\Form6AF5.resx">
+      <DependentUpon>Form6AF5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun8\Envent\frmCheckQtyShouse.resx">
+      <DependentUpon>frmCheckQtyShouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun8\frm8A.en.resx">
+      <DependentUpon>frm8A.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun8\frm8A.resx">
+      <DependentUpon>frm8A.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun8\frm8A.vi.resx">
+      <DependentUpon>frm8A.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun8\frm8A.zh-TW.resx">
+      <DependentUpon>frm8A.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun8\frm8R.resx">
+      <DependentUpon>frm8R.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun8\Search\frm8AF5.en.resx">
+      <DependentUpon>frm8AF5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun8\Search\frm8AF5.resx">
+      <DependentUpon>frm8AF5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun8\Search\frm8AF5.vi.resx">
+      <DependentUpon>frm8AF5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun8\Search\frm8AF5.zh-TW.resx">
+      <DependentUpon>frm8AF5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun8\Search\frmSeachCOLB.en.resx">
+      <DependentUpon>frmSeachCOLB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun8\Search\frmSeachCOLB.resx">
+      <DependentUpon>frmSeachCOLB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun8\Search\frmSeachCOLB.vi.resx">
+      <DependentUpon>frmSeachCOLB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun8\Search\frmSeachCOLB.zh-TW.resx">
+      <DependentUpon>frmSeachCOLB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun8\Search\frmSearchMeMo.en.resx">
+      <DependentUpon>frmSearchMeMo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun8\Search\frmSearchMeMo.resx">
+      <DependentUpon>frmSearchMeMo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun8\Search\frmSearchMeMo.vi.resx">
+      <DependentUpon>frmSearchMeMo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun8\Search\frmSearchMeMo.zh-TW.resx">
+      <DependentUpon>frmSearchMeMo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun8\Search\frmSearchOrder.resx">
+      <DependentUpon>frmSearchOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun8\Search\frmSearchSale.en.resx">
+      <DependentUpon>frmSearchSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun8\Search\frmSearchSale.resx">
+      <DependentUpon>frmSearchSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun8\Search\frmSearchSale.vi.resx">
+      <DependentUpon>frmSearchSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Modun8\Search\frmSearchSale.zh-TW.resx">
+      <DependentUpon>frmSearchSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Search\SearchCGBHC.resx">
+      <DependentUpon>SearchCGBHC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Search\SearchPAYV.resx">
+      <DependentUpon>SearchPAYV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Search\SearchPROD1C.resx">
+      <DependentUpon>SearchPROD1C.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Search\SearchPROD1C_Select_OneItem.resx">
+      <DependentUpon>SearchPROD1C_Select_OneItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Search\SearchPSHQTY.resx">
+      <DependentUpon>SearchPSHQTY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Search\SearchQUVHC.resx">
+      <DependentUpon>SearchQUVHC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINCODE\Search\SearchVENDC.resx">
+      <DependentUpon>SearchVENDC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="f1ToolStripMenuItem.Text\GeneralData.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>GeneralData.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f1ToolStripMenuItem.Text\Language.en.resx" />
+    <EmbeddedResource Include="f1ToolStripMenuItem.Text\Language.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Language.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource\GeneralData.resx" />
+    <None Include="Config\app.config" />
+    <None Include="DataReport\DataSetDataTable.xsc">
+      <DependentUpon>DataSetDataTable.xsd</DependentUpon>
+    </None>
+    <None Include="DataReport\DataSetDataTable.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetDataTable.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataReport\DataSetDataTable.xss">
+      <DependentUpon>DataSetDataTable.xsd</DependentUpon>
+    </None>
+    <None Include="DataReport\DataSetModun1.xsc">
+      <DependentUpon>DataSetModun1.xsd</DependentUpon>
+    </None>
+    <None Include="DataReport\DataSetModun1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetModun1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataReport\DataSetModun1.xss">
+      <DependentUpon>DataSetModun1.xsd</DependentUpon>
+    </None>
+    <None Include="DataReport\DataSetModun4.xsc">
+      <DependentUpon>DataSetModun4.xsd</DependentUpon>
+    </None>
+    <None Include="DataReport\DataSetModun4.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetModun4.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataReport\DataSetModun4.xss">
+      <DependentUpon>DataSetModun4.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MAINCODE\Modun6\Report\" />
+    <Folder Include="MAINCODE\Modun8\CrytalReport\" />
+    <Folder Include="MAINCODE\Modun8\Print\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\visibility %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\visibility.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check-mark.png" />
+    <Content Include="Resource\LibraryCalender.dll" />
+    <None Include="Resources\close.png" />
+    <None Include="Resources\add.png" />
+    <None Include="Resources\copy.png" />
+    <None Include="Resources\completed-task.png" />
+    <Content Include="Resources\eight.png" />
+    <Content Include="Resources\five.png" />
+    <Content Include="Resources\four.png" />
+    <Content Include="Resources\icon_number_2.png" />
+    <Content Include="Resources\letter-a.png" />
+    <Content Include="Resources\letter-b.png" />
+    <Content Include="Resources\letter-c.png" />
+    <Content Include="Resources\letter-d.png" />
+    <Content Include="Resources\letter-e.png" />
+    <Content Include="Resources\letter-f.png" />
+    <Content Include="Resources\letter-g.png" />
+    <Content Include="Resources\letter-h.png" />
+    <Content Include="Resources\letter-i.png" />
+    <Content Include="Resources\letter-j.png" />
+    <Content Include="Resources\letter-k.png" />
+    <Content Include="Resources\letter-l.png" />
+    <Content Include="Resources\letter-m.png" />
+    <Content Include="Resources\letter-n.png" />
+    <Content Include="Resources\letter-o.png" />
+    <Content Include="Resources\letter-p.png" />
+    <Content Include="Resources\letter-q.png" />
+    <Content Include="Resources\letter-r.png" />
+    <Content Include="Resources\letter-s.png" />
+    <Content Include="Resources\letter-t.png" />
+    <Content Include="Resources\letter-x.png" />
+    <None Include="Resources\list-search.png" />
+    <Content Include="Resources\nine.png" />
+    <Content Include="Resources\one.png" />
+    <None Include="Resources\printer.png" />
+    <None Include="Resources\save.png" />
+    <Content Include="Resources\seven.png" />
+    <None Include="Resources\shutdown.png" />
+    <Content Include="Resources\six.png" />
+    <Content Include="Resources\three.png" />
+    <Content Include="Resources\translation.png" />
+    <Content Include="Resources\two.png" />
+    <None Include="Resources\up-arrow.png" />
+    <Content Include="Resources\Wsmark.JPG" />
+    <Content Include="f1ToolStripMenuItem.Text\LibraryCalender.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

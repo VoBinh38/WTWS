@@ -1,0 +1,168 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using LibraryCalender;
+
+namespace PURCHASE.MAINCODE.Modun4.Search
+{
+    public partial class Form4CF5 : Form
+    {
+        DataProvider conn = new DataProvider();
+        public Form4CF5()
+        {
+            this.ShowInTaskbar = false;
+            InitializeComponent();
+        }
+        public class item
+        {
+            public static int index { get; set; }
+            public static DataTable dt { get; set; }
+        }
+        private void Form4CF5_Load(object sender, EventArgs e)
+        {
+            foreach (DataRow item in item.dt.Rows)
+            {
+                item["WS_DATE"] = conn.formatstr2(item["WS_DATE"].ToString());
+            }
+            SelectItemList();
+        }
+        public void LoadDate()
+        {
+            string sql = "select * FROM COMHC1 WHERE 1=1";
+            if (!string.IsNullOrEmpty(txtWS_NO.Text))
+            {
+                sql = sql + " AND WS_NO LIKE '"+txtWS_NO.Text+"%'";
+            }
+            if(txtWS_DATE.MaskFull)
+            {
+                sql = sql + " AND C_NO LIKE '"+txtC_NO.Text+"%'";
+            }
+            if(!string.IsNullOrEmpty(txtC_NAME.Text))
+            {
+                sql = sql + " AND C_NAME LIKE '%"+txtC_NAME.Text+"%'";
+            }
+            if(!string.IsNullOrEmpty(txtOR_NO.Text))
+            {
+                sql = sql + " AND OR_NO LIKE '%"+txtOR_NO.Text+"%'";
+            }
+            sql = sql + " ORDER BY WS_DATE DESC,WS_NO DESC";
+            item.dt = new DataTable();
+            item.dt = conn.readdata(sql);
+            foreach (DataRow item in item.dt.Rows)
+            {
+                item["WS_DATE"] = conn.formatstr2(item["WS_DATE"].ToString());
+            }
+            SelectItemList();
+        }
+        public void SelectItemList()
+        {
+            var da1 = item.dt.AsEnumerable().Select(x => new {
+                C_NO = x.Field<string>("C_NO").ToString(),
+                WS_DATE = x.Field<string>("WS_DATE").ToString(),
+                OR_NO = x.Field<string>("OR_NO").ToString(),
+                TAX = x.Field<double>("TAX"),
+                WS_NO = x.Field<string>("WS_NO").ToString(),
+                TOTAL = x.Field<double>("TOTAL"),
+                C_NAME = x.Field<string>("C_NAME").ToString(),
+                TOT = x.Field<double>("TOT"),
+                DATESE = x.Field<string>("DATESE").ToString(),
+                DISCOUNT = x.Field<double>("DISCOUNT")
+            }).ToList();
+            DGV1.DataSource = da1; 
+            conn.DGV(DGV1);
+        }
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void txtWS_NO_TextChanged(object sender, EventArgs e)
+        {
+            LoadDate();
+        }
+
+        private void txtC_NO_TextChanged(object sender, EventArgs e)
+        {
+            LoadDate();
+        }
+
+        private void txtOR_NO_TextChanged(object sender, EventArgs e)
+        {
+            LoadDate();
+        }
+
+        private void txtC_NAME_TextChanged(object sender, EventArgs e)
+        {
+            LoadDate();
+        }
+
+        private void txtWS_DATE_TextChanged(object sender, EventArgs e)
+        {
+            LoadDate();
+        }
+
+        private void DGV1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            item.index = DGV1.CurrentRow.Index;
+            this.Close();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            item.index = DGV1.CurrentRow.Index;
+            LoadDate();
+        }
+
+        private void txtWS_DATE_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            FromCalender frm = new FromCalender();
+            frm.ShowDialog();
+            txtWS_DATE.Text = FromCalender.getDate.ToString("yyyy/MM/dd");
+        }
+
+        private void txtWS_NO_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                LoadDate();
+            }
+        }
+
+        private void txtC_NO_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                LoadDate();
+            }
+        }
+
+        private void txtC_NAME_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                LoadDate();
+            }
+        }
+
+        private void txtOR_NO_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                LoadDate();
+            }
+        }
+
+        private void txtWS_DATE_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                LoadDate();
+            }
+        }
+    }
+}
