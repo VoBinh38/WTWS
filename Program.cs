@@ -19,7 +19,7 @@ namespace PURCHASE
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmLogin());
-            //Application.Run(new Form4CF7());
+            //Application.Run(new Form4CF7()); 
         }
     }
 }
